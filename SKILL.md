@@ -24,8 +24,10 @@ rdc_parser/
 ## 用法
 
 ```bash
-python rdc_parser/scripts/cli.py <子命令> [参数]
+python -m scripts.cli <子命令> [参数]
 ```
+
+需在项目根目录 `rdc_parser/` 下执行。
 
 ## 参考数据
 
@@ -44,27 +46,32 @@ CLI 默认从 `rdc_parser/references/` 自动加载，也可用 `--references-di
 ### run — 一键全流程（最常用）
 
 ```bash
-python rdc_parser/scripts/cli.py run <input.rdc> -o <output_dir>
+python -m scripts.cli run <input.rdc> -o <output_dir>
 ```
 
-自动执行：convert → parse → classify → report，输出全部 CSV + Markdown 报告 + 缩略图。
+自动执行：convert → parse → classify → report → timing，输出全部 CSV + Markdown 报告 + 缩略图。
 
 可选参数：
 - `--renderdoccmd <path>` — 指定 renderdoccmd.exe
 - `--force-convert` — 强制重新转换 XML
 - `--no-thumb` — 禁用缩略图导出
+- `--no-timing` — 禁用 GPU 耗时导出
+- `--timing-runs <N>` — GPU 耗时回放次数（默认 3）
 - `--references-dir <dir>` — 参考数据目录
+- `--mesh-export <path>` — mesh_export.csv 路径（覆盖 references-dir）
+- `--resource-standard <path>` — 资源分类标准.md 路径（覆盖 references-dir）
+- `--shader-list <path>` — ShaderList.csv 路径（覆盖 references-dir）
 
 ### convert — .rdc 转 .xml
 
 ```bash
-python rdc_parser/scripts/cli.py convert <input.rdc> -o <out_dir>
+python -m scripts.cli convert <input.rdc> -o <out_dir>
 ```
 
 ### parse — XML 解析 DrawCall
 
 ```bash
-python rdc_parser/scripts/cli.py parse <input.xml> -o <out_dir>
+python -m scripts.cli parse <input.xml> -o <out_dir>
 ```
 
 输出 `drawcalls.csv`。
@@ -72,19 +79,22 @@ python rdc_parser/scripts/cli.py parse <input.xml> -o <out_dir>
 ### classify — 资源分类
 
 ```bash
-python rdc_parser/scripts/cli.py classify <drawcalls.csv> -o <out_dir>
+python -m scripts.cli classify <drawcalls.csv> -o <out_dir>
 ```
 
 加载参考数据，输出 `classified.csv`。
 
+可选参考参数：`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
+
 ### report — 生成汇总报告
 
 ```bash
-python rdc_parser/scripts/cli.py report <classified.csv> -o <out_dir>
+python -m scripts.cli report <classified.csv> -o <out_dir>
 ```
 
 输出：
 - `rdc_report.md` — Markdown 分析报告
+- `rdc_summary_by_mesh_type.csv` — 按类型汇总
 - `rdc_summary_by_pass_name.csv` — 按 Pass 汇总
 - `rdc_summary_by_ps.csv` — 按 Shader 汇总
 - `rdc_summary_by_asset_module.csv` — 按资产模块汇总
@@ -96,7 +106,7 @@ python rdc_parser/scripts/cli.py report <classified.csv> -o <out_dir>
 ### html — 交互式 HTML 报告
 
 ```bash
-python rdc_parser/scripts/cli.py html <classified.csv> -o <out_dir> [--platform "D3D11 / SM5.0"]
+python -m scripts.cli html <classified.csv> -o <out_dir> [--platform "D3D11 / SM5.0"]
 ```
 
 输出 `rdc_report.html`，表格可排序筛选。
@@ -104,15 +114,17 @@ python rdc_parser/scripts/cli.py html <classified.csv> -o <out_dir> [--platform 
 ### poly — 减面分析
 
 ```bash
-python rdc_parser/scripts/cli.py poly <classified.csv> -o <out_dir>
+python -m scripts.cli poly <classified.csv> -o <out_dir>
 ```
 
 聚合 mesh 级别数据，匹配 `资源分类标准.md` 中的面数标准，输出超标项。
 
+可选参考参数：`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
+
 ### compare — 两份抓帧对比
 
 ```bash
-python rdc_parser/scripts/cli.py compare <A_classified.csv> <B_classified.csv> -o <out_dir> [--name-a "优化前"] [--name-b "优化后"]
+python -m scripts.cli compare <A_classified.csv> <B_classified.csv> -o <out_dir> [--name-a "优化前"] [--name-b "优化后"]
 ```
 
 输出 `compare_report.md` + 差异 CSV。
@@ -120,32 +132,34 @@ python rdc_parser/scripts/cli.py compare <A_classified.csv> <B_classified.csv> -
 ### batch — 批量分析
 
 ```bash
-python rdc_parser/scripts/cli.py batch <rdc_directory> -o <out_dir>
+python -m scripts.cli batch <rdc_directory> -o <out_dir>
 ```
 
 遍历目录下所有 `.rdc`，每个子目录独立走一遍全流程。
 
+可选参数：`--renderdoccmd`、`--force-convert`、`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
+
 ### timing — GPU 耗时
 
 ```bash
-python rdc_parser/scripts/cli.py timing <input.rdc> -o <out_dir> [--runs 3] [--classified <classified.csv>]
+python -m scripts.cli timing <input.rdc> -o <out_dir> [--runs 3] [--classified <classified.csv>] [--json <timing.json>]
 ```
 
-多次回放导出 per-event GPU 耗时，可合并到 `classified.csv`。
+多次回放导出 per-event GPU 耗时，可合并到 `classified.csv`。`--json` 可跳过导出，直接使用已有的 timing JSON 文件。
 
 ## 工作流示例
 
 ```bash
 # 单文件完整分析
-python rdc_parser/scripts/cli.py run "D:\captures\scene.rdc" -o "D:\output\scene"
+python -m scripts.cli run "D:\captures\scene.rdc" -o "D:\output\scene"
 
 # 对比优化前后
-python rdc_parser/scripts/cli.py run "D:\captures\before.rdc" -o "D:\output\before"
-python rdc_parser/scripts/cli.py run "D:\captures\after.rdc" -o "D:\output\after"
-python rdc_parser/scripts/cli.py compare "D:\output\before\classified.csv" "D:\output\after\classified.csv" -o "D:\output\diff"
+python -m scripts.cli run "D:\captures\before.rdc" -o "D:\output\before"
+python -m scripts.cli run "D:\captures\after.rdc" -o "D:\output\after"
+python -m scripts.cli compare "D:\output\before\classified.csv" "D:\output\after\classified.csv" -o "D:\output\diff"
 
 # 批量处理
-python rdc_parser/scripts/cli.py batch "D:\captures\batch" -o "D:\output\batch_out"
+python -m scripts.cli batch "D:\captures\batch" -o "D:\output\batch_out"
 ```
 
 ## 环境要求
