@@ -3,3 +3,4 @@ __pycache__/
 *.rdc
 rdc_analysis_output/
 *output/
+.claude
