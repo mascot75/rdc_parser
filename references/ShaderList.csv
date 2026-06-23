@@ -1,0 +1,1502 @@
+Shader Name,Path
+AVProVideo/Background/AVProVideo-ApplyToFarPlane,Assets/Third/AVProVideo/Extensions/VideoPlayer/Shaders/AVProVideo-ApplyToFarPlane.shader
+AVProVideo/Internal/BlendFrames,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-BlendFrames.shader
+AVProVideo/Internal/Blit,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-Blit.shader
+AVProVideo/Internal/IMGUI/Texture Transparent,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-IMGUI-Transparent.shader
+AVProVideo/Internal/Preview,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-Preview.shader
+AVProVideo/Internal/Resolve,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-Resolve.shader
+AVProVideo/Internal/ResolveOES,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-ResolveOES.shader
+AVProVideo/Internal/Transition,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-Transition.shader
+AVProVideo/Internal/UI/Stereo,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-UI-Default-Stereo.shader
+AVProVideo/Internal/UI/Stereo - AndroidOES,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-UI-AndroidOES.shader
+AVProVideo/Internal/UI/Transparent Packed (stereo),Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-UI-Default-Transparent.shader
+AVProVideo/Internal/UI/Transparent Packed (stereo) - AndroidOES,Assets/Third/AVProVideo/Runtime/Shaders/Resources/AVProVideo-Internal-UI-Default-Transparent-Android OES.shader
+AVProVideo/Lit/Diffuse (texture+color+fog+stereo support),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Lit-Diffuse.shader
+AVProVideo/Lit/Transparent Diffuse (texture+color+fog+packed alpha),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Lit-Transparent-Diffuse.shader
+AVProVideo/Skybox/3x2 Cube,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Skybox-Cube3x2.shader
+AVProVideo/Skybox/Sphere,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Skybox-Sphere.shader
+AVProVideo/Skybox/Sphere - Android OES,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Skybox-Sphere-AndroidOES.shader
+AVProVideo/Unlit/Opaque (texture+color+fog+stereo support),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Unlit.shader
+AVProVideo/Unlit/Opaque (texture+color+stereo support) - Android OES ONLY,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Unlit-AndroidOES.shader
+AVProVideo/Unlit/Transparent (texture+alpha support) - Android OES ONLY,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Unlit-Transparent-AndroidOES.shader
+AVProVideo/Unlit/Transparent (texture+color+fog+stereo+alpha),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-Unlit-Transparent.shader
+AVProVideo/VR/InsideSphere Unlit (stereo+color) - Android OES ONLY,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-VR-InsideSphere-AndroidOES.shader
+AVProVideo/VR/InsideSphere Unlit (stereo+fog),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-VR-InsideSphere.shader
+AVProVideo/VR/InsideSphere Unlit (stereo+fog) Stereo UV,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-VR-InsideSphere-StereoUV.shader
+AVProVideo/VR/InsideSphere Unlit Transparent (stereo+color+alpha) - Android OES ONLY,Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-VR-InsideSphere-Transparent-AndroidOES.shader
+AVProVideo/VR/InsideSphere Unlit Transparent (stereo+color+fog+alpha),Assets/Third/AVProVideo/Runtime/Shaders/AVProVideo-VR-InsideSphere-Transparent.shader
+A_KingsoftScene/Displacement/DisplacementEffect,Assets/_Game/Scripts/Environment/EnvModule/Interaction/_Resources/Shaders/DisplacementEffect.shader
+A_KingsoftScene/Displacement/DisplacementFootPrint,Assets/_Game/Scripts/Environment/EnvModule/Interaction/_Resources/Shaders/DisplacementFootPrint.shader
+A_KingsoftScene/Displacement/DisplacementTrail,Assets/_Game/Scripts/Environment/EnvModule/Interaction/_Resources/Shaders/DisplacementTrail.shader
+A_KingsoftScene/FallingLeaves,Assets/Third/PhysicsFallingLeaves/Runtime/Resources/FallingLeavesShader/FallingLeaves.shader
+A_KingsoftScene/GPUDrivenAlphaTestShadow,Packages/com.unity.render-pipelines.universal/Shaders/Utils/GPUDrivenShadow/AlphaTestShadow.shader
+A_KingsoftScene/GPUDrivenNormalShadow,Packages/com.unity.render-pipelines.universal/Shaders/Utils/GPUDrivenShadow/NormalShadow.shader
+A_KingsoftScene/GPUDrivenSpeedTreeShadow,Packages/com.unity.render-pipelines.universal/Shaders/Utils/GPUDrivenShadow/SpeedTreeShadow.shader
+A_KingsoftScene/HIZBuilder,Assets/_Resources/Arts/Shaders/URP/Scene/URP_HIZBuilder.shader
+A_KingsoftScene/URP_Billboard,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Billboard.shader
+A_KingsoftScene/URP_ComplexLit,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLit.shader
+A_KingsoftScene/URP_ComplexLitAlpha,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitAlpha.shader
+A_KingsoftScene/URP_ComplexLitAlpha_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitAlpha_Phone.shader
+A_KingsoftScene/URP_ComplexLitLayer,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitLayer.shader
+A_KingsoftScene/URP_ComplexLitLayer_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitLayer_Phone.shader
+A_KingsoftScene/URP_ComplexLitOctahedronImpostor,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitOctahedronImpostor.shader
+A_KingsoftScene/URP_ComplexLitTessellation,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitTessellation.shader
+A_KingsoftScene/URP_ComplexLit_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLit_Phone.shader
+A_KingsoftScene/URP_EmissiveLit,Assets/_Resources/Arts/Shaders/URP/Scene/URP_EmissiveLit.shader
+A_KingsoftScene/URP_Foliage,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Foliage.shader
+A_KingsoftScene/URP_Foliage_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Foliage_Phone.shader
+A_KingsoftScene/URP_Glass,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Glass.shader
+A_KingsoftScene/URP_Grass,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Grass.shader
+A_KingsoftScene/URP_Grass_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Grass_Phone.shader
+A_KingsoftScene/URP_HomeConstructionLine,Assets/_Resources/Arts/Shaders/URP/Scene/URP_HomeConstructionLine.shader
+A_KingsoftScene/URP_JS3Grass,Assets/_Resources/Arts/Shaders/URP/Scene/URP_JS3Grass.shader
+A_KingsoftScene/URP_Lit,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Lit.shader
+A_KingsoftScene/URP_SimpleLit,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SimpleLit.shader
+A_KingsoftScene/URP_SkyboxProcedural,Assets/_Game/Scripts/Environment/EnvModule/Sky/_Resources/Shaders/URP_SkyboxProcedural.shader
+A_KingsoftScene/URP_SpeedTree8,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8.shader
+A_KingsoftScene/URP_SpeedTree8OctahedronImpostor,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8OctahedronImpostor.shader
+A_KingsoftScene/URP_SpeedTree8OctahedronImpostor_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8OctahedronImpostor_Phone.shader
+A_KingsoftScene/URP_SpeedTree8_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8_Phone.shader
+A_KingsoftScene/URP_SpeedTree8_Trunk,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8_Trunk.shader
+A_KingsoftScene/URP_SpeedTree8_Trunk_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8_Trunk_Phone.shader
+A_KingsoftScene/URP_SphereHeightFog,Assets/_Game/Scripts/Environment/EnvModule/Sky/_Resources/Shaders/URP_SphereHeightFog.shader
+A_KingsoftScene/URP_Terrain,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Terrain.shader
+A_KingsoftScene/URP_TerrainGrid,Assets/_Resources/Arts/Shaders/URP/Scene/URP_TerrainGrid.shader
+A_KingsoftScene/URP_TerrainTessellation,Assets/_Resources/Arts/Shaders/URP/Scene/URP_TerrainTessellation.shader
+A_KingsoftScene/URP_Terrain_Phone,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Terrain_Phone.shader
+A_KingsoftScene/URP_Water,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Water.shader
+A_KingsoftUI/UIMirrorShadow,Assets/_Resources/Arts/Shaders/URP/UI/UIMirrorShadow.shader
+A_KingsoftUI/UI_ProceduralSkybox,Assets/_Resources/Arts/Shaders/URP/UI/UIProceduralSkybox.shader
+A_KingsoftUI/UI_ProceduralSkybox_Simple,Assets/_Resources/Arts/Shaders/URP/UI/UIProceduralSkybox_Simple.shader
+Absolute,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Absolute.shadergraph
+Abyss/effect/ParticleStandard,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/EffectParticleStandard_ASE.shader
+Abyss/effect/Simple,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/EffectSimple.shader
+Add,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Add.shadergraph
+All,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/All.shadergraph
+AltitudeMask,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Blending Masks/AltitudeMask.shadergraph
+And,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/And.shadergraph
+AngleMask,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Blending Masks/AngleMask.shadergraph
+AnimatedFlag,Packages/com.unity.shadergraph/Samples~/FeatureExamples/VertexAnimation/AnimatedFlag/AnimatedFlag.shadergraph
+Any,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Any.shadergraph
+Arccosine,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Arccosine.shadergraph
+Arctangent2,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Arctangent2.shadergraph
+ArnoldStandardSurface,Packages/com.unity.render-pipelines.universal/Runtime/Materials/ArnoldStandardSurface/ArnoldStandardSurface.shadergraph
+ArnoldStandardSurfaceTransparent,Packages/com.unity.render-pipelines.universal/Runtime/Materials/ArnoldStandardSurface/ArnoldStandardSurfaceTransparent.shadergraph
+AutodeskInteractive,Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractive.shadergraph
+AutodeskInteractiveMasked,Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveMasked.shadergraph
+AutodeskInteractiveTransparent,Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveTransparent.shadergraph
+BOXOPHOBIC/Atmospherics/Height Fog Preset,Assets/Third/Atmospheric Height Fog/Core/Resources/Height Fog Preset.shader
+BOXOPHOBIC/Atmospherics/Height Fog Standalone,Assets/Third/Atmospheric Height Fog/Core/Resources/Height Fog Standalone.shader
+Background,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Scenes/Background.shadergraph
+Bakery/Example shader with Alpha Meta Pass,Assets/Bakery/examples/shaders/Baked_Alpha_meta.shader
+Bakery/Example shader with Normal Meta Pass,Assets/Bakery/examples/shaders/Baked_Normal_Maps_meta.shader
+Bakery/Example terrain shader with Normal Meta Pass,Assets/Bakery/examples/shaders/Baked_Normal_Maps_terrain_meta.shader
+Bakery/Light,Assets/Bakery/ftLight.shader
+Bakery/LightFilter,Assets/Bakery/ftLightFilter.shader
+Bakery/Simple Vertex Lightmapped,Assets/Bakery/ftSimpleVertexLM.shader
+Bakery/Skybox,Assets/Bakery/ftSkybox.shader
+Bakery/Standard,Assets/Bakery/shader/BakeryStandard.shader
+Bakery/Standard Specular,Assets/Bakery/shader/BakeryStandardSpecular.shader
+Bark_Wind,Assets/Third/WaterSystemHDRP~/Demo/_Resources/BookOfTheDead/WindLitShaderGraph/Bark_Wind.shadergraph
+Bark_Wind_Temp,Assets/_Resources/Arts/Shaders/HDRP/Scene/Temp/Bark_Wind_Temp.shadergraph
+BatchFewStandard,Packages/com.third.polyfew/BatchFewShader/BatchFewStandard.shader
+BatchFewStandardSpecular,Packages/com.third.polyfew/BatchFewShader/BatchFewStandardSpecular.shader
+BendDeformer,Packages/com.unity.shadergraph/Samples~/FeatureExamples/VertexAnimation/BendDeformer/BendDeformer.shadergraph
+Billboard,Packages/com.unity.shadergraph/Samples~/FeatureExamples/VertexAnimation/Billboard/Billboard.shadergraph
+BitangentVector,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/BitangentVector.shadergraph
+Blend,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/Blend.shadergraph
+BlendColor,Assets/_Game/EditorTools/SceneTool/ShaderAnalyzer/BlendColor.shader
+BlitMaterial,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/BlitToRTHandle/BlitMaterial.shadergraph
+BlobShadow_Graph,Assets/_Resources/Temp/URPPackageSamples/Decals/BlobShadow/BlobShadow_Graph.shadergraph
+BlockoutGrid,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/LevelBlockout/BlockoutGrid.shadergraph
+Branch,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Branch.shadergraph
+BranchOnMaterialQuality,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Condition/BranchOnMaterialQuality.shadergraph
+BranchOnRP,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Condition/BranchOnRP.shadergraph
+CMWaveform,Packages/com.unity.cinemachine/Editor/EditorResources/CMWaveform.shader
+C_ParticleStandard,Assets/_Resources/Arts/ArtWorks/Effect/NPC/M1_P82_body_001a/lengqi/C_ParticleStandard.shader
+CalculateLevelofDetailTexture2D,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/CalculateLevelofDetailTexture2D.shadergraph
+Camera,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Camera.shadergraph
+CameraDistanceMask,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Blending Masks/CameraDistanceMask.shadergraph
+Ceiling,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Ceiling.shadergraph
+ChannelMask,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/ChannelMask.shadergraph
+Checkerboard,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/Checkerboard.shadergraph
+Clamp,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Clamp.shadergraph
+ColorMask,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/ColorMask.shadergraph
+ColorspaceConversion,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/ColorspaceConversion.shadergraph
+Combine,Packages/com.unity.shadergraph/Samples~/NodeReference/Channel/Combine.shadergraph
+Comparison,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Comparison.shadergraph
+Contrast,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/Contrast.shadergraph
+Cosine,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Cosine.shadergraph
+CrossProduct,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/CrossProduct.shadergraph
+Custom/3DNoiseTests,Packages/com.unity.terrain-tools/Tests/Editor/NoiseTests.shader
+Custom/CustomTonemapperCurve,Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/CustomTonemapperCurve.shader
+Custom/My Transparent Shader,Assets/Third/Atmospheric Height Fog/Demo/Shaders/My Transparent Shader.shader
+Custom/PW_Road_LitBasic_BuiltIn,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Road_LitBasic_BuiltIn.shader
+Custom/PW_Spline_LitBasic_BuiltIn,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Spline_LitBasic_BuiltIn.shader
+CustomFunction,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/CustomFunction.shadergraph
+CustomInterpolatorNdotL,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Custom Interpolator/CustomInterpolatorNdotL.shadergraph
+CustomInterpolatorUVScrolling,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Custom Interpolator/CustomInterpolatorUVScrolling.shadergraph
+CustomLightingCelShader,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Custom Lighting/CustomLightingCelShader.shadergraph
+CustomLightingPBR,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Custom Lighting/CustomLightingPBR.shadergraph
+CustomLightingSimple,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Custom Lighting/CustomLightingSimple.shadergraph
+DDX,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/DDX.shadergraph
+DDY,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/DDY.shadergraph
+Decal,Packages/com.unity.render-pipelines.universal/Shaders/Decal.shadergraph
+DecalMaterialProjection,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Decals/DecalMaterialProjection.shadergraph
+DecalWaterCaustics,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Decals/DecalWaterCaustics.shadergraph
+DecalWaterRunning,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Decals/DecalWaterRunning.shadergraph
+DecalWaterWetness,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Decals/DecalWaterWetness.shadergraph
+Decal_Lit,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/Decal_Lit.shadergraph
+Decal_UnlitAdditive,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/Decal_UnlitAdditive.shadergraph
+Decal_UnlitAlphaBlend,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/Decal_UnlitAlphaBlend.shadergraph
+DefaultCompositionGraph,Assets/_Game/Main/HDRPSetting/Compositor/DefaultCompositionGraph.shadergraph
+DefaultMaterial,Packages/com.unity.shadergraph/Samples~/ProductionReady/Scenes/DefaultMaterial.shadergraph
+DefaultVFXSG,Packages/com.unity.visualeffectgraph/Shaders/DefaultVFXSG.shadergraph
+DegreesToRadians,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/DegreesToRadians.shadergraph
+DepthColor_graph,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/TrailEffect/Shaders/DepthColor_graph.shadergraph
+DepthEdge,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/DepthBlit/DepthEdge.shadergraph
+DetailMappingColor,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Detail Mapping/DetailMappingColor.shadergraph
+DetailMappingFull,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Detail Mapping/DetailMappingFull.shadergraph
+DetailMappingNormal,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Detail Mapping/DetailMappingNormal.shadergraph
+DielectricSpecular,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/DielectricSpecular.shadergraph
+Distance,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Distance.shadergraph
+Distort,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/DistortTunnel/Distort.shadergraph
+Dither,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/Dither.shadergraph
+Dither_Graph,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/OcclusionEffect/Dither_Graph.shadergraph
+Divide,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Divide.shadergraph
+DotProduct,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/DotProduct.shadergraph
+DummyPipeline/VariantStrippingTestsShader,Packages/com.unity.render-pipelines.core/Tests/Editor/ShaderStripping/DummyPipelineShader.shader
+DynamicShadowProjector/Blit/Blit,Assets/_Game/Scripts/GameLogic/Character/Appearance/FakeShadow/Editor/Blit.shader
+DynamicTexel,Packages/com.third.texelinspector/Editor/DynamicTexel.shader
+Editor_Mat_Terrain,Assets/_Game/EditorTools/SceneLogicTool/Editor/Material/Editor_Mat_Terrain.shader
+Ellipse,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/Ellipse.shadergraph
+EyeIndex,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/EyeIndex.shadergraph
+FadeTransition,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/FadeTransition.shadergraph
+Fern,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Details/Ferns/Fern.shadergraph
+Flip,Packages/com.unity.shadergraph/Samples~/NodeReference/Channel/Flip.shadergraph
+Flipbook,Assets/_Game/Scripts/Environment/EnvModule/Snow/_Resources/VFX/Visualeffectgraph/Test/VFXGraphAdditions/Shaders/ParticleOutput/Flipbook.shadergraph
+FlipbookBlend,Assets/_Game/Scripts/Environment/EnvModule/Snow/_Resources/VFX/Visualeffectgraph/Test/VFXGraphAdditions/Shaders/ParticleOutput/FlipbookBlend.shadergraph
+Floor,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Floor.shadergraph
+FlowMapExample-Magma,Assets/_Game/Scripts/Environment/EnvModule/Snow/_Resources/VFX/Visualeffectgraph/Test/VFXGraphAdditions/Shaders/MeshOutput/FlowMapExample-Magma.shadergraph
+FlowMapping,Packages/com.unity.shadergraph/Samples~/FeatureExamples/UV Projection/FlowMapping/FlowMapping.shadergraph
+FoliageWind,Packages/com.unity.shadergraph/Samples~/FeatureExamples/VertexAnimation/FoliageWind/FoliageWind.shadergraph
+Fraction,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Fraction.shadergraph
+FresnelEffect,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/FresnelEffect.shadergraph
+FullscreenInvertColors,Packages/com.unity.render-pipelines.universal/Shaders/FullscreenInvertColors.shadergraph
+GPUDriven/BRGPicking,Packages/com.unity.render-pipelines.core/Runtime/GPUDriven/Shader/GPUDrivenPicking.shader
+GPUDriven/FallbackError,Packages/com.unity.render-pipelines.core/Runtime/GPUDriven/Shader/GPUDrivenFallBackError.shader
+GPUDriven/Loading,Packages/com.unity.render-pipelines.core/Runtime/GPUDriven/Shader/GPUDrivenLoading.shader
+GPUTerrain/BuildHizMap,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/GpuTerrain/HizMap/BuildHizMap.shader
+GPUTerrain/GPUTerrainDebug,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/GpuTerrain/_Resource/Shaders/DebugAlphaFix.shader
+GSpawn/SimpleDiffuse,Assets/Third/GSpawn/Resources/Shaders/SimpleDiffuse.shader
+GSpawn/SimpleDiffuseTex,Assets/Third/GSpawn/Resources/Shaders/SimpleDiffuseTex.shader
+GSpawn/XZGrid,Assets/Third/GSpawn/Resources/Shaders/XZGrid.shader
+GSpawn/XZGridCoordSystemLine,Assets/Third/GSpawn/Resources/Shaders/XZGridCoordSystemLine.shader
+GUI/3D Text Shader - Cull Back,Assets/_Resources/Temp/URPPackageSamples/SharedAssets/Shaders/3DText.shader
+GUI/Text Shader Zwrite,Assets/Third/LuxURPEssentials~/Demos/Fonts/ZwriteFont.shader
+GatherTexture2D,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/GatherTexture2D.shadergraph
+GerstnerWave,Packages/com.unity.shadergraph/Samples~/FeatureExamples/VertexAnimation/GerstnerWave/GerstnerWave.shadergraph
+Glitch_Graph,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/GlitchEffect/Glitch_Graph.shadergraph
+Gradient,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Gradient.shadergraph
+GradientNoise,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/GradientNoise.shadergraph
+GradientRemap_Graph,Assets/_Resources/Temp/URPPackageSamples/SharedAssets/Shaders/GradientRemap_Graph.shadergraph
+GrassWindTerrainDetails,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Details/Grass/GrassWindTerrainDetails.shadergraph
+HDAlphaEmission,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDAlphaEmission.shadergraph
+HDBillboard,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDBillboard.shadergraph
+HDBillboardUnLit,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDBillboardUnLit.shadergraph
+HDCollisionTransparent,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDCollisionTransparent.shadergraph
+HDEffectStandardUnLit,Assets/_Resources/Arts/Shaders/HDRP/Effect/HDEffectStandardUnLit.shadergraph
+HDGrass,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDGrass.shadergraph
+HDRP/BakeStaticTerrain,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/StaticTerrain/_Resource/Shaders(HDRP)/BakeStaticTerrain.shader
+HDRP/HDStaticTerrain,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/StaticTerrain/_Resource/Shaders(HDRP)/HDStaticTerrain.shader
+HDRP/Kingsoft/HDLit,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDLit.shader
+HDRP/Kingsoft/HDLitTessellation,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDLitTessellation.shader
+HDRPLit,Packages/com.unity.shadergraph/Samples~/ProductionReady/Lit/HDRPLit.shadergraph
+HDRock,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDRock.shadergraph
+HDSceneTreeLeafs,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDSceneTreeLeafs.shadergraph
+HDTerrain,Assets/_Resources/Arts/Shaders/HDRP/Scene/HDTerrain.shadergraph
+HD_CharacterAlphaHigh,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterAlphaHigh.shadergraph
+HD_CharacterAlphaSilk,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterAlphaSilk.shadergraph
+HD_CharacterAlphaSilk_Sparkle,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterAlphaSilk_Sparkle.shadergraph
+HD_CharacterAlphaSilk_Sparkle_Metallic,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterAlphaSilk_Sparkle_Metallic.shadergraph
+HD_CharacterEye,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterEye.shadergraph
+HD_CharacterEyelash,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterEyelash.shadergraph
+HD_CharacterFace,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterFace.shadergraph
+HD_CharacterHair,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterHair.shadergraph
+HD_CharacterNPC,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterNPC.shadergraph
+HD_CharacterSkin,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_CharacterSkin.shadergraph
+HD_Fur,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_Fur.shadergraph
+HD_FurBase,Assets/_Resources/Arts/Shaders/HDRP/Character/HD_FurBase.shadergraph
+HeightMask,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Blending Masks/HeightMask.shadergraph
+HexGrid,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Procedural Noise and Shapes/HexGrid.shadergraph
+Hidden/ACosOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ACosOpNode.shader
+Hidden/ASESShaderSelectorUnlit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Shaders/ASESShaderSelectorUnlit.shader
+Hidden/ASinOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ASinOpNode.shader
+Hidden/ATan2OpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ATan2OpNode.shader
+Hidden/ATanOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ATanOpNode.shader
+Hidden/A_KingsoftScene/URP_ComplexLitBakingImpostor,Assets/_Resources/Arts/Shaders/URP/Scene/URP_ComplexLitBakingImpostor.shader
+Hidden/A_KingsoftScene/URP_FoliageBakingBillboard,Assets/_Resources/Arts/Shaders/URP/Scene/URP_FoliageBakingBillBoard.shader
+Hidden/A_KingsoftScene/URP_GrassBakingBillboard,Assets/_Resources/Arts/Shaders/URP/Scene/URP_GrassBakingBillBoard.shader
+Hidden/A_KingsoftScene/URP_SpeedTree8BakingBillBoard,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8BakingBillBoard.shader
+Hidden/A_KingsoftScene/URP_SpeedTree8BakingImpostor,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8BakingImpostor.shader
+Hidden/A_KingsoftScene/URP_SpeedTree8BakingShadowOnly,Assets/_Resources/Arts/Shaders/URP/Scene/URP_SpeedTree8BakingShadowOnly.shader
+Hidden/AbsOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_AbsOpNode.shader
+Hidden/AllNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_AllNode.shader
+Hidden/Amplify Impostors/Octahedron Impostor,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/OctahedronImpostor.shader
+Hidden/Amplify Impostors/Octahedron Impostor URP,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/OctahedronImpostorURP.shader
+Hidden/Amplify Impostors/Spherical Impostor,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/SphericalImpostor.shader
+Hidden/Amplify Impostors/Spherical Impostor URP,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/SphericalImpostorURP.shader
+Hidden/AnyNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_AnyNode.shader
+Hidden/AppendNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_AppendNode.shader
+Hidden/BOXOPHOBIC/Atmospherics/Height Fog Global,Assets/Third/Atmospheric Height Fog/Core/Resources/Height Fog Global.shader
+Hidden/BakeDepth2,Assets/_Game/Scripts/Effect/Editor/Editor Default Resources/BakeDepth.shader
+Hidden/Baking URP,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/BakingURP.shader
+Hidden/BlendNormalsNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_BlendNormalsNode.shader
+Hidden/BlendOpsNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_BlendOpsNode.shader
+Hidden/BlitNoAlpha,Packages/com.unity.shadergraph/Editor/Resources/Shaders/BlitNoAlpha.shader
+Hidden/BreakToComponentsNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_BreakToComponentsNode.shader
+Hidden/Builtin_TerrainVisualization,Packages/com.unity.terrain-tools/Shaders/Visualization/Builtin/BLT_TerrainVisualization.shader
+Hidden/CeilOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_CeilOpNode.shader
+Hidden/Checkerboard,Packages/com.unity.shadergraph/Editor/Resources/Shaders/Checkerboard.shader
+Hidden/ClampOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ClampOpNode.shader
+Hidden/Clip,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Clip.shader
+Hidden/ClipPlanes,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ClipPlanes.shader
+Hidden/CloudsShadowShader,Assets/_Game/Scripts/Environment/EnvModule/Shadows/CloudsShadow/_Resources/CloudsShadowShader.shader
+Hidden/ColorNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ColorNode.shader
+Hidden/ColorSpaceDouble,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ColorSpaceDouble.shader
+Hidden/ComponentMaskNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ComponentMaskNode.shader
+Hidden/ComputeScreenPos,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ComputeScreenPos.shader
+Hidden/CopyAlpha,Packages/com.third.texelinspector/Editor/CopyAlpha.shader
+Hidden/CopyLight,Assets/Third/SSS4URP/SSSCore/CopyLight.shader
+Hidden/Core/DebugOccluder,Assets/Third/PrecomputeVisibility/RunTime/DynamicCulling/Compute/DebugOccluder.shader
+Hidden/Core/DebugOcclusionTest,Assets/Third/PrecomputeVisibility/RunTime/DynamicCulling/Compute/DebugOcclusionTest.shader
+Hidden/Core/FallbackError,Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/FallbackShader.shader
+Hidden/Core/LensFlareDataDrivenPreview,Packages/com.unity.render-pipelines.core/Editor/PostProcessing/LensFlareResource/LensFlareDataDrivenPreview.shader
+Hidden/CosOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_CosOpNode.shader
+Hidden/CosTime,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_CosTime.shader
+Hidden/CoshOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_CoshOpNode.shader
+Hidden/CrossProductOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_CrossProductOpNode.shader
+Hidden/DdxOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DdxOpNode.shader
+Hidden/DdyOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DdyOpNode.shader
+Hidden/Debug/PixelSpan,Assets/_Game/EditorTools/SceneLogicTool/Debug/PixelSpan.shader
+Hidden/DecodeDepthNormalNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DecodeDepthNormalNode.shader
+Hidden/DecodeFloatRGBAHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DecodeFloatRGBAHlpNode.shader
+Hidden/DecodeFloatRGHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DecodeFloatRGHlpNode.shader
+Hidden/DecodeLighmapHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DecodeLightmapHlpNode.shader
+Hidden/DecodeViewNormalStereoHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DecodeViewNormalStereoHlpNode.shader
+Hidden/DegreesOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DegreesOpNode.shader
+Hidden/DeltaTime,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DeltaTime.shader
+Hidden/DesaturateNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DesaturateNode.shader
+Hidden/DiffuseAndSpecularFromMetallicNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DiffuseAndSpecularFromMetallic.shader
+Hidden/DilateDepth,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/UpsampleDepth.shader
+Hidden/DistanceOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DistanceOpNode.shader
+Hidden/DotProductOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DotProductOpNode.shader
+Hidden/DynamicAppendNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_DynamicAppendNode.shader
+Hidden/EncodeFloatRGBAHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_EncodeFloatRGBAHlpNode.shader
+Hidden/EncodeFloatRGNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_EncodeFloatRGHlpNode.shader
+Hidden/EncodeViewNormalStereoHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_EncodeViewNormalStereoHlpNode.shader
+Hidden/Exp2OpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Exp2OpNode.shader
+Hidden/ExpOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ExpOpNode.shader
+Hidden/FWidthOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FWidthOpNode.shader
+Hidden/FaceVariableNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FaceVariableNode.shader
+Hidden/FastBlur,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/BlurOptimized/MobileBlurOpaque.shader
+Hidden/FloorOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FloorOpNode.shader
+Hidden/FmodOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FmodOpNode.shader
+Hidden/FogAndAmbientColors,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FogAndAmbientColors.shader
+Hidden/FogParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FogParams.shader
+Hidden/FractNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FractNode.shader
+Hidden/FresnelNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FresnelNode.shader
+Hidden/FullScreen/HD_CustomCopy,Assets/_ShellCode/Rendering/HDRP/CustomPass/Resources/HD_CustomCopy.shader
+Hidden/FunctionInputNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FunctionInputNode.shader
+Hidden/FunctionNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FunctionNode.shader
+Hidden/FunctionOutputNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_FunctionOutputNode.shader
+Hidden/Gaia/BaseOperation,Assets/Procedural Worlds/Gaia/Shaders/Unity/Standard Shaders/BaseOperation.shader
+Hidden/Gaia/CombineCollisionMasks,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/CombineCollisionMasks.shader
+Hidden/Gaia/CombineColorChannels,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_ChannelCombine.shader
+Hidden/Gaia/FilterDistanceMask,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterDistanceMask.shader
+Hidden/Gaia/FilterHeightMask,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterHeightMask.shader
+Hidden/Gaia/FilterImageMask,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterImageMask.shader
+Hidden/Gaia/FilterSlopeMask,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterSlopeMask.shader
+Hidden/Gaia/FlipY,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterFlipY.shader
+Hidden/Gaia/GrowShrink,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterGrowShrink.shader
+Hidden/Gaia/MixHeight,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterMixHeight.shader
+Hidden/Gaia/PackUnityTerrain,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/PackUnityTerrain.shader
+Hidden/Gaia/SmoothHeight,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/SmoothHeight.shader
+Hidden/Gaia/SpawnerPreview,Assets/Procedural Worlds/Gaia/Shaders/Unity/Standard Shaders/SpawnerPreview.shader
+Hidden/Gaia/StampPreview,Assets/Procedural Worlds/Gaia/Shaders/Unity/Standard Shaders/StampPreview.shader
+Hidden/Gaia/TerrainTools/Noise/NoiseBlit/NoiseBlitFbm,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/Generated/NoiseBlitFBM.shader
+Hidden/Gaia/TerrainTools/Noise/NoiseBlit/NoiseBlitNone,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/Generated/NoiseBlitNone.shader
+Hidden/Gaia/TerrainTools/Noise/Preview,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/NoiseLib/Preview.shader
+Hidden/Gaia/TerrainTools/NoiseFill/NoiseFillFbm,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/Generated/NoiseFillFbm.shader
+Hidden/Gaia/TerrainTools/NoiseFill/NoiseFillNone,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/Generated/NoiseFillNone.shader
+Hidden/Gaia/TerrainTools/NoiseLib/DefaultPreview,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/NoiseLib/NoisePreview.shader
+Hidden/Gaia/TreeCollisionMaskBaking,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/TreeCollisionMaskBaking.shader
+Hidden/Gaia/UnpackUnityTerrain,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/UnpackUnityTerrain.shader
+Hidden/GaiaPro/Contrast,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/Unity/Terrain Tools/Contrast.shader
+Hidden/GaiaPro/HeightTransform,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterHeightTransform.shader
+Hidden/GaiaPro/PowerOf,Assets/Procedural Worlds/Gaia/Shaders/Unity/Terrain Tools/PowerOf.shader
+Hidden/GaiaPro/SharpenRidges,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/Unity/Terrain Tools/SharpenRidges.shader
+Hidden/GaiaPro/SimpleHeightBlend,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/Unity/Terrain Tools/SimpleHeightBlend.shader
+Hidden/GaiaPro/StrengthTransform,Assets/Procedural Worlds/Gaia/Shaders/Terrain Operations/FilterStrengthTransform.shader
+Hidden/GaiaPro/Terrace,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/Unity/Terrain Tools/Terrace.shader
+Hidden/GammaToLinearNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_GammaToLinearNode.shader
+Hidden/GetDepth,Assets/Editor/UwaProjScan_3.1.8/ArtCheckUtils/Depth.shader
+Hidden/GetLocalVarNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_GetLocalVarNode.shader
+Hidden/GlobalFog,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/ImageEffect/GlobalFog.shader
+Hidden/GradientSample,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_GradientSample.shader
+Hidden/GrayscaleNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_GrayscaleNode.shader
+Hidden/HDRP/DrawDiffusionProfile,Packages/com.unity.render-pipelines.universal/Runtime/SubsurfaceScattering/Shader/DrawDiffusionProfile.shader
+Hidden/HDRP/UI_Compositing,Assets/_ShellCode/Rendering/HDRP/CameraStacking/Resources/HDRP UI Compositing.shader
+Hidden/HDRP/VolumetricCloudsCombine,Assets/Third/VolumetricClouds/Runtime/Lighting/VolumetricLighting/VolumetricCloudsCombine.shader
+Hidden/HSVToRGBNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_HSVToRGBNode.shader
+Hidden/HeightMapTextureBlend,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_HeightMapTextureBlend.shader
+Hidden/Image/GaussianBlur,Assets/_Resources/Arts/Shaders/URP/UI/GaussianBlur.shader
+Hidden/Image/KawaseBlur,Assets/_Resources/Arts/Shaders/URP/UI/KawaseBlur.shader
+Hidden/ImageEffect/RadialBlur,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/ImageEffect/ImageEffectRadialBlur.shader
+Hidden/Impostor/Baking/URP/SpeedTree,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/Baking-URP-SpeedTree.shader
+Hidden/ImpostorDilate,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/ImpostorDilate.shader
+Hidden/Impostors/Baking/Bake,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/ImpostorBakeTemplate.shader
+Hidden/Impostors/Baking/Bake URP,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/ImpostorBakeTemplateURP.shader
+Hidden/Impostors/Lit,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/AmplifyImpostorsTemplate.shader
+Hidden/Impostors/Lit URP,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Runtime/AmplifyImpostorsTemplateURP.shader
+Hidden/IndirectDiffuseLight,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_IndirectDiffuseLight.shader
+Hidden/IndirectSpecularLight,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_IndirectSpecularLight.shader
+Hidden/InstanceIDNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_InstanceIDNode.shader
+Hidden/IntNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_IntNode.shader
+Hidden/Internal-SpriteDepthNormalsTexture,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/SpriteDepthNormalsTexture.shader
+Hidden/JXSJEnv/Shift,Assets/_Game/Scripts/Environment/EnvModule/Interaction/_Resources/Shaders/ShiftRT.shader
+Hidden/KriptoFX/KWS/AnisotropicFiltering,Assets/Third/WaterSystem/Shaders/KWS_AnisotropicFiltering.shader
+Hidden/KriptoFX/KWS/BlurBilateral,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_BlurBilateral.shader
+Hidden/KriptoFX/KWS/BlurGaussian,Assets/Third/WaterSystem/Shaders/KWS_BlurGaussian.shader
+Hidden/KriptoFX/KWS/CausticDecal,Assets/Third/WaterSystem/Shaders/KWS_CausticDecal.shader
+Hidden/KriptoFX/KWS/CausticPass,Assets/Third/WaterSystem/Shaders/KWS_CausticPass.shader
+Hidden/KriptoFX/KWS/Caustic_Pass,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/Common/CommandPass/KWS_Caustic_Pass.shader
+Hidden/KriptoFX/KWS/ClipMask,Assets/Third/WaterSystem/Shaders/KWS_VolumeMask.shader
+Hidden/KriptoFX/KWS/CopyDepthTexture,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_CopyDepthTexture.shader
+Hidden/KriptoFX/KWS/DrawToDepth,Assets/Third/WaterSystem/Shaders/KWS_DrawToDepth.shader
+Hidden/KriptoFX/KWS/DynamicWaves,Assets/Third/WaterSystem/Shaders/KWS_DynamicWaves.shader
+Hidden/KriptoFX/KWS/FFT_ToHeightMap,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_FFT_ToHeightMap.shader
+Hidden/KriptoFX/KWS/FlowMapEdit,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/Common/Editor/KWS_FlowMapEdit.shader
+Hidden/KriptoFX/KWS/FluidSimulation,Assets/Third/WaterSystem/Shaders/KWS_FluidSimulation.shader
+Hidden/KriptoFX/KWS/FoamParticles,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_FoamParticles.shader
+Hidden/KriptoFX/KWS/FoamParticlesShadow,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_FoamParticlesShadow.shader
+Hidden/KriptoFX/KWS/KWS_BuoyancyPass_FftToHeight,Assets/Third/WaterSystem/Shaders/KWS_BuoyancyPass_FftToHeight.shader
+Hidden/KriptoFX/KWS/MaskDepthNormal,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_MaskDepthNormal.shader
+Hidden/KriptoFX/KWS/SSR,Assets/Third/WaterSystem/Shaders/KWS_SSR.shader
+Hidden/KriptoFX/KWS/ShorelineFoamDrawToScreen,Assets/Third/WaterSystem/Shaders/KWS_ShorelineFoamDrawToScreen.shader
+Hidden/KriptoFX/KWS/ShorelineWavePosition,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/Common/Editor/KWS_ShorelineWavePosition.shader
+Hidden/KriptoFX/KWS/ShorelineWaves,Assets/Third/WaterSystem/Shaders/KWS_ShorelineWaves.shader
+Hidden/KriptoFX/KWS/Underwater,Assets/Third/WaterSystem/Shaders/KWS_Underwater.shader
+Hidden/KriptoFX/KWS/UnderwaterBlurToScreenPass,Assets/Third/WaterSystem/Shaders/KWS_UnderwaterBlurToScreenPass.shader
+Hidden/KriptoFX/KWS/VolumetricLighting,Assets/Third/WaterSystem/Shaders/PlatformSpecific/KWS_VolumetricLighting.shader
+Hidden/KriptoFX/KWS/Water,Assets/Third/WaterSystem/Shaders/KWS_Water.shader
+Hidden/KriptoFX/KWS/WaterPrePass,Assets/Third/WaterSystem/Shaders/KWS_WaterPrePass.shader
+Hidden/KriptoFX/KWS/WaterTesselated,Assets/Third/WaterSystem/Shaders/KWS_WaterTesselated.shader
+Hidden/LODFadeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LODFadeNode.shader
+Hidden/LayeredBlendNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LayeredBlendNode.shader
+Hidden/Legacy/Lit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/Lit.shader
+Hidden/LengthOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LengthOpNode.shader
+Hidden/LerpOp,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LerpOp.shader
+Hidden/Light2D-Point,Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Point.shader
+Hidden/Light2D-Shape,Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Shape.shader
+Hidden/Light2D-Shape-Volumetric,Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Shape-Volumetric.shader
+Hidden/Light2d-Point-Volumetric,Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D-Point-Volumetric.shader
+Hidden/LightAttenuation,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LightAttenuation.shader
+Hidden/LightColorNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LightColorNode.shader
+Hidden/Lighting/ScreenSpacePlaneReflection,Assets/Third/WaterSystem/Shaders/ScreenSpacePlanarReflection.shader
+Hidden/LightmapCombiner,Assets/Bakery/AutoBake/Editor/LightmapCombiner.shader
+Hidden/LinearDepthNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LinearDepthNode.shader
+Hidden/LinearMaterial,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/LinearPreviews.shader
+Hidden/LinearToGammaNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LinearToGammaNode.shader
+Hidden/Log10OpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Log10OpNode.shader
+Hidden/Log2OpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Log2OpNode.shader
+Hidden/LogOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LogOpNode.shader
+Hidden/LookDev/Compositor,Packages/com.unity.render-pipelines.core/Editor/LookDev/Compositor.shader
+Hidden/LookDev/CubeToLatlong,Packages/com.unity.render-pipelines.core/Editor/LookDev/CubeToLatlong.shader
+Hidden/LuminanceNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_LuminanceNode.shader
+Hidden/Lux URP WindComposite,Assets/Third/LuxURPEssentials~/Scripts/Resources/Lux URP WindComposite.shader
+Hidden/Lux URP/Lit (Add Pass),Assets/Third/LuxURPEssentials~/Shaders/Terrain/Lux URP Terrain Add.shader
+Hidden/Lux URP/Terrain/Lit (Basemap Gen),Assets/Third/LuxURPEssentials~/Shaders/Terrain/Lux URP Terrain BaseMapGen.shader
+Hidden/Nature/Lux Tree Creator Bark Rendertex,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux TreeCreatorBarkRendertex.shader
+Hidden/Nature/Lux Tree Creator Leaves Rendertex,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux TreeCreatorLeavesRendertex.shader
+Hidden/NegateNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_NegateNode.shader
+Hidden/NodeMasking,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_NodeMasking.shader
+Hidden/NoiseGeneratorNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_NoiseGeneratorNode.shader
+Hidden/NormalPainter/BakeNormalMap,Packages/com.third.NormalPainterVertex/Editor/Runtime/Shaders/BakeNormalMap.shader
+Hidden/NormalPainter/BrushShape,Packages/com.third.NormalPainterVertex/Editor/Runtime/Shaders/BrushShape.shader
+Hidden/NormalPainter/Overlay,Packages/com.third.NormalPainterVertex/Editor/Runtime/Shaders/Overlay.shader
+Hidden/NormalPainter/Visualizer,Packages/com.third.NormalPainterVertex/Editor/Runtime/Shaders/Visualizer.shader
+Hidden/NormalVertexDataNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_NormalVertexDataNode.shader
+Hidden/NormalizeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_NormalizeNode.shader
+Hidden/ObjSpaceLightDirHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjSpaceLightDirHlpNode.shader
+Hidden/ObjSpaceViewDirHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjSpaceViewDirHlpNode.shader
+Hidden/ObjectScaleNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjectScaleNode.shader
+Hidden/ObjectToClipPos,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjectToClipPos.shader
+Hidden/ObjectToViewPos,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjectToViewPos.shader
+Hidden/ObjectToWorldTransfNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ObjectToWorldTransfNode.shader
+Hidden/OneMinusNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_OneMinusNode.shader
+Hidden/OrthoParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_OrthoParams.shader
+Hidden/Overdraw-Opaque,Assets/Editor/UwaProjScan_3.1.8/UwaProjScanUrpSupport/Overdraw-Opaque.shader
+Hidden/Overdraw-Transparent,Assets/Editor/UwaProjScan_3.1.8/UwaProjScanUrpSupport/Overdraw-Transparent.shader
+Hidden/PannerNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PannerNode.shader
+Hidden/ParallaxMappingNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ParallaxMappingNode.shader
+Hidden/ParallaxOffset,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ParallaxOffset.shader
+Hidden/PiNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PiNode.shader
+Hidden/Polybrush/Overlay,Packages/com.unity.polybrush/Content/Shader/Hidden/Overlay.shader
+Hidden/Polybrush/VertexBillboard,Packages/com.unity.polybrush/Content/Shader/Hidden/VertexBillboard.shader
+Hidden/PosVertexDataNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PosVertexDataNode.shader
+Hidden/PosterizeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PosterizeNode.shader
+Hidden/PowerNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PowerNode.shader
+Hidden/PreviewT4M,Assets/Third/T4M/PreviewT4M.shader
+Hidden/Preview_ConditionalIfNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ConditionalIfNode.shader
+Hidden/PrimitiveIDVariableNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_PrimitiveIDVariableNode.shader
+Hidden/ProBuilder/FaceHighlight,Assets/Third/ProCore~/ProBuilder/Shader/pb_FaceHighlight.shader
+Hidden/ProBuilder/FacePicker,Assets/Third/ProCore~/ProBuilder/Shader/pb_FacePicker.shader
+Hidden/ProBuilder/HideVertices,Assets/Third/ProCore~/ProBuilder/Shader/pb_HideVertices.shader
+Hidden/ProBuilder/NormalPreview,Assets/Third/ProCore~/ProBuilder/Shader/pb_NormalPreview.shader
+Hidden/ProBuilder/ScrollHighlight,Assets/Third/ProCore~/ProBuilder/Shader/pb_ScrollHighlight.shader
+Hidden/ProBuilder/SelectionPicker,Assets/Third/ProCore~/ProBuilder/Shader/pb_SelectionPicker.shader
+Hidden/ProBuilder/SmoothingPreview,Assets/Third/ProCore~/ProBuilder/Shader/pb_SmoothingPreview.shader
+Hidden/ProBuilder/VertexPicker,Assets/Third/ProCore~/ProBuilder/Shader/pb_VertexPicker.shader
+Hidden/ProBuilder/pb_TransparentOverlay,Assets/Third/ProCore~/ProBuilder/Shader/pb_TransparentOverlay.shader
+Hidden/ProBuilder/pb_VertexShader,Assets/Third/ProCore~/ProBuilder/Shader/pb_VertexShader.shader
+Hidden/ProbeVolume/VoxelizeScene,Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VoxelizeScene.shader
+Hidden/ProfilePass,Assets/Third/SSS4URP/SSSCore/ProfilePass.shader
+Hidden/ProjectionParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ProjectionParams.shader
+Hidden/RGBToHSVNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RGBToHSVNode.shader
+Hidden/RSqrtOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RsqrtOpNode.shader
+Hidden/RadiansOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RadiansOpNode.shader
+Hidden/RangedFloatNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RangedFloatNode.shader
+Hidden/RcasFinalBlit_URP,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/XeSS/Plugins/Resources/XeSS/RcasFinalBlit_URP.shader
+Hidden/ReciprocalNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ReciprocalNode.shader
+Hidden/ReflectOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ReflectOpNode.shader
+Hidden/ReformSim/Droplet,Assets/Third/RaindropEffect/Shaders/Droplet.shader
+Hidden/ReformSim/GaussianBlur,Assets/Third/RaindropEffect/Shaders/GaussianBlur.shader
+Hidden/ReformSim/GaussianBlur2022,Assets/Third/RaindropEffect/Shaders/GaussianBlur2022.shader
+Hidden/ReformSim/GlassFog,Assets/Third/RaindropEffect/Shaders/GlassFog.shader
+Hidden/ReformSim/RaindropEffect,Assets/Third/RaindropEffect/Shaders/RaindropEffect.shader
+Hidden/ReformSim/RaindropEffect2022,Assets/Third/RaindropEffect/Shaders/RaindropEffect2022.shader
+Hidden/ReformSim/SeparableBlur,Assets/Third/RaindropEffect/Shaders/SeparableBlur.shader
+Hidden/ReformSim/Wiper,Assets/Third/RaindropEffect/Shaders/Wiper.shader
+Hidden/ReformSim/Wiping,Assets/Third/RaindropEffect/Shaders/Wiping.shader
+Hidden/RefractOpVec,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RefractOpVec.shader
+Hidden/RegisterLocalVarNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RegisterLocalVarNode.shader
+Hidden/RelayNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RelayNode.shader
+Hidden/RotatorNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RotatorNode.shader
+Hidden/RoundOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_RoundOpNode.shader
+Hidden/SGSR_BlitShader,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/SGSR1_BlitShader.shader
+Hidden/SGSR_BlitShader_Low,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/SGSR1_BlitShaderLow.shader
+Hidden/SSS_Blur,Assets/Third/SSS4URP/SSSCore/SSS_Blur.shader
+Hidden/SamplerNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SamplerNode.shader
+Hidden/SaturateNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SaturateNode.shader
+Hidden/ScaleAndOffsetNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ScaleAndOffsetNode.shader
+Hidden/ScaleNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ScaleNode.shader
+Hidden/ScreenParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ScreenParams.shader
+Hidden/ScreenPosInputsNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ScreenPosInputsNode.shader
+Hidden/ShadeVertexLights,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ShadeVertexLights.shader
+Hidden/Shader Graph/FallbackError,Packages/com.unity.shadergraph/Editor/Resources/Shaders/FallbackError.shader
+Hidden/ShaderPacker,Assets/Third/AmplifyImpostors/Plugins/EditorResources/Shaders/Baking/ShaderPacker.shader
+Hidden/Shadow2DShadowSprite,Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Sprite.shader
+Hidden/Shadow2DUnshadowGeometry,Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Geometry.shader
+Hidden/Shadow2DUnshadowSprite,Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Sprite.shader
+Hidden/ShadowProjected2D,Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Projected.shader
+Hidden/SignOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SignOpNode.shader
+Hidden/SimpleAddOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleAddOpNode.shader
+Hidden/SimpleContrastNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleContrastNode.shader
+Hidden/SimpleDivideOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleDivideOpNode.shader
+Hidden/SimpleMaxOp,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleMaxOp.shader
+Hidden/SimpleMinNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleMinNode.shader
+Hidden/SimpleMultiplyOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleMultiplyOpNode.shader
+Hidden/SimpleRemainderNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleRemainderNode.shader
+Hidden/SimpleSubtractOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleSubtractOpNode.shader
+Hidden/SimpleTimeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimpleTimeNode.shader
+Hidden/SimplifiedFModOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SimplifiedFModOpNode.shader
+Hidden/SinOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SinOpNode.shader
+Hidden/SinTimeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SinTimeNode.shader
+Hidden/SinhOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SinhOpNode.shader
+Hidden/SmoothstepOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SmoothstepOpNode.shader
+Hidden/Spine/Bones,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Utility/Hidden-Spine-Bones.shader
+Hidden/Sprite-CameraDepthNormalsTexture,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/CameraDepthNormalsTexture.shader
+Hidden/Sprite-CameraDepthTexture,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/CameraDepthTexture.shader
+Hidden/Sprite-CameraNormalsTexture,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/CameraNormalsTexture.shader
+Hidden/SqrtOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SqrtOpNode.shader
+Hidden/StaticSwitchNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_StaticSwitchNode.shader
+Hidden/StepOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_StepOpNode.shader
+Hidden/SummedBlendNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SummedBlendNode.shader
+Hidden/SwitchByFaceNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SwitchByFaceNode.shader
+Hidden/SwitchBySRPVersion,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SwitchBySRPVersionNode.shader
+Hidden/SwitchNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SwitchNode.shader
+Hidden/SwizzleNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_SwizzleNode.shader
+Hidden/TFHCCompareEqual,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Compare.shader
+Hidden/TFHCCompareGreater,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareGreater.shader
+Hidden/TFHCCompareGreaterEqual,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareGreaterEqual.shader
+Hidden/TFHCCompareLess,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareLessNode.shader
+Hidden/TFHCCompareLessEqual,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareLowerEqual.shader
+Hidden/TFHCCompareNotEqual,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareNotEqual.shader
+Hidden/TFHCCompareWithRange,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCCompareWithRange.shader
+Hidden/TFHCFlipBookUVAnimation,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCFlipBookUVAnimation.shader
+Hidden/TFHCIf,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCIf.shader
+Hidden/TFHCPixelateUV,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCPixelateUV.shader
+Hidden/TFHCRemap,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TFHCRemap.shader
+Hidden/TMP/Internal/Editor/Distance Field SSD,Packages/com.unity.textmeshpro/Editor Resources/Shaders/TMP_SDF Internal Editor.shader
+Hidden/TMatrix/TextureTool/ClearNonNormalData,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/ClearNonNormalData.shader
+Hidden/TMatrix/TextureTool/HeightFromNormal,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/HeightFromNormal.shader
+Hidden/TMatrix/TextureTool/MergeInChannel,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/MergeInChannel.shader
+Hidden/TMatrix/TextureTool/NormalSAOFromDiffuse,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/NormalSAOFromDiffuse.shader
+Hidden/TMatrix/TextureTool/NormalSAOFromHeight,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/NormalSAOFromHeight.shader
+Hidden/TMatrix/TextureTool/NormalSAOFromNormal,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/NormalSAOFromNormal.shader
+Hidden/TMatrix/TextureTool/PackedNormalAOMode,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/PackedNormalAOMode.shader
+Hidden/TMatrix/TextureTool/PackedNormalMetalAOMode,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/PackedNormalMetalAOMode.shader
+Hidden/TMatrix/TextureTool/PackedNormalMetalMode,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/PackedNormalMetalMode.shader
+Hidden/TMatrix/TextureTool/UnpackNormalMap,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/TextureTool/Editor/Shader/UnpackNormalMap.shader
+Hidden/TND/Upscaling/AutoReactive,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/Common/TND_AutoReactive.shader
+Hidden/TND/Upscaling/Blit,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/Common/TND_Blit.shader
+Hidden/TND/Upscaling/FallbackUpscale,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/Common/TND_FallbackUpscale.shader
+Hidden/TND/Upscaling/MergeReactive,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/Common/TND_MergeReactive.shader
+Hidden/TND/Upscaling/Sharpen,Packages/com.unity.render-pipelines.universal/Runtime/Upsacling/SGSR/Resources/Common/TND_Sharpen.shader
+Hidden/TanOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TanOpNode.shader
+Hidden/TangentVertexDataNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TangentSignVertexDataNode.shader
+Hidden/TanhOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TanhOpNode.shader
+Hidden/TauNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TauNode.shader
+Hidden/TemplateShaderProperty,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TemplateShaderProperty.shader
+Hidden/Templates/CustomRTInit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/CustomRT/CustomRTInit.shader
+Hidden/Templates/CustomRTUpdate,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/CustomRT/CustomRTUpdate.shader
+Hidden/Templates/Legacy/Multi Pass Unlit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/MultiPassUnlit.shader
+Hidden/Templates/Legacy/Particles Alpha Blended,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/Particle Alpha Blend.shader
+Hidden/Templates/Legacy/PostProcess,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/PostProcess.shader
+Hidden/Templates/Legacy/Sprites Default,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/Sprites-Default.shader
+Hidden/Templates/Legacy/UnlitLightmap,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/UnlitLightmap.shader
+Hidden/Templates/PostProcessStack,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/PPStack.shader
+Hidden/Templates/UI-Default,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/UI/UI-Default.shader
+Hidden/Templates/Unlit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/Legacy/Unlit.shader
+Hidden/TerrainEngine/CameraFacingBillboardTree,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/CameraFacingBillboardTree.shader
+Hidden/TerrainEngine/DetailScatter,Packages/com.unity.terrain-tools/Shaders/DetailScatter.shader
+Hidden/TerrainEngine/Details/UniversalPipeline/BillboardWavingDoublePass,Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassBillboard.shader
+Hidden/TerrainEngine/Details/UniversalPipeline/Vertexlit,Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainDetailLit.shader
+Hidden/TerrainEngine/Details/UniversalPipeline/WavingDoublePass,Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrass.shader
+Hidden/TerrainEngine/PaintHeightTool,Packages/com.unity.terrain-tools/Shaders/PaintHeight.shader
+Hidden/TerrainEngine/PaintMaterialBrushPreview,Packages/com.unity.terrain-tools/Shaders/PaintMaterialBrushPreview.shader
+Hidden/TerrainTools/BlendModes,Packages/com.unity.terrain-tools/Editor/TerrainTools/FilterStack/Shaders/BlendModes.shader
+Hidden/TerrainTools/Blur,Packages/com.unity.terrain-tools/Editor/TerrainTools/FilterStack/Shaders/Blur.shader
+Hidden/TerrainTools/BrushPreview,Packages/com.unity.terrain-tools/Shaders/BrushPreview.shader
+Hidden/TerrainTools/CloneBrush,Packages/com.unity.terrain-tools/Shaders/CloneBrush.shader
+Hidden/TerrainTools/ContrastTool,Packages/com.unity.terrain-tools/Shaders/ContrastHeight.shader
+Hidden/TerrainTools/Filters,Packages/com.unity.terrain-tools/Editor/TerrainTools/FilterStack/Shaders/Filters.shader
+Hidden/TerrainTools/HeightBlit,Packages/com.unity.terrain-tools/Shaders/TerrainToolHeightBlit.shader
+Hidden/TerrainTools/MeshUtility,Packages/com.unity.terrain-tools/Shaders/MeshUtility.shader
+Hidden/TerrainTools/Noise/NoiseBlit/NoiseBlitFbm,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseBlitFbm.shader
+Hidden/TerrainTools/Noise/NoiseBlit/NoiseBlitNone,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseBlitNone.shader
+Hidden/TerrainTools/Noise/NoiseBlit/NoiseBlitStrata,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseBlitStrata.shader
+Hidden/TerrainTools/Noise/Preview,Packages/com.unity.terrain-tools/Shaders/NoiseLib/Preview.shader
+Hidden/TerrainTools/NoiseFill,Packages/com.unity.terrain-tools/Shaders/NoiseFill.shader
+Hidden/TerrainTools/NoiseFill/NoiseFillFbm,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseFillFbm.shader
+Hidden/TerrainTools/NoiseFill/NoiseFillNone,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseFillNone.shader
+Hidden/TerrainTools/NoiseFill/NoiseFillStrata,Packages/com.unity.terrain-tools/Shaders/Generated/NoiseFillStrata.shader
+Hidden/TerrainTools/NoiseHeightTool,Packages/com.unity.terrain-tools/Shaders/NoiseHeightTool.shader
+Hidden/TerrainTools/NoiseLib/DefaultPreview,Packages/com.unity.terrain-tools/Shaders/NoiseLib/NoisePreview.shader
+Hidden/TerrainTools/PaintAspect,Packages/com.unity.terrain-tools/Shaders/PaintAspect.shader
+Hidden/TerrainTools/PaintConcavity,Packages/com.unity.terrain-tools/Shaders/PaintConcavity.shader
+Hidden/TerrainTools/PinchHeight,Packages/com.unity.terrain-tools/Shaders/PinchHeight.shader
+Hidden/TerrainTools/SedimentSplat,Packages/com.unity.terrain-tools/Shaders/SedimentSplat.shader
+Hidden/TerrainTools/SetExactHeight,Packages/com.unity.terrain-tools/Shaders/SetExactHeight.shader
+Hidden/TerrainTools/SharpenPeaks,Packages/com.unity.terrain-tools/Shaders/SharpenPeaks.shader
+Hidden/TerrainTools/SimpleHeightBlend,Packages/com.unity.terrain-tools/Shaders/SimpleHeightBlend.shader
+Hidden/TerrainTools/SlopeFlatten,Packages/com.unity.terrain-tools/Shaders/SlopeFlatten.shader
+Hidden/TerrainTools/SmoothHeight,Packages/com.unity.terrain-tools/Shaders/SmoothHeight.shader
+Hidden/TerrainTools/SmudgeHeight,Packages/com.unity.terrain-tools/Shaders/SmudgeHeight.shader
+Hidden/TerrainTools/TerraceErosion,Packages/com.unity.terrain-tools/Shaders/TerraceErosion.shader
+Hidden/TerrainTools/TexelValidityBlit,Packages/com.unity.terrain-tools/Shaders/TexelValidity.shader
+Hidden/TerrainTools/TwistHeight,Packages/com.unity.terrain-tools/Shaders/TwistHeight.shader
+Hidden/TexCoordVertexDataNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TexCoordVertexDataNode.shader
+Hidden/TexelSize,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TexelSize.shader
+Hidden/Texture2D,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Texture2D.shader
+Hidden/TextureArrayEditor,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/TextureArrayInspector.shader
+Hidden/TextureArrayNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TextureArrayNode.shader
+Hidden/TextureCoordinatesNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TextureCoordinatesNode.shader
+Hidden/TexturePropertyNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TexturePropertyNode.shader
+Hidden/TextureTool/ClearNonNormalData,Assets/_Game/EditorTools/TextureTool/Editor/Shader/ClearNonNormalData.shader
+Hidden/TextureTool/HeightFromNormal,Assets/_Game/EditorTools/TextureTool/Editor/Shader/HeightFromNormal.shader
+Hidden/TextureTool/MergeInChannel,Assets/_Game/EditorTools/TextureTool/Editor/Shader/MergeInChannel.shader
+Hidden/TextureTool/NormalSAOFromDiffuse,Assets/_Game/EditorTools/TextureTool/Editor/Shader/NormalSAOFromDiffuse.shader
+Hidden/TextureTool/NormalSAOFromHeight,Assets/_Game/EditorTools/TextureTool/Editor/Shader/NormalSAOFromHeight.shader
+Hidden/TextureTool/NormalSAOFromNormal,Assets/_Game/EditorTools/TextureTool/Editor/Shader/NormalSAOFromNormal.shader
+Hidden/TextureTool/PackedNormalAOMode,Assets/_Game/EditorTools/TextureTool/Editor/Shader/PackedNormalAOMode.shader
+Hidden/TextureTool/PackedNormalMetalAOMode,Assets/_Game/EditorTools/TextureTool/Editor/Shader/PackedNormalMetalAOMode.shader
+Hidden/TextureTool/PackedNormalMetalMode,Assets/_Game/EditorTools/TextureTool/Editor/Shader/PackedNormalMetalMode.shader
+Hidden/TextureTool/PackedTextureGenerate,Assets/_Game/EditorTools/TextureTool/Editor/Shader/PackedTextureGenerate.shader
+Hidden/TextureTool/UnpackNormalMap,Assets/_Game/EditorTools/TextureTool/Editor/Shader/UnpackNormalMap.shader
+Hidden/TextureTransform,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TextureTransform.shader
+Hidden/TimeNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TimeNode.shader
+Hidden/ToggleSwitchNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ToggleSwitchNode.shader
+Hidden/TriplanarNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TriplanarNode.shader
+Hidden/TruncOpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TruncOpNode.shader
+Hidden/TwoSidedSignNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_TwoSidedSignNode.shader
+Hidden/URP_AtmosphericScattering,Assets/_Game/Scripts/Environment/EnvModule/Sky/_Resources/Shaders/URP_AtmosphericScattering.shader
+Hidden/URP_LightShafts,Assets/_Game/Scripts/Environment/EnvModule/Sky/_Resources/Shaders/URP_LightShafts.shader
+Hidden/UnityFx/Outline,Packages/com.unityfx.outline/Runtime/Shaders/Outline.shader
+Hidden/UnityFx/Outline.URP,Packages/com.unityfx.outline.urp/Runtime/Shaders/Outline.URP.shader
+Hidden/UnityFx/OutlineColor,Packages/com.unityfx.outline/Runtime/Shaders/OutlineColor.shader
+Hidden/UnityFx/OutlineColor.URP,Packages/com.unityfx.outline.urp/Runtime/Shaders/OutlineColor.URP.shader
+Hidden/Universal Render Pipeline/AutoExposure,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/AutoExposure.shader
+Hidden/Universal Render Pipeline/BRGPicking,Packages/com.unity.render-pipelines.universal/Shaders/BRGPicking.shader
+Hidden/Universal Render Pipeline/Blit,Packages/com.unity.render-pipelines.universal/Shaders/Utils/Blit.shader
+Hidden/Universal Render Pipeline/Bloom,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader
+Hidden/Universal Render Pipeline/BokehDepthOfField,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/BokehDepthOfField.shader
+Hidden/Universal Render Pipeline/CameraMotionBlur,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/CameraMotionBlur.shader
+Hidden/Universal Render Pipeline/CameraMotionVectors,Packages/com.unity.render-pipelines.universal/Shaders/CameraMotionVectors.shader
+Hidden/Universal Render Pipeline/ClusterDeferred,Packages/com.unity.render-pipelines.universal/Shaders/Utils/ClusterDeferred.shader
+Hidden/Universal Render Pipeline/CopyDepth,Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader
+Hidden/Universal Render Pipeline/CubemapToLatlong,Assets/_Game/EditorTools/XSJArtEditorTools/SceneTools/JS4-OutputSpResourse/Shader/CubemapToLatlong.shader
+Hidden/Universal Render Pipeline/DBufferClear,Packages/com.unity.render-pipelines.universal/Runtime/Decal/DBuffer/DBufferClear.shader
+Hidden/Universal Render Pipeline/Debug/DebugReplacement,Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader
+Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader
+Hidden/Universal Render Pipeline/Editor/CurveBackground,Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/CurveBackground.shader
+Hidden/Universal Render Pipeline/Editor/Shadows Midtones Highlights Curve,Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/ShadowsMidtonesHighlightsCurves.shader
+Hidden/Universal Render Pipeline/Editor/Trackball,Packages/com.unity.render-pipelines.universal/Editor/Overrides/Shaders/TrackballEditor.shader
+Hidden/Universal Render Pipeline/FallbackError,Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+Hidden/Universal Render Pipeline/FallbackLoading,Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackLoading.shader
+Hidden/Universal Render Pipeline/FinalPost,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/FinalPost.shader
+Hidden/Universal Render Pipeline/GaussianDepthOfField,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/GaussianDepthOfField.shader
+Hidden/Universal Render Pipeline/HBAO,Assets/Third/HorizonBasedAmbientOcclusion/SRP/URP/Shaders/HBAO.shader
+Hidden/Universal Render Pipeline/LensFlareDataDriven,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareDataDriven.shader
+Hidden/Universal Render Pipeline/LutBuilderHdr,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderHdr.shader
+Hidden/Universal Render Pipeline/LutBuilderLdr,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderLdr.shader
+Hidden/Universal Render Pipeline/MaterialError,Packages/com.unity.render-pipelines.universal/Shaders/Utils/MaterialError.shader
+Hidden/Universal Render Pipeline/ObjectMotionVectors,Packages/com.unity.render-pipelines.universal/Shaders/ObjectMotionVectors.shader
+Hidden/Universal Render Pipeline/PaniniProjection,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/PaniniProjection.shader
+Hidden/Universal Render Pipeline/PreIntegratedFGD_Marschner,Packages/com.unity.render-pipelines.universal/Runtime/Material/PreIntegratedFGD/PreIntegratedFGD_Marschner.shader
+Hidden/Universal Render Pipeline/Sampling,Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader
+Hidden/Universal Render Pipeline/Scaling Setup,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/ScalingSetup.shader
+Hidden/Universal Render Pipeline/ScreenSpaceAmbientOcclusion,Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceAmbientOcclusion.shader
+Hidden/Universal Render Pipeline/ScreenSpaceShadows,Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceShadows.shader
+Hidden/Universal Render Pipeline/SpLutBuilder,Assets/_Game/EditorTools/XSJArtEditorTools/SceneTools/JS4-OutputSpResourse/Shader/SpLutBuilder.shader
+Hidden/Universal Render Pipeline/StencilDeferred,Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDeferred.shader
+Hidden/Universal Render Pipeline/Stop NaN,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader
+Hidden/Universal Render Pipeline/SubpixelMorphologicalAntialiasing,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader
+Hidden/Universal Render Pipeline/TJSR,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/TJSR.shader
+Hidden/Universal Render Pipeline/TemporalAA,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/TemporalAA.shader
+Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass),Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitAdd.shader
+Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass),Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitBase.shader
+Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen),Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitBasemapGen.shader
+Hidden/Universal Render Pipeline/UberPost,Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader
+Hidden/Universal Render Pipeline/XR/XRMirrorView,Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMirrorView.shader
+Hidden/Universal Render Pipeline/XR/XROcclusionMesh,Packages/com.unity.render-pipelines.universal/Shaders/XR/XROcclusionMesh.shader
+Hidden/Universal Render Pipeline/preIntegratedFGD_CharlieFabricLambert,Packages/com.unity.render-pipelines.universal/Runtime/Material/PreIntegratedFGD/preIntegratedFGD_CharlieFabricLambert.shader
+Hidden/Universal Render Pipeline/preIntegratedFGD_GGXDisneyDiffuse,Packages/com.unity.render-pipelines.universal/Runtime/Material/PreIntegratedFGD/preIntegratedFGD_GGXDisneyDiffuse.shader
+Hidden/Universal/2D Custom Lit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/2DCustomLit.shader
+Hidden/Universal/2D Lit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/2DLit.shader
+Hidden/Universal/2D Unlit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/2DUnlit.shader
+Hidden/Universal/Anisotropy,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/Anisotropy.shader
+Hidden/Universal/Blin_Phong,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/Blin_Phong.shader
+Hidden/Universal/BlitHDROverlay,Packages/com.unity.render-pipelines.universal/Shaders/Utils/BlitHDROverlay.shader
+Hidden/Universal/CharacterBlin_Phong,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/CharacterBlin_Phong.shader
+Hidden/Universal/CharacterPBR_Fog,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/CharacterPBR_Fog.shader
+Hidden/Universal/CoreBlit,Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader
+Hidden/Universal/CoreBlitColorAndDepth,Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlitColorAndDepth.shader
+Hidden/Universal/CustomLighting,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/CustomLighting.shader
+Hidden/Universal/Decal,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/Decal.shader
+Hidden/Universal/HDRDebugView,Packages/com.unity.render-pipelines.universal/Shaders/Debug/HDRDebugView.shader
+Hidden/Universal/Lit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/Lit.shader
+Hidden/Universal/PBR,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR.shader
+Hidden/Universal/PBR_Boss,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_Boss.shader
+Hidden/Universal/PBR_Cloth,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_Cloth.shader
+Hidden/Universal/PBR_SSS,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_SSS.shader
+Hidden/Universal/PBR_Silk,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_Silk.shader
+Hidden/Universal/PBR_Silk_Sparkle,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_Silk_Sparkle.shader
+Hidden/Universal/PBR_Silk_Sparkle_V1,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Templates/PBR_Silk_Sparkle_V1.shader
+Hidden/Universal/Unlit,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Templates/URP/Unlit.shader
+Hidden/UnlitTransparentColored,Packages/com.unity.render-pipelines.core/Editor/Gizmo/UnlitGizmo.shader
+Hidden/UnpackScaleNormalNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_UnpackScaleNormalNode.shader
+Hidden/UvColor,Assets/Editor/UwaProjScan_3.1.8/ArtCheckUtils/UvColor.shader
+Hidden/UvUnwrap,Assets/Editor/UwaProjScan_3.1.8/ArtCheckUtils/UvUnwrap.shader
+Hidden/VFX/Empty,Packages/com.unity.visualeffectgraph/Shaders/Empty.shader
+Hidden/VFX/GradientBorder,Packages/com.unity.visualeffectgraph/Editor/UIResources/shader/GradientBorder.shader
+Hidden/VFX/GradientDashedBorder,Packages/com.unity.visualeffectgraph/Editor/UIResources/shader/GradientDashedBorder.shader
+Hidden/VFX/SystemInfo,Packages/com.unity.visualeffectgraph/Editor/UIResources/shader/SystemInfo.shader
+Hidden/VFX/TimeBar,Packages/com.unity.visualeffectgraph/Editor/UIResources/shader/TimeBar.shader
+Hidden/VacuumShaders/Fallback/Unlit,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Fallback/Unlit.shader
+Hidden/VacuumShaders/Fallback/VertexLit,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Fallback/VertexLit.shader
+Hidden/VacuumShaders/Terrain To Mesh/Basemap,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Basemap/Basemap.shader
+Hidden/Vector2Node,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Vector2Node.shader
+Hidden/Vector3Node,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Vector3Node.shader
+Hidden/Vector4Node,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_Vector4Node.shader
+Hidden/VertexBinormalNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_VertexBinormalNode.shader
+Hidden/VertexColorNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_VertexColorNode.shader
+Hidden/VertexIdVariableNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_VertexIdVariableNode.shader
+Hidden/VertexTangentNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_VertexTangentNode.shader
+Hidden/Viewer _SSS_Blur,Assets/Third/SSS4URP/BufferViewer/Viewer_SSS_Blur.shader
+Hidden/Viewer _SSS_LightPass,Assets/Third/SSS4URP/BufferViewer/Viewer_SSS_LightPass.shader
+Hidden/Viewer _SSS_ProfilePass,Assets/Third/SSS4URP/BufferViewer/Viewer_SSS_ProfilePass.shader
+Hidden/VolumetricFog2/Blur,Assets/Third/VolumetricFog2/Resources/Shaders/Blur.shader
+Hidden/VolumetricFog2/DepthOnly,Assets/Third/VolumetricFog2/Resources/Shaders/DepthOnly.shader
+Hidden/VolumetricFog2/DistantFog,Assets/Third/VolumetricFog2/Resources/Shaders/DistantFog.shader
+Hidden/VolumetricFog2/Empty,Assets/Third/VolumetricFog2/Resources/Shaders/Empty.shader
+Hidden/VolumetricFog2/FoWBlur,Assets/Third/VolumetricFog2/Resources/Shaders/FogOfWarBlur.shader
+Hidden/VolumetricFog2/Noise2DGen,Assets/Third/VolumetricFog2/Resources/Shaders/Noise2DGen.shader
+Hidden/VolumetricFog2/Turbulence2D,Assets/Third/VolumetricFog2/Resources/Shaders/Turbulence2D.shader
+Hidden/VolumetricFog2/VolumeDebug,Assets/Third/VolumetricFog2/Resources/Shaders/VolumetricFogDebug.shader
+Hidden/VoronoiNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_VoronoiNode.shader
+Hidden/VoxelizeShader,Packages/com.unity.visualeffectgraph/Shaders/SDFBaker/RayMapVoxelize.shader
+Hidden/WaterSystem/SimpleWater,Assets/Third/WaterSystem/Shaders/SimpleWater/SimpleWater.shader
+Hidden/WeightedBlendNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WeightedBlendNode.shader
+Hidden/WindComposite,Assets/_Game/Scripts/Environment/EnvModule/Wind/Shaders/WindComposite.shader
+Hidden/WindVisualizationX,Assets/_Game/Scripts/Environment/EnvModule/Wind/Shaders/WindViz.shader
+Hidden/WireNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WireNode.shader
+Hidden/WorldNormalVector,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldNormalVector.shader
+Hidden/WorldPosInputsNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ViewDirInputsCoordNode.shader
+Hidden/WorldReflectionVector,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldReflectionVector.shader
+Hidden/WorldSpaceCameraPos,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldSpaceCameraPos.shader
+Hidden/WorldSpaceLightDirHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldSpaceLightDirHlpNode.shader
+Hidden/WorldSpaceLightPosNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldSpaceLightPosNode.shader
+Hidden/WorldSpaceViewDirHlpNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldSpaceViewDirHlpNode.shader
+Hidden/WorldTexelDensity,Packages/com.third.texelinspector/Editor/WorldTexelDensity.shader
+Hidden/WorldToObjectTransfNode,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldToObjectTransfNode.shader
+Hidden/WorldTransformParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_WorldTransformParams.shader
+Hidden/ZBufferParams,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Previews/Preview_ZBufferParams.shader
+Hidden/ftAtlas,Assets/Editor/x64/Bakery/ftAtlas.shader
+Hidden/ftBlack,Assets/Bakery/ftBlack.shader
+Hidden/ftChecker,Assets/Editor/x64/Bakery/ftChecker.shader
+Hidden/ftCubemap2Strip,Assets/Bakery/ftCubemap2Strip.shader
+Hidden/ftCubemap2StripExport,Assets/Bakery/ftCubemap2StripExport.shader
+Hidden/ftDilate,Assets/Bakery/ftDilate.shader
+Hidden/ftFarSphere,Assets/Bakery/ftFarSphere.shader
+Hidden/ftFarSphereDilate,Assets/Bakery/ftFarSphereDilate.shader
+Hidden/ftFarSphereProjClip,Assets/Bakery/ftFarSphereProjClip.shader
+Hidden/ftFarSphereRender,Assets/Bakery/ftFarSphereRender.shader
+Hidden/ftFarSphereRenderOccluder,Assets/Bakery/ftFarSphereRenderOccluder.shader
+Hidden/ftMultiply,Assets/Bakery/ftMultiply.shader
+Hidden/ftOverlapTest,Assets/Bakery/ftOverlapTest.shader
+Hidden/ftProjection,Assets/Editor/x64/Bakery/ftProjection.shader
+Hidden/ftRGBM2Half,Assets/Bakery/ftRGBM2Half.shader
+Hidden/ftUVNormalMap,Assets/Bakery/ftUVNormalMap.shader
+Hidden/ftUnlitTerrain,Assets/Bakery/ftUnlitTerrain.shader
+Hidden/ftUnlitTerrainOpaque,Assets/Bakery/ftUnlitTerrainOpaque.shader
+Hidden/ftVolumePreview,Assets/Editor/x64/Bakery/ftVolumePreview.shader
+Hidden/nTools/UvInspector/Simple,Packages/com.third.uvinspector/UVInspector/Shaders/Simple.shader
+Hidden/nTools/UvInspector/UvPreview,Packages/com.third.uvinspector/UVInspector/Shaders/UvPreview.shader
+Hue,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/Hue.shadergraph
+IceShader,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Ice/IceShader.shadergraph
+Impostors/Examples/ColorByPosition,Assets/Third/AmplifyImpostors/Examples/Assets/Misc/ColorByPosition.shader
+Impostors/Examples/StandardCrossfade,Assets/Third/AmplifyImpostors/Examples/Assets/Misc/StandardCrossfade.shader
+InfiniteUnderwateSuspendedParticles,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/InfiniteUnderwateSuspendedParticles.shadergraph
+InfiniteUnderwaterBubbles,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/InfiniteUnderwaterBubbles.shadergraph
+InfiniteUnderwaterLitParticles,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/InfiniteUnderwaterLitParticles.shadergraph
+InteriorCubemapping,Packages/com.unity.shadergraph/Samples~/FeatureExamples/UV Projection/InteriorCubemapping/InteriorCubemapping.shadergraph
+InverseLerp,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/InverseLerp.shadergraph
+InvertColors,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/InvertColors.shadergraph
+IsFrontFace,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/IsFrontFace.shadergraph
+IsInfinite,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/IsInfinite.shadergraph
+IsNaN,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/IsNaN.shadergraph
+JS4Character/JS4_CharacterAccessories,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterAccessories.shader
+JS4Character/JS4_CharacterEye,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterEye.shader
+JS4Character/JS4_CharacterEye_Combine,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterEye_Combine.shader
+JS4Character/JS4_CharacterEye_Simple,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterEye_Simple.shader
+JS4Character/JS4_CharacterEyelash,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterEyelash.shader
+JS4Character/JS4_CharacterFabric,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterFabric.shader
+JS4Character/JS4_CharacterFabric_Phone,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterFabric_Phone.shader
+JS4Character/JS4_CharacterFace_Combine,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterFace_Combine.shader
+JS4Character/JS4_CharacterFur,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterFur.shader
+JS4Character/JS4_CharacterFurBase,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterFurBase.shader
+JS4Character/JS4_CharacterHair,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterHair.shader
+JS4Character/JS4_CharacterHairOpaque,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterHairOpaque.shader
+JS4Character/JS4_CharacterHair_Phone,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterHair_Phone.shader
+JS4Character/JS4_CharacterLow,Assets/_Resources/Arts/Shaders/URP/Characters/JS4_CharacterLow.shader
+JS4Character/SSS_CharacterSkin,Assets/Third/SSS4URP/Modify/Shader/JS4_SSS_CharacterSkin.shader
+JS4Character/SSS_CharacterSkin_Simple,Assets/Third/SSS4URP/Modify/Shader/JS4_SSS_CharacterSkin_Simple.shader
+JS4_Effect/DecalShadow,Assets/_Resources/Arts/Shaders/URP/Effect/DecalShadow.shader
+JS4_Effect/DistortionGrabEffect,Assets/_Resources/Arts/Shaders/URP/Effect/DistortionGrabEffect.shader
+JS4_Effect/URP_Distortion,Assets/_Resources/Arts/Shaders/URP/Effect/URP_Distortion.shader
+JS4_Effect/URP_Outline,Assets/_Resources/Arts/Shaders/URP/Effect/URP_Outline.shader
+JS4_Effect/URP_ParticleStandard,Assets/_Resources/Arts/Shaders/URP/Effect/URP_ParticleStandard.shader
+JS4_Effect/URP_ParticleStandard_WithFog,Assets/_Resources/Arts/Shaders/URP/Effect/URP_ParticleStandard_WithFog.shader
+JS4_Effect/URP_Stencil,Assets/_Resources/Arts/Shaders/URP/Effect/URP_Stencil.shader
+JS4_Effect/URP_UIScreenDissolve,Assets/_Resources/Arts/Shaders/URP/Effect/URP_UIScreenDissolve.shader
+Kingsoft/Effect/Gaussblur,Assets/_ShellCode/Rendering/Effect/Resources/GaussBlur.shader
+Kingsoft/Effect/RadialBlur,Assets/_Resources/Arts/Shaders/URP/UI/RadialBlur.shader
+Kingsoft/FakeShadow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Shadow/FakeShadow.shader
+Kingsoft/MirrorReflection/Diffuse,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Mirror-Diffuse.shader
+Kingsoft/OnlyShadowReceiver,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Shadow/OnlyShadowReceive.shader
+Kingsoft/PostProcessing/GaussianDepthOfField,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/ReplaceShader/KingsoftGaussianDepthOfField.shader
+Kingsoft/Scene/HIZBuilder,Assets/_Resources/Arts/Shaders/HDRP/Scene/Compute/HIZBuilder_HD.shader
+Kingsoft/Water/WaterFlow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Water/WaterFlow.shader
+Kingsoft/Water/WaterHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Water/WaterHigh.shader
+Kingsoft/Water/WaterMedium,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Water/WaterMedium.shader
+Kingsoft/Water/WaterNew,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Water/WaterNew.shader
+KingsoftCharacter/CharacterAlphaHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterAlphaHigh.shader
+KingsoftCharacter/CharacterAlphaHighForBoss,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterAlphaHighForBoss.shader
+KingsoftCharacter/CharacterAlphaSilk,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterAlphaSilk.shader
+KingsoftCharacter/CharacterAlphaSilk_Sparkle,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterAlphaSilk_Sparkle.shader
+KingsoftCharacter/CharacterAlphaSilk_Sparkle_Test,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterAlphaSilk_Sparkle_Test.shader
+KingsoftCharacter/CharacterEmissionHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterEmissionHigh.shader
+KingsoftCharacter/CharacterHair,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterHair.shader
+KingsoftCharacter/CharacterHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterHigh.shader
+KingsoftCharacter/CharacterNPC,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterNPC.shader
+KingsoftCharacter/CharacterSilk,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterSilk.shader
+KingsoftCharacter/CharacterSkin,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterSkin.shader
+KingsoftCharacter/Face/CharacterEye,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterEye.shader
+KingsoftCharacter/Face/CharacterEyelash,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterEyelash.shader
+KingsoftCharacter/Face/CharacterFace,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterFace.shader
+KingsoftCharacter/Face/CharacterFaceLod,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterFaceLod.shader
+KingsoftCharacter/Low/CharacterFaceLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterFaceLow.shader
+KingsoftCharacter/Low/CharacterHairLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterHairLow.shader
+KingsoftCharacter/Low/CharacterLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterLow.shader
+KingsoftCharacter/Low/CharacterNPCLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CharacterNPCLow.shader
+KingsoftCharacter/Low/URP_CrystalLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_CrystalLow.shader
+KingsoftCharacter/URP_Crystal,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_Crystal.shader
+KingsoftCharacter/URP_Fur,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_Fur.shader
+KingsoftCharacter/URP_FurBase,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_FurBase.shader
+KingsoftCharacter/URP_FurWithPreDepth,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Character/URP_FurWithPreDepth.shader
+KingsoftScene/AnimFish,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/AnimFish.shader
+KingsoftScene/CollisionTransparent,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/CollisionTransparent.shader
+KingsoftScene/DynamicHeightMapRenderer,Assets/_Resources/Arts/Shaders/URP/Scene/Include/Common/DynamicHeightMapRenderer.shader
+KingsoftScene/Emissive,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/Emissive.shader
+KingsoftScene/EmissiveAlphaBlendEmission,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/EmissiveAlphaBlendEmission.shader
+KingsoftScene/EmissiveAlphaClip,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/EmissiveAlphaClip.shader
+KingsoftScene/FarMountain,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/FarMountain.shader
+KingsoftScene/Grass,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/Grass.shader
+KingsoftScene/OnlyMoveGrass,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/OnlyMoveGrass.shader
+KingsoftScene/SceneAlphaHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneAlphaHigh.shader
+KingsoftScene/SceneDecal,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneDecal.shader
+KingsoftScene/SceneEmission,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneEmission.shader
+KingsoftScene/SceneHigh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneHigh.shader
+KingsoftScene/SceneHighAlphaClip,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneHighAlphaClip.shader
+KingsoftScene/SceneHighWith2Layer,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneHighWith2Layer.shader
+KingsoftScene/SceneHighWith2LayerTerrainBlend,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneHighWith2LayerTerrainBlend.shader
+KingsoftScene/SceneHighWithTint,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneHighWithTint.shader
+KingsoftScene/SceneLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneLow.shader
+KingsoftScene/SceneTerrain,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneTerrain.shader
+KingsoftScene/SceneTerrainLow,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneTerrainLow.shader
+KingsoftScene/SceneTreeLeafs,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneTreeLeafs.shader
+KingsoftScene/SceneTreeTrunk,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SceneTree.shader
+KingsoftScene/ShadowMaskCapture,Assets/_Game/Scripts/IDSystemMgr/Editor/ShadowMaskCapture/ShadowMaskCapture.shader
+KingsoftScene/SkyProcedual,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/SkyProcedual.shader
+KingsoftScene/Skybox,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/Skybox.shader
+KingsoftScene/URP_Billboard,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Scene/URP_Billboard.shader
+KriptoFX/KWS/Water,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_Water.shader
+KriptoFX/KWS/WaterMask_DrawAlways,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Mask/WaterMask_DrawAlways.shader
+KriptoFX/KWS/WaterMask_Ignore,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Mask/WaterMask_Ignore.shader
+KriptoFX/KWS/WaterTesselated,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/KWS_WaterTesselated.shader
+KriptoFX/Water/ComputeNormal,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/Common/FFT/ComputeNormal.shader
+KriptoFX/Water/KW_WaterHoleMask,Assets/Third/WaterSystemHDRP~/WaterResources/Shaders/Resources/PlatformSpecific/Other/KW_WaterHoleMask.shader
+LatLongProjection,Packages/com.unity.shadergraph/Samples~/FeatureExamples/UV Projection/LatLongProjection/LatLongProjection.shadergraph
+Leaves_Wind,Assets/Third/WaterSystemHDRP~/Demo/_Resources/BookOfTheDead/WindLitShaderGraph/Leaves_Wind.shadergraph
+Leaves_Wind_Temp,Assets/_Resources/Arts/Shaders/HDRP/Scene/Temp/Leaves_Wind_Temp.shadergraph
+Length,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Length.shadergraph
+Lerp,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Lerp.shadergraph
+LightningVFXGraph,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/LightningVFXGraph.shadergraph
+Lit,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Decals/Lit.shadergraph
+Lit Texture Blend HDRP,Packages/com.unity.polybrush/Samples~/SamplesHDRP/Shader/Lit Texture Blend HDRP.ShaderGraph
+Lit Texture Blend URP,Packages/com.unity.polybrush/Samples~/SamplesUniversalRP/Shader/Lit Texture Blend URP.ShaderGraph
+Lit Vertex Color HDRP,Packages/com.unity.polybrush/Samples~/SamplesHDRP/Shader/Lit Vertex Color HDRP.ShaderGraph
+Lit Vertex Color URP,Packages/com.unity.polybrush/Samples~/SamplesUniversalRP/Shader/Lit Vertex Color URP.ShaderGraph
+LitWeather,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/LitWeather.shadergraph
+Lux AddiveBlending Fixed Fog,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux AddiveBlending Fixed Fog.shadergraph
+Lux Advanced Parallax,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Advanced Parallax.shadergraph
+Lux Charlie Sheen Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Charlie Sheen Graph.shadergraph
+Lux ClearCoat Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux ClearCoat Graph.shadergraph
+Lux Flat Shading,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Flat Shading.shadergraph
+Lux Flat Shading Deferred,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Flat Shading Deferred.shadergraph
+Lux GGX Anisotropic Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux GGX Anisotropic Graph.shadergraph
+Lux Hair,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Hair.shadergraph
+Lux Hair Blended,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Hair Blended.shadergraph
+Lux Improved Sampling,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Improved Sampling.shadergraph
+Lux Instanced Mesh Particles,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Instanced Mesh Particles.shadergraph
+Lux Procedural Texturing,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Procedural Texturing.shadergraph
+Lux Procedural Texturing Simple,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Procedural Texturing Simple.shadergraph
+Lux SRP Displacement/Simple Displacement,Assets/Third/LuxURPEssentials~/Lux SRP Grass Displacement/Shaders/Simple Displacement FX.shader
+Lux SRP Displacement/Simple Displacement Debug,Assets/Third/LuxURPEssentials~/Lux SRP Grass Displacement/Shaders/Simple Displacement FX Debug.shader
+Lux SRP Displacement/Simple Displacement Trail,Assets/Third/LuxURPEssentials~/Lux SRP Grass Displacement/Shaders/Simple Displacement Trail FX.shader
+Lux Simple Multiply,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Simple Multiply.shadergraph
+Lux Skin Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Skin Graph.shadergraph
+Lux Skin Graph Custom Normal Sampling,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Skin Graph Custom Normal Sampling.shadergraph
+Lux Skin Graph Metalness,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Skin Graph Metalness.shadergraph
+Lux Standard Lit Tonemapped Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Standard Lit Tonemapped Graph.shadergraph
+Lux Toon Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Toon Graph.shadergraph
+Lux Toon Graph Uncolored Shadows,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Toon Graph Uncolored Shadows.shadergraph
+Lux Toon Graph V2,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Toon Graph V2.shadergraph
+Lux TopDown Graph,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux TopDown Graph.shadergraph
+Lux Transmission Graph Candle,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Transmission Graph Candle.shadergraph
+Lux Transmission Graph Simple,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Transmission Graph Simple.shadergraph
+Lux Transparent Graph Simple,Assets/Third/LuxURPEssentials~/Shader Graphs/Lux Transparent Graph Simple.shadergraph
+Lux URP Animated Billboard,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux URP Animated Billboard.shadergraph
+Lux URP/Billboard,Assets/Third/LuxURPEssentials~/Shaders/Billboard/Lux URP Billboard.shader
+Lux URP/Clear Coat,Assets/Third/LuxURPEssentials~/Shaders/Clear Coat/Lux URP Clear Coat.shader
+Lux URP/Cloth,Assets/Third/LuxURPEssentials~/Shaders/Cloth/Lux URP Cloth.shader
+Lux URP/Cloth STL,Assets/Third/LuxURPEssentials~/Shaders/Cloth/Lux URP Cloth STL.shader
+Lux URP/Depth DepthNormal Only,Assets/Third/LuxURPEssentials~/Shaders/Depth Only/Lux URP Depth DepthNormal Only.shader
+Lux URP/Depth Only,Assets/Third/LuxURPEssentials~/Shaders/Depth Only/Lux URP Depth Only.shader
+Lux URP/Depth Only Lit,Assets/Third/LuxURPEssentials~/Shaders/Depth Only/Lux URP Depth Only Lit.shader
+Lux URP/FX/Box Volume,Assets/Third/LuxURPEssentials~/Shaders/Volumetrics/Lux URP FX BoxVolume.shader
+Lux URP/FX/Lightbeam,Assets/Third/LuxURPEssentials~/Shaders/Volumetrics/Lux URP FX LightBeam.shader
+Lux URP/FX/Sphere Volume,Assets/Third/LuxURPEssentials~/Shaders/Volumetrics/Lux URP FX SphereVolume.shader
+Lux URP/Fast Outline,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Fast Outline.shader
+Lux URP/Fast Outline AlphaTested,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Fast Outline AlphaTested.shader
+Lux URP/Fast Outline AlphaTested Double Pass,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Fast Outline AlphaTested Double Pass.shader
+Lux URP/Fast Outline Double Pass,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Fast Outline Double Pass.shader
+Lux URP/Fast Outline Stencil Prepare,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Fast Outline Stencil Prepare.shader
+Lux URP/Flat Shaded,Assets/Third/LuxURPEssentials~/Shaders/Flat Shaded/Lux URP Flat Shaded.shader
+Lux URP/Glass,Assets/Third/LuxURPEssentials~/Shaders/Glass/Lux URP Glass.shader
+Lux URP/Gradient Sky,Assets/Third/LuxURPEssentials~/Shaders/Toon/Lux URP Toon Gradient Sky.shader
+Lux URP/Human/Hair,Assets/Third/LuxURPEssentials~/Shaders/Human/Lux URP Hair.shader
+Lux URP/Human/Hair Blend,Assets/Third/LuxURPEssentials~/Shaders/Human/Lux URP Hair Blend.shader
+Lux URP/Human/Skin,Assets/Third/LuxURPEssentials~/Shaders/Human/Lux URP Skin.shader
+Lux URP/Lit Extended Uber,Assets/Third/LuxURPEssentials~/Shaders/Lit Extended/Lux URP Lit Extended Uber.shader
+Lux URP/Minimal GBuffer Pass,Assets/Third/LuxURPEssentials~/Shaders/Depth Only/Lux URP Minimal GBuffer Pass.shader
+Lux URP/Nature/Tree Creator Bark,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux URP Tree Creator Bark.shader
+Lux URP/Nature/Tree Creator Bark Optimized,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux URP Tree Creator Bark Optimized.shader
+Lux URP/Nature/Tree Creator Leaves,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux URP Tree Creator Leaves.shader
+Lux URP/Nature/Tree Creator Leaves Optimized,Assets/Third/LuxURPEssentials~/Shaders/Tree Creator/Lux URP Tree Creator Leaves Optimized.shader
+Lux URP/Particles/Simple Lit,Assets/Third/LuxURPEssentials~/Shaders/Particles/Lux URP Particles Simple Lit.shader
+Lux URP/Particles/Simple Lit Tess,Assets/Third/LuxURPEssentials~/Shaders/Particles/Lux URP Particles Simple Lit Tess.shader
+Lux URP/Projection/Decal Lit,Assets/Third/LuxURPEssentials~/Shaders/Decals/Lux URP Lit Decal.shader
+Lux URP/Projection/Decal Unlit,Assets/Third/LuxURPEssentials~/Shaders/Decals/Lux URP Unlit Decal.shader
+Lux URP/Projection/Top Down,Assets/Third/LuxURPEssentials~/Shaders/Projection/Lux URP Projection Top Down.shader
+Lux URP/Simple Fuzz,Assets/Third/LuxURPEssentials~/Shaders/Fuzzy/Lux URP Simple Fuzz.shader
+Lux URP/Skybox/Procedural,Assets/Third/LuxURPEssentials~/Shaders/Sky/SkyboxProceduralFogged.shader
+Lux URP/Terrain/Blend,Assets/Third/LuxURPEssentials~/Shaders/Terrain Blend/Lux URP Terrain Blend.shader
+Lux URP/Terrain/Blend Depth Only,Assets/Third/LuxURPEssentials~/Shaders/Terrain Blend/Lux URP Terrain Blend Depth Only.shader
+Lux URP/Terrain/Lit,Assets/Third/LuxURPEssentials~/Shaders/Terrain/Lux URP Terrain.shader
+Lux URP/Terrain/Lit (Base Pass),Assets/Third/LuxURPEssentials~/Shaders/Terrain/Lux URP Terrain Base.shader
+Lux URP/Terrain/Mesh Terrain,Assets/Third/LuxURPEssentials~/Shaders/Terrain Mesh/Lux URP MeshTerrain.shader
+Lux URP/Toon & Outline HLSL,Assets/Third/LuxURPEssentials~/Shaders/Toon/Lux URP Toon & Outline.shader
+Lux URP/Toon HLSL,Assets/Third/LuxURPEssentials~/Shaders/Toon/Lux URP Toon.shader
+Lux URP/Toon Outline,Assets/Third/LuxURPEssentials~/Shaders/Outline/Lux URP Toon Outline.shader
+Lux URP/Transmission,Assets/Third/LuxURPEssentials~/Shaders/Transmission/Lux URP Transmission.shader
+Lux URP/Vegetation/Foliage,Assets/Third/LuxURPEssentials~/Shaders/Vegetation/Lux URP Foliage.shader
+Lux URP/Vegetation/Grass,Assets/Third/LuxURPEssentials~/Shaders/Vegetation/Lux URP Grass.shader
+Lux URP/Vegetation/Wind Visualize,Assets/Third/LuxURPEssentials~/Shaders/Vegetation/Lux URP Wind Visualize.shader
+Lux URP/Versatile Blend,Assets/Third/LuxURPEssentials~/Shaders/Versatile Blend/Lux URP Versatile Blend.shader
+Lux URP/Water,Assets/Third/LuxURPEssentials~/Shaders/Water/Lux URP Water.shader
+MagicLightProbes/VolumeBounds,Assets/Third/MagicLightProbes/Shaders/MLPVolumeBounds.shader
+MagicLightProbes/VolumeBounds1,Assets/Third/MagicLightProbes/Shaders/MLPVolumeBounds1.shader
+MatCap,Packages/com.unity.shadergraph/Samples~/FeatureExamples/UV Projection/MatCap/MatCap.shadergraph
+MatrixConstruction,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/MatrixConstruction.shadergraph
+MatrixSplit,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/MatrixSplit.shadergraph
+MatrixTranspose,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/MatrixTranspose.shadergraph
+Maximum,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Maximum.shadergraph
+MetalReflectance,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/MetalReflectance.shadergraph
+Minimum,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Minimum.shadergraph
+MotionVectorsFlipbook,Assets/_Game/Scripts/Environment/EnvModule/Snow/_Resources/VFX/Visualeffectgraph/Test/VFXGraphAdditions/Shaders/ParticleOutput/MotionVectorsFlipbook.shadergraph
+Multiply,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Multiply.shadergraph
+Nand,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Nand.shadergraph
+Negate,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Negate.shadergraph
+NoiseSineWave,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/NoiseSineWave.shadergraph
+Normal Vector,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Normal Vector.shadergraph
+NormalBlend,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalBlend.shadergraph
+NormalFromHeight,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalFromHeight.shadergraph
+NormalFromTexture,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalFromTexture.shadergraph
+NormalReconstructZ,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalReconstructZ.shadergraph
+NormalStrength,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalStrength.shadergraph
+NormalUnpack,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/NormalUnpack.shadergraph
+Normalize,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Normalize.shadergraph
+Not,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Not.shadergraph
+Object,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Object.shadergraph
+OneMinus,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/OneMinus.shadergraph
+Or,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Or.shadergraph
+OverDraw,Assets/_Game/Scripts/ForDevelop/TestOverDraw/OverDraw.shader
+PBR_HUE,Assets/Third/WaterSystemHDRP~/Demo/_Resources/BookOfTheDead/WindLitShaderGraph/UtilityGraphs/PBR_HUE.ShaderGraph
+PIXYZ/UnlitVertexColor,Assets/Pixyz/Shader/UnlitVertexColor.shader
+PWS/Details/PW_Details_Foliage_BuiltIn,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_Foliage_BuiltIn.shader
+PWS/Details/PW_Details_LitBasic_BuiltIn,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_LitBasic_BuiltIn.shader
+PWS/Details/Zprime,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_Zprime.shader
+PWS/PW_FlowRiver,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/RiverMaterial/PW_FlowRiver_LitBasic_BuiltIn.shader
+PWS/PW_General_Deferred,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_General_Deferred.shader
+PWS/PW_General_Forward,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_General_Forward.shader
+PWS/PW_RiverShader,Assets/Procedural Worlds/GeNa/Resources/Shaders/RiverShader.shader
+PWS/PW_VertexColor,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/PW General/PW_VertexColor.shader
+PWS/PW_Water,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water.shader
+PWS/PW_Water_Under,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water_Under.shader
+PWS/RoadDecals,Assets/Procedural Worlds/GeNa/Shaders/RoadDecals.shader
+PWS/SH_FlowData,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/SH_FlowData.shader
+PWS/Skybox/PW_HDRI,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_SkyboxCubemap.shader
+PWS/Skybox/PW_Procedural,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_SkyboxProcedural.shader
+PWS/VFX/Buterfly,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_Butterfly.shader
+PWS/VFX/Embers,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_Embers.shader
+PWS/VFX/PW_Clouds,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_Clouds.shader
+PWS/VFX/PW_SkydomeCloudsHight,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_SkydomeCloudsHight.shader
+PWS/VFX/PW_VFX_SkyDome_Space,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_VFX_SkyDome.shader
+PWS/VFX/PW_VFX_SnowFall_Middle,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_VFX_SnowFall_Middle.shader
+PWS/VFX/PW_VFX_Snowfall_Close,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_VFX_Snowfall_Close.shader
+PWS_TEST/ProceduralSkybox,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_VFX_Procedural_Skybox.shader
+PW_Details_Foliage_HDRP,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_Foliage_HDRP.shadergraph
+PW_Details_Foliage_URP,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_Foliage_URP.shadergraph
+PW_Details_LitBasic_HDRP,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_LitBasic_HDRP.shadergraph
+PW_Details_LitBasic_URP,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_LitBasic_URP.shadergraph
+PW_Details_Zprime_HDRP,Assets/Procedural Worlds/Flora/Content Resources/Shaders/PW_Details_Zprime_HDRP.shadergraph
+PW_Foliage_ShaderGraph_HDRP,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Foliage_ShaderGraph_HDRP.shadergraph
+PW_General_ShaderGraph_HDRP,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_General_ShaderGraph_HDRP.shadergraph
+PW_General_ShaderGraph_URP,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_General_ShaderGraph_URP.shadergraph
+PW_RiverFlow_LitBasic_HDRP,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/RiverMaterial/PW_RiverFlow_LitBasic_HDRP.shadergraph
+PW_RiverFlow_LitBasic_URP,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/RiverMaterial/PW_RiverFlow_LitBasic_URP.shadergraph
+PW_Road_LitBasic_HDRP,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Road_LitBasic_HDRP.shadergraph
+PW_Road_LitBasic_URP,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Road_LitBasic_URP.shadergraph
+PW_Spline_LitBasic_HDRP,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Spline_LitBasic_HDRP.shadergraph
+PW_Spline_LitBasic_URP,Assets/Procedural Worlds/GeNa/Resources/Shaders/Road/PW_Spline_LitBasic_URP.shadergraph
+PW_VFX_Rain,Assets/Procedural Worlds/Gaia/Gaia Pro/Weather/VFX/Shaders/PW_VFX_Rain.shader
+PW_Vertex_Color_SRP,Assets/Procedural Worlds/Gaia/Gaia Pro/Shaders/PW General/PW_Vertex_Color_SRP.shadergraph
+PW_Water_RP,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water_RP.shadergraph
+PW_Water_URP,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water_URP.shadergraph
+PW_Water_VR,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water_VR.shadergraph
+Paint1G_WAnim_Shader,Assets/_Resources/Temp/URPTestScene1/ExampleAssets/Shaders/Paint1G_WAnim_Shader.shadergraph
+PaintSplat_Graph,Assets/_Resources/Temp/URPPackageSamples/Decals/PaintSplat/PaintSplat_Graph.shadergraph
+PaintTextureAdvance,Packages/com.unity.terrain-tools/Shaders/PaintTexture.shader
+ParallaxMapping,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/ParallaxMapping.shadergraph
+ParallaxOcclusionMapping,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/ParallaxOcclusionMapping.shadergraph
+ParticleEffect,Packages/com.unity.shadergraph/Samples~/ProductionReady/Common/Shaders/ParticleEffect.shadergraph
+ParticleEffectProfiler/OverDraw,Assets/Editor/UwaProjScan_3.1.8/OverDraw.shader
+PhysicalMaterial3DsMax,Packages/com.unity.render-pipelines.universal/Runtime/Materials/PhysicalMaterial3DsMax/PhysicalMaterial3DsMax.shadergraph
+PhysicalMaterial3DsMaxTransparent,Packages/com.unity.render-pipelines.universal/Runtime/Materials/PhysicalMaterial3DsMax/PhysicalMaterial3DsMaxTransparent.shadergraph
+PixelSpan,Assets/_Game/Scripts/GameLogic/Scene/Debug/Resources/PixelSpan.shader
+PlaceHolder/WorldSpaceGrid,Packages/com.unity.timeline/Samples~/GameplaySequenceDemo/Shaders/WorldSpaceGrid.shader
+PointLight_Graph,Assets/_Resources/Temp/URPPackageSamples/Decals/ProxyLighting/Shaders/PointLight_Graph.shadergraph
+PolarCoordinates,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/PolarCoordinates.shadergraph
+Polybrush/Simple Texture Blend,Packages/com.unity.polybrush/Samples~/SamplesStandard/Shader/SimpleTextureBlend.shader
+Polybrush/Standard Texture Blend Bump,Packages/com.unity.polybrush/Samples~/SamplesStandard/Shader/StandardTextureBlend.shader
+Polybrush/Standard Vertex Color,Packages/com.unity.polybrush/Samples~/SamplesStandard/Shader/StandardVertexColor.shader
+Polygon,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/Polygon.shadergraph
+Position,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Position.shadergraph
+PostProcessEdgeDetection,Packages/com.unity.shadergraph/Samples~/ProductionReady/PostProcess/PostProcessEdgeDetection.shadergraph
+PostProcessHalfTone,Packages/com.unity.shadergraph/Samples~/ProductionReady/PostProcess/PostProcessHalfTone.shadergraph
+PostProcessRainOnLens,Packages/com.unity.shadergraph/Samples~/ProductionReady/PostProcess/PostProcessRainOnLens.shadergraph
+PostProcessUnderwater,Packages/com.unity.shadergraph/Samples~/ProductionReady/PostProcess/PostProcessUnderwater.shadergraph
+PostProcessVHS,Packages/com.unity.shadergraph/Samples~/ProductionReady/PostProcess/PostProcessVHS.shadergraph
+Posterize,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Posterize.shadergraph
+Power,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Power.shadergraph
+Preview,Packages/com.unity.shadergraph/Samples~/NodeReference/Utility/Preview.shadergraph
+ProBuilder/Diffuse Texture Blend,Assets/Third/ProCore~/ProBuilder/Shader/DiffuseTextureBlend.shader
+ProBuilder/Diffuse Vertex Color,Assets/Third/ProCore~/ProBuilder/Shader/DiffuseVertexColor.shader
+ProBuilder/Reference Unlit,Assets/Third/ProCore~/ProBuilder/Shader/pb_ReferenceUnlit.shader
+ProBuilder/Standard Vertex Color,Assets/Third/ProCore~/ProBuilder/Shader/pb_StandardVertexColor.shader
+ProBuilder/Unlit Solid Color,Assets/Third/ProCore~/ProBuilder/Shader/pb_UnlitSolidColor.shader
+ProBuilder/UnlitVertexColor,Assets/Third/ProCore~/ProBuilder/Shader/pb_UnlitVertexColor.shader
+ProcLightning,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/ProcLightning.shadergraph
+Procedural Worlds/GeNa/BlitCopy,Assets/Procedural Worlds/GeNa/Resources/Shaders/BlitCopy.shader
+Procedural Worlds/GeNa/BrushPreview,Assets/Procedural Worlds/GeNa/Resources/Shaders/BrushPreview.shader
+Procedural Worlds/GeNa/PW_GreyScale,Assets/Procedural Worlds/GeNa/Resources/Shaders/PW_Greyscale.shader
+Procedural Worlds/GeNa/PaintHeight,Assets/Procedural Worlds/GeNa/Resources/Shaders/PaintHeight.shader
+Procedural Worlds/GeNa/TerrainLayerUtils,Assets/Procedural Worlds/GeNa/Resources/Shaders/TerrainLayerUtils.shader
+Procedural Worlds/GeNa/Visualization,Assets/Procedural Worlds/GeNa/Resources/Shaders/Visualization.shader
+Procedural Worlds/SB_Billboard,Assets/Procedural Worlds/GeNa/Shaders/SB_Billboard.shader
+ProceduralBrick,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Procedural Noise and Shapes/ProceduralBrick.shadergraph
+Projector/Light,Assets/_Game/EditorTools/SceneTool/RuntimeTerrainEditor/Projector/Shaders/ProjectorLight.shader
+Quad,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/BlitToRTHandle/Quad.shadergraph
+RaceBoats,Assets/Third/WaterSystemHDRP~/Demo/_Resources/BookOfTheDead/WindLitShaderGraph/UtilityGraphs/RaceBoats.ShaderGraph
+RadialShear,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/RadialShear.shadergraph
+RadiansToDegrees,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/RadiansToDegrees.shadergraph
+RainExample,Packages/com.unity.shadergraph/Samples~/ProductionReady/Weather/RainExample.shadergraph
+RainFloorExample,Packages/com.unity.shadergraph/Samples~/ProductionReady/Weather/RainFloorExample.shadergraph
+RainPropsExample,Packages/com.unity.shadergraph/Samples~/ProductionReady/Weather/RainPropsExample.shadergraph
+RainRocksExample,Packages/com.unity.shadergraph/Samples~/ProductionReady/Weather/RainRocksExample.shadergraph
+RandomRange,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/RandomRange.shadergraph
+Reciprocal,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Reciprocal.shadergraph
+ReciprocalSquareRoot,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/ReciprocalSquareRoot.shadergraph
+Rectangle,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/Rectangle.shadergraph
+Reflection,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Reflection.shadergraph
+Reflective/Diffuse Reflection Spec,Assets/Procedural Worlds/Gaia/Asset Samples/Standard Assets/Vehicles/Car/Shaders/ReflectiveDiffuseSpec.shader
+Reflective/Diffuse Reflection Spec Transp,Assets/Procedural Worlds/Gaia/Asset Samples/Standard Assets/Vehicles/Car/Shaders/ReflectiveDiffuseSpecTransp.shader
+Reflective/Diffuse Transperant,Assets/Procedural Worlds/Gaia/Asset Samples/Standard Assets/Vehicles/Car/Shaders/DiffuseReflectiveShader.shader
+ReformSim/Raindrop,Assets/Third/RaindropEffect/Shaders/Raindrop.shader
+ReformSim/RaindropEffectGlass,Assets/Third/RaindropEffect/Shaders/RaindropEffectGlass.shader
+ReformSim/RaindropEffectGlassVR,Assets/Third/RaindropEffect/Shaders/RaindropEffectGlassVR.shader
+Refract,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Refract.shadergraph
+Remap,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Remap.shadergraph
+RenderCubeToScreen,Assets/_Game/EditorTools/SceneTool/Panoramagram/RenderCubeToScreen.shader
+ReplaceColor,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/ReplaceColor.shadergraph
+ReplacedShader/FillShader,Assets/_Game/EditorTools/EffectTool/EffectOptimization/Editor/EditorRes/FillShader.shader
+Rock,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Rock/Rock.shadergraph
+Rotate,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/Rotate.shadergraph
+RotateAboutAxis,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/RotateAboutAxis.shadergraph
+Round,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Round.shadergraph
+RoundedPolygon,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/RoundedPolygon.shadergraph
+RoundedRectangle,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/RoundedRectangle.shadergraph
+RuntimeVirtualTexture/Core/PageTableUploadMesh,Packages/com.seasun.virtualtexture/Core/Resource/Shader/PageTableUploadMesh.shader
+RuntimeVirtualTexture/Core/PageTableUploadProcedural,Packages/com.seasun.virtualtexture/Core/Resource/Shader/PageTableUploadProcedural.shader
+RuntimeVirtualTexture/Universal/Debug/GPUReadBack,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/Debug/GPUReadBackDebug.shader
+RuntimeVirtualTexture/Universal/Debug/PageTable,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/Debug/PageTableDebug.shader
+RuntimeVirtualTexture/Universal/Debug/Texture2DArrayView,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/Debug/TextureArrayView.shader
+RuntimeVirtualTexture/Universal/Decal,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/Projector/Decal.shader
+RuntimeVirtualTexture/Universal/FeedBack,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/GPUFeedBack.shader
+RuntimeVirtualTexture/Universal/TerrainLit,Packages/com.seasun.virtualtexture/Universal/Test/Terrain/TerrainLit.shader
+RuntimeVirtualTexture/Universal/TerrainLit Target2.0,Packages/com.seasun.virtualtexture/Universal/Test/Terrain/TerrainLit Target 2.0.shader
+RuntimeVirtualTexture/Universal/TerrainWriter,Packages/com.seasun.virtualtexture/Universal/Test/Terrain/PhysicalTextureSample.shader
+RuntimeVirtualTexture/Universal/UITexture,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/Debug/ImageColor.shader
+RuntimeVirtualTexture/Universal/VirtualTextureCompress,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/VirtualTextureCompress.shader
+RuntimeVirtualTexture/Universal/VirtualTextureCopy,Packages/com.seasun.virtualtexture/Universal/Resource/Shader/VirtualTextureCopy.shader
+SB_Billboard_HDRP_SRC,Assets/Procedural Worlds/GeNa/Shaders/SB_Billboard_HDRP_SRC.shadergraph
+SB_Billboard_URP_SRC,Assets/Procedural Worlds/GeNa/Shaders/SB_Billboard_URP_SRC.shadergraph
+SDFShapes,Packages/com.unity.shadergraph/Samples~/FeatureExamples/Procedural Noise and Shapes/SDF Shapes/SDFShapes.shadergraph
+SH_Lightning,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/SH_Lightning.shadergraph
+SH_SandMat,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/SH_SandMat.shadergraph
+SH_SnowFlake,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/SH_SnowFlake.shadergraph
+SH_SnowMat,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/SH_SnowMat.shadergraph
+SH_VFX_Lightning,Assets/Procedural Worlds/Gaia/Gaia Pro/HDRP Time Of Day/Content Resources/Weather/Shaders/SH_VFX_Lightning.shadergraph
+SH_Vefects_VFX_URP_Fire_Flames_01,Assets/_Resources/Arts/ArtWorks/Effect/SeriesElements/Fire/Shaders/SH_Vefects_VFX_URP_Fire_Flames_01.shader
+SH_Vefects_VFX_URP_Heat_Haze_01,Assets/_Resources/Arts/ArtWorks/Effect/SeriesElements/Fire/Shaders/SH_Vefects_VFX_URP_Heat_Haze_01.shader
+SH_Vefects_VFX_URP_Particles_Erosion_01,Assets/_Resources/Arts/ArtWorks/Effect/SeriesElements/Fire/Shaders/SH_Vefects_VFX_URP_Particles_Erosion_01.shader
+SRP Default,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/SRP/SRP Default.shadergraph
+SRPShading/Lit,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/Lit/Lit.shader
+SRPShading/MeshPixels,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/MeshPixels.shader
+SRPShading/MipmapColor,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/MipmapColor.shader
+SRPShading/MipmapTexLv,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/MipmapTexLv.shader
+SRPShading/OverDrawColor,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/Overdraw.shader
+SRPShading/Unlit,Assets/_Game/Scripts/ForDevelop/ForTest/SRPShadingModeView/Shaders/Unlit/Unlit.shader
+SampleCubemap,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleCubemap.shadergraph
+SampleGradient,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleGradient.shadergraph
+SampleReflectedCubemap,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleReflectedCubemap.shadergraph
+SampleTexture2D,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleTexture2D.shadergraph
+SampleTexture2DArray,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleTexture2DArray.shadergraph
+SampleTexture3D,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SampleTexture3D.shadergraph
+SamplerState,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SamplerState.shadergraph
+SamplesArrow,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesArrow.shadergraph
+SamplesBackdrop,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesBackdrop.shadergraph
+SamplesChecker,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesChecker.shadergraph
+SamplesCrossLit,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesCrossLit.shadergraph
+SamplesCyclo,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesCyclo.shadergraph
+SamplesEmissive,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesEmissive.shadergraph
+SamplesGenericTextured,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesGenericTextured.shadergraph
+SamplesLit_Inter,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/TextMesh Pro/Resources/Fonts & Materials/SamplesLit_Inter.shadergraph
+SamplesTransparentInfos,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesTransparentInfos.shadergraph
+SamplesTurntable,Packages/com.unity.shadergraph/Samples~/ProductionReady/SRPCommon/Materials/Shaders/SamplesTurntable.shadergraph
+Sand_Graph,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/TrailEffect/Shaders/Sand_Graph.shadergraph
+Saturate,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Saturate.shadergraph
+Saturation,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/Saturation.shadergraph
+SawtoothWave,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/SawtoothWave.shadergraph
+SceneColor,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SceneColor.shadergraph
+SceneDepth,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SceneDepth.shadergraph
+SceneDepthDifference,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SceneDepthDifference.shadergraph
+Screen,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Screen.shadergraph
+ScreenPosition,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/ScreenPosition.shadergraph
+Seasun/EcosystemSimulate/LightningSimulate/LightningBoltShader,Assets/_Game/Scripts/Environment/EnvModule/Lightning/_Resources/Shader/LightningBoltShader.shader
+Seasun/EcosystemSimulate/WeatherSimulate/FogParticle,Assets/_Game/Scripts/Environment/EnvModule/Rain/_Resources/VFX/Legacy/Shaders/WeatherFogParticle.shader
+Seasun/UIEffectSystem/Bloom/Alpha_distortion,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Distortion/Resources/AlphaDistortion.shader
+Seasun/UIEffectSystem/Bloom/BloomMask,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/BloomMask/Resources/BloomMask.shader
+Seasun/UIEffectSystem/Bloom/BloomMaskInternal,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/BloomMask/Resources/BloomMaskInternal.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-Bitmap.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Bitmap Custom Atlas,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-Bitmap-Custom-Atlas.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-DistanceField.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-DistanceField-Surface.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-DistanceField-Overlay.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Mobile/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP_Mobile_Bitmap.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Mobile/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP_Moblie_DsitanceField.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Mobile/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP_Mobile_DistanceField-Surface.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Mobile/Distance Field - Masking,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP_Moblie_DistanceField-Masking.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Mobile/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP_Mobile_DistanceField-Overlay.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/TextMeshPro/Sprite,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask-TMP-Sprite.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/UI/Default,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMask.shader
+Seasun/UIEffectSystem/UESCustomAlphaMask/UI/MaskTexture,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/CustomAlphaMask/Resources/UESCustomAlphaMaskTexture.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-Bitmap.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Bitmap Custom Atlas,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-Bitmap-Custom-Atlas.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-DistanceField.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-DistanceField-Surface.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-DistanceField-Overlay.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Mobile/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP_Mobile_Bitmap.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Mobile/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP_Moblie_DsitanceField.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Mobile/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP_Mobile_DistanceField-Surface.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Mobile/Distance Field - Masking,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP_Moblie_DistanceField-Masking.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Mobile/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP_Mobile_DistanceField-Overlay.shader
+Seasun/UIEffectSystem/UESEclosion/TextMeshPro/Sprite,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion-TMP-Sprite.shader
+Seasun/UIEffectSystem/UESEclosion/UI/Default,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Eclosion/Resources/UESEclosion.shader
+Seasun/UIEffectSystem/UESGlitchArt,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArt.shader
+Seasun/UIEffectSystem/UESGlitchArtAnalogNoise,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtAnalogNoise.shader
+Seasun/UIEffectSystem/UESGlitchArtDigitalStripe,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtDigitalStripe.shader
+Seasun/UIEffectSystem/UESGlitchArtImageBlock,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtImageBlock.shader
+Seasun/UIEffectSystem/UESGlitchArtLineBlock,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtLineBlock.shader
+Seasun/UIEffectSystem/UESGlitchArtRGBSplit,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtRGBSplit.shader
+Seasun/UIEffectSystem/UESGlitchArtScanLineJitter,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtScanLineJitter.shader
+Seasun/UIEffectSystem/UESGlitchArtScreenJump,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtScreenJump.shader
+Seasun/UIEffectSystem/UESGlitchArtScreenShake,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtScreenShake.shader
+Seasun/UIEffectSystem/UESGlitchArtTileJitter,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtTileJitter.shader
+Seasun/UIEffectSystem/UESGlitchArtWaveJitter,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/GlitchArt/Resources/UESGlitchArtWaveJitter.shader
+Seasun/UIEffectSystem/UESLensDistortion,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/LensDistortion/Resources/UESLensDistortion.shader
+Seasun/UIEffectSystem/UESMaskCameraRT,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/MaskCameraRT/Resources/UESMaskCameraRT.shader
+Seasun/UIEffectSystem/UESMaskableGaussianBlur,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/MaskableGaussianBlur/Resources/UESMaskableGaussianBlur.shader
+Seasun/UIEffectSystem/UESMovie,Packages/com.seasun.ui-effect-system-urp/Runtime/MovieEngine/Core/Shaders/Resources/UESMovie.shader
+Seasun/UIEffectSystem/UESMovie_V1,Packages/com.seasun.ui-effect-system-urp/Runtime/MovieEngine/Core/Shaders/Resources/UESMovie_V1.shader
+Seasun/UIEffectSystem/UESMovie_V2,Packages/com.seasun.ui-effect-system-urp/Runtime/MovieEngine/Core/Shaders/Resources/UESMovie_V2.shader
+Seasun/UIEffectSystem/UESMovie_V3,Packages/com.seasun.ui-effect-system-urp/Runtime/MovieEngine/Core/Shaders/Resources/UESMovie_V3.shader
+Seasun/UIEffectSystem/UESOutline,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Bitmap.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Bitmap Custom Atlas,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Bitmap-Custom-Atlas.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-DsitanceField.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-DsitanceField-Surface.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-DistanceField-Overlay.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Mobile/Bitmap,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Mobile-Bitmap.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Mobile/Distance Field,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Moblie-DsitanceField.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Mobile/Distance Field (Surface),Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Moblie-DsitanceField-Surface.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Mobile/Distance Field - Masking,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Mobile-DistanceField-Masking.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Mobile/Distance Field Overlay,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Moblie-DsitanceField-Overlay.shader
+Seasun/UIEffectSystem/UESOutlineTMP/TextMeshPro/Sprite,Packages/com.seasun.ui-effect-system-urp/Runtime/EffectEngine/Plugin/Outline/Resources/UESOutline-TMP-Sprite.shader
+ShadowFix,Assets/Third/WaterSystem/Shaders/PlatformSpecific/ShadowFix.shadergraph
+Sign,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Sign.shadergraph
+SimpleNoise,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/SimpleNoise.shadergraph
+SimpleParticle,Assets/_Game/Scripts/Environment/EnvModule/Snow/_Resources/VFX/Visualeffectgraph/Test/VFXGraphAdditions/Shaders/ParticleOutput/SimpleParticle.shadergraph
+Sine,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Sine.shadergraph
+SkyPlanet,Assets/_Resources/Temp/URPPackageSamples/CameraStacking/3D Skybox/Shaders/SkyPlanet.shadergraph
+SkyboxWithMainLight,Assets/_Resources/Temp/CharacterSkinPreview/Skybox/SkyboxWithMainLight.shadergraph
+Smoothstep,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Smoothstep.shadergraph
+SnowExample,Packages/com.unity.shadergraph/Samples~/ProductionReady/Weather/SnowExample.shadergraph
+SolidColor,Assets/_Game/EditorTools/SceneTool/ShaderAnalyzer/SolidColor.shader
+SpeedTree8_PBRLit,Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8_PBRLit.shadergraph
+SpeedTree8_PBRLit - backup,Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8_PBRLit - backup.shadergraph
+SphereMask,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/SphereMask.shadergraph
+Spherize,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/Spherize.shadergraph
+Spine/Blend Modes/Skeleton PMA Additive,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Additive.shader
+Spine/Blend Modes/Skeleton PMA Multiply,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Multiply.shader
+Spine/Blend Modes/Skeleton PMA Screen,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/BlendModes/Spine-Skeleton-PMA-Screen.shader
+Spine/Outline/Blend Modes/Skeleton PMA Additive,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Additive-Outline.shader
+Spine/Outline/Blend Modes/Skeleton PMA Multiply,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Multiply-Outline.shader
+Spine/Outline/Blend Modes/Skeleton PMA Screen,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/BlendModes/Spine-Skeleton-PMA-Screen-Outline.shader
+Spine/Outline/OutlineOnly-ZWrite,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-OutlineOnly-ZWrite.shader
+Spine/Outline/Skeleton,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Outline.shader
+Spine/Outline/Skeleton Fill,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Fill-Outline.shader
+Spine/Outline/Skeleton Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Lit-Outline.shader
+Spine/Outline/Skeleton Lit ZWrite,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Lit-ZWrite-Outline.shader
+Spine/Outline/Skeleton Tint,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-Tint-Outline.shader
+Spine/Outline/Skeleton Tint Black,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Skeleton-TintBlack-Outline.shader
+Spine/Outline/SkeletonGraphic,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-Outline.shader
+Spine/Outline/SkeletonGraphic Tint Black,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/SkeletonGraphic/Spine-SkeletonGraphic-TintBlack-Outline.shader
+Spine/Outline/Special/Skeleton Grayscale,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Spine-Special-Skeleton-Grayscale-Outline.shader
+Spine/Outline/Sprite/Pixel Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Sprite/SpritesPixelLit-Outline.shader
+Spine/Outline/Sprite/Unlit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Sprite/SpritesUnlit-Outline.shader
+Spine/Outline/Sprite/Vertex Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Outline/Sprite/SpritesVertexLit-Outline.shader
+Spine/RenderQuad,Assets/_Game/Scripts/UI/UISpine/RenderQuadShader.shader
+Spine/Skeleton,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton.shader
+Spine/Skeleton Fill,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton-Fill.shader
+Spine/Skeleton Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton-Lit.shader
+Spine/Skeleton Lit ZWrite,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton-Lit-ZWrite.shader
+Spine/Skeleton Tint,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton-Tint.shader
+Spine/Skeleton Tint Black,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Skeleton-TintBlack.shader
+Spine/SkeletonGraphic,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic.shader
+Spine/SkeletonGraphic Additive,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Additive.shader
+Spine/SkeletonGraphic Fill,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Fill.shader
+Spine/SkeletonGraphic Grayscale,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Grayscale.shader
+Spine/SkeletonGraphic Multiply,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Multiply.shader
+Spine/SkeletonGraphic Screen,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/Spine-SkeletonGraphic-Screen.shader
+Spine/SkeletonGraphic Tint Black,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/TintBlack/Spine-SkeletonGraphic-TintBlack.shader
+Spine/SkeletonGraphic Tint Black Additive,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/TintBlack/Spine-SkeletonGraphic-TintBlack-Additive.shader
+Spine/SkeletonGraphic Tint Black Multiply,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/TintBlack/Spine-SkeletonGraphic-TintBlack-Multiply.shader
+Spine/SkeletonGraphic Tint Black Screen,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/SkeletonGraphic/TintBlack/Spine-SkeletonGraphic-TintBlack-Screen.shader
+Spine/Special/HiddenPass,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Utility/HiddenPass.shader
+Spine/Special/Skeleton Grayscale,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Spine-Special-Skeleton-Grayscale.shader
+Spine/Sprite/Pixel Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/SpritesPixelLit.shader
+Spine/Sprite/Unlit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/SpritesUnlit.shader
+Spine/Sprite/Vertex Lit,Packages/com.esotericsoftware.spine.spine-unity/Runtime/spine-unity/Shaders/Sprite/SpritesVertexLit.shader
+Split,Packages/com.unity.shadergraph/Samples~/NodeReference/Channel/Split.shadergraph
+SplitTextureTransform,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/SplitTextureTransform.shadergraph
+SpotLightProxy_Graph,Assets/_Resources/Temp/URPPackageSamples/Decals/ProxyLighting/Shaders/SpotLightProxy_Graph.shadergraph
+SquareRoot,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/SquareRoot.shadergraph
+SquareWave,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/SquareWave.shadergraph
+Step,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Step.shadergraph
+SubgraphLibrary,Packages/com.unity.ugui.extensions/Runtime/Subgraphs/SubgraphLibrary.shadergraph
+SubsurfaceScattering/Blur,Packages/com.unity.render-pipelines.universal/Runtime/SubsurfaceScattering/Shader/SubsurfaceScatteringBlur.shader
+SubsurfaceScattering/Blur_HDRP,Packages/com.unity.render-pipelines.universal/Runtime/SubsurfaceScattering/Shader/SubsurfaceScatteringBlur_HDRP.shader
+SubsurfaceScattering/Combine,Packages/com.unity.render-pipelines.universal/Runtime/SubsurfaceScattering/Shader/SubsurfaceScatteringCombine.shader
+Subtract,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Subtract.shadergraph
+SupGames/DOFBlurBloomUrp/BumpedDiffuseUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/BumpedDiffuseUrp.shader
+SupGames/DOFBlurBloomUrp/BumpedSpecularUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/BumpedSpecularUrp.shader
+SupGames/DOFBlurBloomUrp/DiffuseUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/DiffuseUrp.shader
+SupGames/DOFBlurBloomUrp/SpecularUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/SpecularUrp.shader
+SupGames/DOFBlurBloomUrp/TransparentUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/TransparentUrp.shader
+SupGames/DOFBlurBloomUrp/UnlitUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/Shaders/UnlitUrp.shader
+SupGames/DOFUrp/BumpedDiffuseUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/BumpedDiffuseUrp.shader
+SupGames/DOFUrp/BumpedSpecularUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/BumpedSpecularUrp.shader
+SupGames/DOFUrp/DiffuseUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/DiffuseUrp.shader
+SupGames/DOFUrp/SpecularUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/SpecularUrp.shader
+SupGames/DOFUrp/TransparentUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/TransparentUrp.shader
+SupGames/DOFUrp/UnlitUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/Shaders/UnlitUrp.shader
+SupGames/DepthBlurBloomUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_DofBlurBloom~/DofBlurBloomUrp.shader
+SupGames/DepthOfFieldUrp,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_Dof~/DOFUrp.shader
+SupGames/Mobile/FxaaURP,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/UPR_FXAA~/FXAAUrp.shader
+SupGames/Mobile/PostProcess,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_PPS~/MobilePostProcess.shader
+SupGames/Mobile/PostProcessURP,Assets/_Game/Scripts/Effect/RenderFeature/Deprecated~/URP_PPS~/URP_PPS/PostProcessUrp.shader
+SwirlyFrame_Graph,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/KeepFrame/SwirlyFrame_Graph.shadergraph
+Swizzle,Packages/com.unity.shadergraph/Samples~/NodeReference/Channel/Swizzle.shadergraph
+TMP_SDF-HDRP LIT,Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
+TMP_SDF-HDRP UNLIT,Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph
+TMP_SDF-URP Lit,Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph
+TMP_SDF-URP Unlit,Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
+TMatrix/Unlit LOD Tag,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Editor/BuildTool/Resource/Editor/Debug/Unlit LOD Tag.shader
+TangentVector,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/TangentVector.shadergraph
+TerrainNettle,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Details/Nettle/TerrainNettle.shadergraph
+TextMeshPro/Bitmap,Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+TextMeshPro/Bitmap Custom Atlas,Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+TextMeshPro/Distance Field,Assets/TextMesh Pro/Shaders/TMP_SDF.shader
+TextMeshPro/Distance Field (Surface),Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+TextMeshPro/Distance Field Overlay,Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+TextMeshPro/Distance Field SSD,Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+TextMeshPro/MSDF,Assets/TextMesh Pro/Shaders/TMP_MSDF.shader
+TextMeshPro/Mobile/Bitmap,Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+TextMeshPro/Mobile/Distance Field,Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+TextMeshPro/Mobile/Distance Field (Surface),Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader
+TextMeshPro/Mobile/Distance Field - 2 Pass,Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader
+TextMeshPro/Mobile/Distance Field - Masking,Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader
+TextMeshPro/Mobile/Distance Field Overlay,Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+TextMeshPro/Mobile/Distance Field SSD,Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+TextMeshPro/Sprite,Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+TextureSize,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/TextureSize.shadergraph
+TilingAndOffset,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/TilingAndOffset.shadergraph
+Time,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/Time.shadergraph
+TrailMap,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/TrailEffect/Shaders/TrailMap.shadergraph
+Transform,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Transform.shadergraph
+TransformationMatrix,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/TransformationMatrix.shadergraph
+TriangleWave,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/TriangleWave.shadergraph
+Triplanar,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/Triplanar.shadergraph
+TriplanarProjection,Packages/com.unity.shadergraph/Samples~/FeatureExamples/UV Projection/Triplanar Projection/TriplanarProjection.shadergraph
+Truncate,Packages/com.unity.shadergraph/Samples~/NodeReference/Math/Truncate.shadergraph
+Tunnel,Assets/_Resources/Temp/URPPackageSamples/RendererFeatures/DistortTunnel/Tunnel.shadergraph
+Twirl,Packages/com.unity.shadergraph/Samples~/NodeReference/UV/Twirl.shadergraph
+UI/ColorPicker,Assets/_Resources/Arts/Shaders/URP/UI/ColorPickerShader.shader
+UI/Default (Height Fog Support),Assets/Third/Atmospheric Height Fog/Core/Shaders/UI Default (Height Fog Support).shader
+UI/DefaultEx,Assets/_Resources/Arts/Shaders/URP/Built-in/UI-DefaultEx.shader
+UI/Default_Addition,Packages/com.seasun.ui-effect-system-urp/Runtime/Common/Shaders/UI_Default_Addition.shader
+UI/FogMask,Assets/_Resources/Arts/Shaders/URP/UI/FogMask.shader
+UI/FogMaskEdge,Assets/_Resources/Arts/Shaders/URP/UI/FogMaskEdge.shader
+UI/FogReceiver,Assets/_Resources/Arts/Shaders/URP/UI/FogReceiver.shader
+UI/MaskShader,Assets/_Resources/Arts/Shaders/URP/UI/MaskShader.shader
+UI/OpaqueEmissive,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/OpaqueEmissive.shader
+UI/RenderFullScreenFogMask,Assets/_Resources/Arts/Shaders/URP/UI/RenderFullScreenFogMask.shader
+UI/UIRadialBlur,Assets/_Resources/Arts/Shaders/URP/UI/UIRadialBlur.shader
+URPLit,Packages/com.unity.shadergraph/Samples~/ProductionReady/Lit/URPLit.shadergraph
+URP_Decal,Assets/_Resources/Arts/Shaders/URP/Scene/URP_Decal.shadergraph
+URP_DecalShadow,Assets/_Resources/Arts/Shaders/URP/Effect/URP_DecalShadow.shadergraph
+URP_UIEffectStandard,Assets/_Resources/Arts/Shaders/URP/Effect/URP_UIEffectStandard.shadergraph
+UV,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/UV.shadergraph
+UnderwaterBubbles,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Particles/UnderwaterBubbles.shadergraph
+Universal Render Pipeline/2D/Sprite-Lit-Default,Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader
+Universal Render Pipeline/2D/Sprite-Mask,Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Mask.shader
+Universal Render Pipeline/2D/Sprite-Unlit-Default,Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Unlit-Default.shader
+Universal Render Pipeline/Baked Lit,Packages/com.unity.render-pipelines.universal/Shaders/BakedLit.shader
+Universal Render Pipeline/ClipmapTerrain/Lit,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/GpuTerrain/_Resource/Shaders/URP/ClipmapTerrainLit.shader
+Universal Render Pipeline/Complex Lit,Packages/com.unity.render-pipelines.universal/Shaders/ComplexLit.shader
+Universal Render Pipeline/HLOD/DrawLOD,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/StaticTerrain/_Resource/Shaders/DrawLOD.shader
+Universal Render Pipeline/Lit,Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader
+Universal Render Pipeline/Nature/SpeedTree7,Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7.shader
+Universal Render Pipeline/Nature/SpeedTree7 Billboard,Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7Billboard.shader
+Universal Render Pipeline/Nature/SpeedTree8,Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8.shader
+Universal Render Pipeline/Particles/Lit,Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesLit.shader
+Universal Render Pipeline/Particles/Simple Lit,Packages/com.unity.render-pipelines.universal/Shaders/Particles/ParticlesSimpleLit.shader
+Universal Render Pipeline/Particles/Unlit,Assets/_Game/Scripts/Environment/EnvModule/Rain/_Resources/VFX/Legacy/Shaders/ParticlesUnlit.shader
+Universal Render Pipeline/Simple Lit,Packages/com.unity.render-pipelines.universal/Shaders/SimpleLit.shader
+Universal Render Pipeline/StaticTerrain,Assets/_Game/Scripts/Matrix/SceneStreamingManager/Runtime/StaticTerrain/_Resource/Shaders/TerrainLit.shader
+Universal Render Pipeline/Terrain/Lit,Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLit.shader
+Universal Render Pipeline/Unlit,Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
+Universal Render Pipeline/VR/SpatialMapping/Occlusion,Packages/com.unity.render-pipelines.universal/Shaders/SpatialMappingOcclusion.shader
+Universal Render Pipeline/VR/SpatialMapping/Wireframe,Packages/com.unity.render-pipelines.universal/Shaders/SpatialMappingWireframe.shader
+Unlit/BlurMaskShader,Assets/_Resources/Arts/Shaders/URP/UI/BlurMaskShader.shader
+Unlit/Colored Transparent,Packages/com.amplifycreations.amplifyshadereditor/Plugins/EditorResources/Shaders/Unlit-ColoredAlpha.shader
+Unlit/DebugDisplacement,Assets/Third/LuxURPEssentials~/Lux SRP Grass Displacement/Shaders/Debug/DebugDisplacement.shader
+Unlit/DepthTexture,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/ReplaceShader/DepthTexture.shader
+Unlit/Element3DGridShader,Packages/com.unity.visualeffectgraph/Editor/UIResources/shader/Element3DGridShader.shader
+Unlit/FakeShadow,Assets/_Resources/Arts/Shaders/URP/Effect/FakeShadow.shader
+Unlit/Metal Floor,Assets/_Resources/Arts/Shaders/URP/UI/UIReflectionPlane.shader
+Unlit/PWS_PostPro_DilationAll,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/PWS_PostPro_DilationAll.shader
+Unlit/PW_Water_CameraNormals,Assets/Procedural Worlds/Gaia/Shaders/PW General/PW_Water_CameraNormals.shader
+Unlit/SDFGenerateShader,Assets/_Resources/Arts/Shaders/URP/UI/SDFGenerateShader.shader
+Unlit/SH_PP_ShrinkFromBlur,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/SH_PP_ShrinkFromBlur.shader
+Unlit/SH_PostProcess_Blur,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/SH_PostProcess_Blur.shader
+Unlit/SH_PostProcess_DiffuseAlpha,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/SH_PostProcess_DiffuseAlpha.shader
+Unlit/SH_RS_Opacity,Assets/Procedural Worlds/GeNa/Scripts/Core/Extensions/RiverFlow/GeNa River/Shaders/SH_RS_Opacity.shader
+Unlit/SimpleDots,Packages/com.unity.render-pipelines.core/Runtime/GPUDriven/Shader/SimpleDots.shader
+Unlit/Stencil,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Stencil.shader
+Unlit/StencilReplace,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/StencilReplace.shader
+Unlit/Transparent Colored-Instanced,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/Unlit - Transparent Colored - Instanced.shader
+Unlit_Additive,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Decals/Unlit_Additive.shadergraph
+Unlit_AlphaBlend,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Decals/Unlit_AlphaBlend.shadergraph
+Unlit_Multiply,Assets/Third/WaterSystem/Shaders/PlatformSpecific/Effects/Decals/Unlit_Multiply.shadergraph
+VFXSpriteLit,Packages/com.unity.render-pipelines.universal/Shaders/2D/VFXSpriteLit.shadergraph
+VFXSpriteUnlit,Packages/com.unity.render-pipelines.universal/Shaders/2D/VFXSpriteUnlit.shadergraph
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped Specular/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/BumpedSpecular_2.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped Specular/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/BumpedSpecular_3.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped Specular/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/BumpedSpecular_4.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Bumped_2.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Bumped_3.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Bumped/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Bumped_4.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_2.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_3.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_4.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/5 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_5.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/6 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_6.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/7 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_7.shader
+VacuumShaders/Terrain To Mesh/Legacy Shaders/Diffuse/8 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Legacy Shaders/Diffuse_8.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Bumped/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Bumped_2.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Bumped/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Bumped_3.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Bumped/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Bumped_4.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_2.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_3.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_4.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/5 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_5.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/6 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_6.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/7 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_7.shader
+VacuumShaders/Terrain To Mesh/One Directional Light/Diffuse/8 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/One Directional Light/Diffuse_8.shader
+VacuumShaders/Terrain To Mesh/Standard/Bumped/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Bumped_2.shader
+VacuumShaders/Terrain To Mesh/Standard/Bumped/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Bumped_3.shader
+VacuumShaders/Terrain To Mesh/Standard/Bumped/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Bumped_4.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_2.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_3.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_4.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/5 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_5.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/6 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_6.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/7 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_7.shader
+VacuumShaders/Terrain To Mesh/Standard/Diffuse/8 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Standard/Diffuse_8.shader
+VacuumShaders/Terrain To Mesh/Unlit/2 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_2.shader
+VacuumShaders/Terrain To Mesh/Unlit/3 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_3.shader
+VacuumShaders/Terrain To Mesh/Unlit/4 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_4.shader
+VacuumShaders/Terrain To Mesh/Unlit/5 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_5.shader
+VacuumShaders/Terrain To Mesh/Unlit/6 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_6.shader
+VacuumShaders/Terrain To Mesh/Unlit/7 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_7.shader
+VacuumShaders/Terrain To Mesh/Unlit/8 Textures,Packages/com.third.terraintomesh/VacuumShaders/Terrain To Mesh/Shaders/Unlit/Unlit_8.shader
+VertexColor,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/VertexColor.shadergraph
+ViewDirection,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/ViewDirection.shadergraph
+ViewVector,Packages/com.unity.shadergraph/Samples~/NodeReference/Input/ViewVector.shadergraph
+VolumetricClouds/VolumetricCloudsBlitShader,Assets/Third/VolumetricClouds/Runtime/Shader/VolumetricCloudsBlitShader.shader
+VolumetricFog2/VolumetricFog2DURP,Assets/Third/VolumetricFog2/Resources/Shaders/VolumetricFog2DURP.shader
+"Volund/Standard MaskyMix Scatter (Specular, Surface)",Assets/Third/WaterSystemHDRP~/Demo/_Resources/Shaders/StandardMaskyMixScatterSpecularSurface.shader
+"Volund/Standard Scatter (Specular, Surface)",Assets/Third/WaterSystemHDRP~/Demo/_Resources/Shaders/StandardScatterSpecularSurface.shader
+Voronoi,Packages/com.unity.shadergraph/Samples~/NodeReference/Procedural/Voronoi.shadergraph
+Wall_Graph,Assets/_Resources/Temp/URPPackageSamples/SharedAssets/Shaders/Wall_Graph.shadergraph
+WaterLake,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Water/WaterLake.shadergraph
+WaterSimple_FoamMask,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Water/WaterSimple_FoamMask.shadergraph
+WaterStream,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Water/WaterStream.shadergraph
+WaterStreamFalls,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Water/WaterStreamFalls.shadergraph
+WhiteBalance,Packages/com.unity.shadergraph/Samples~/NodeReference/Artistic/WhiteBalance.shadergraph
+XGS/AfterImage/Additive,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/AfterImageAdditive.shader
+XGS/UtilityPass,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/UtilityPass.shader
+clover,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Details/clover/clover.shadergraph
+com.unity,Packages/com.unity.shadergraph
+effect/AlphaRimProFaceVF,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/AlphaRimProFaceVF.shader
+effect/AlphaRimProVF,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/AlphaRimProVF.shader
+effect/C_EffectStandard,Assets/_Resources/Arts/ArtWorks/Effect/NPC/M1_P82_body_001a/lengqi/C_EffectStandard.shader
+effect/C_EffectStandard_ZTestAlways,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/C_EffectStandard_ZTestAlways.shader
+effect/C_ParticleStandard_Temp,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/C_ParticleStandard_Temp.shader
+effect/CommandDistort,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/CommandDistort.shader
+effect/DistortionGrabEffect,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/DistortionGrabEffect.shader
+effect/Falloff,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/falloff.shader
+effect/FalloffTexture,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/falloffTexture.shader
+effect/Flow Map,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/FlowMap.shader
+effect/InkPainting,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/InkPainting.shader
+effect/InkPainting_Low,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/ReplaceShader/InkPainting_Low.shader
+effect/InkPainting_Medium,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/InkPainting_Medium.shader
+effect/Mesh AlphaTest,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Mesh_Alphatest.shader
+effect/Ripple,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Ripple.shader
+effect/S_Normal,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/S_Normal.shader
+effect/S_PBR,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/S_PBR.shader
+effect/S_PBRTint,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/S_PBRTint.shader
+effect/Standard,Assets/_Resources/Arts/ArtWorks/Effect/NPC/M1_P82_body_001a/lengqi/Standard.shader
+effect/Standard FX,Assets/_Resources/Arts/ArtWorks/Effect/NPC/M1_P82_body_001a/lengqi/Standard_FX.shader
+effect/Standard-ZTestAlways,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Standard_ZTestAlways.shader
+effect/Standard_NoCut,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Standard_NoCut.shader
+effect/Suoquan,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Suoquan.shader
+effect/UVAnimation,Assets/_Resources/Arts/Shaders/URP/UI/UVAnimation.shader
+effect/双层 Mesh,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/2layers.shader
+effect/双层 Mesh UV流动,Assets/_Resources/Arts/ArtWorks/Effect/NPC/M1_P82_body_001a/lengqi/2layersUV.shader
+effect/双层 Mesh UV流动-ZTestAlways,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/2layersUV_ZTestAlways.shader
+effect/双层 Mesh-ZTestAlways,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/2layers_ZTestAlways.shader
+effect/双层 Texture UV流动,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/2layersUVTexture.shader
+effect/扭曲,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/Distort.shader
+effect/扭曲 Mask,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/DistortNew.shader
+effect/扭曲 全屏,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/DistortionGrab.shader
+effect/扭曲 溶解,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/DistortDissove.shader
+effect/溶解 勾边,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/S_RongJie.shader
+effect/熔岩,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/S_RongYan.shader
+effect/腐蚀,Assets/_Resources/Arts/Shaders/JXSJ3_URP~/effect/AlphaDissolve.shader
+pebbles,Packages/com.unity.shadergraph/Samples~/ProductionReady/Environment/Details/Pebbles/pebbles.shadergraph
