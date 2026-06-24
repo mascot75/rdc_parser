@@ -618,6 +618,7 @@ def load_drawcalls_csv(path: Path) -> list[DrawRec]:
                 ib=get(row, "ib"),
                 vs=get(row, "vs"),
                 ps=get(row, "ps"),
+                raw_ps=get(row, "raw_ps") or get(row, "ps"),
                 blend=get(row, "blend").lower() in ("true", "1", "是"),
                 depth_write=get(row, "depth_write").lower() in ("true", "1", "是"),
                 depth_enable=get(row, "depth_enable").lower() in ("true", "1", "是"),

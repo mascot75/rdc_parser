@@ -124,10 +124,10 @@ python -m scripts.cli poly <classified.csv> -o <out_dir>
 ### compare — 两份抓帧对比
 
 ```bash
-python -m scripts.cli compare <A_classified.csv> <B_classified.csv> -o <out_dir> [--name-a "优化前"] [--name-b "优化后"]
+python -m scripts.cli compare <A_classified.csv> <B_classified.csv> -o <out_dir> [--name-a "优化前"] [--name-b "优化后"] [--timing-a <A_gpu_timing.json>] [--timing-b <B_gpu_timing.json>]
 ```
 
-输出 `compare_report.md` + 差异 CSV。
+输出 `compare_report.md` + 差异 CSV。传入 `--timing-a` / `--timing-b` 可启用 GPU 耗时对比，报告和 CSV 会增加耗时列，按耗时变化排序。
 
 ### batch — 批量分析
 
@@ -147,16 +147,37 @@ python -m scripts.cli timing <input.rdc> -o <out_dir> [--runs 3] [--classified <
 
 多次回放导出 per-event GPU 耗时，可合并到 `classified.csv`。`--json` 可跳过导出，直接使用已有的 timing JSON 文件。
 
+### update-refs — 更新参考数据
+
+```bash
+python -m scripts.cli update-refs <unity_project_dir> [-o <out_dir>]
+```
+
+从 Unity 项目目录扫描并导出 mesh/prefab/shader 路径到参考数据目录。默认输出到 `references/`。
+
+可选参数：
+- `--mesh-dir <dir>` — mesh 搜索目录（默认 `<项目>/Assets/_Resources`）
+- `--prefab-dir <dir>` — prefab 搜索目录（默认 `<项目>/Assets/_Resources`）
+- `--workers <N>` — mesh 解析线程数（默认 16）
+- `--skip-mesh` — 跳过 mesh 导出
+- `--skip-prefab` — 跳过 prefab 导出
+- `--skip-shader` — 跳过 shader 扫描
+
+> 注：此命令较慢（需扫描整个 Unity 项目），仅在参考数据需要更新时执行。
+
 ## 工作流示例
 
 ```bash
+# 更新参考数据（仅在 Unity 项目资源变更时执行）
+python -m scripts.cli update-refs "E:\swordm3d" -o references
+
 # 单文件完整分析
 python -m scripts.cli run "D:\captures\scene.rdc" -o "D:\output\scene"
 
-# 对比优化前后
+# 对比优化前后（含耗时对比）
 python -m scripts.cli run "D:\captures\before.rdc" -o "D:\output\before"
 python -m scripts.cli run "D:\captures\after.rdc" -o "D:\output\after"
-python -m scripts.cli compare "D:\output\before\classified.csv" "D:\output\after\classified.csv" -o "D:\output\diff"
+python -m scripts.cli compare "D:\output\before\classified.csv" "D:\output\after\classified.csv" -o "D:\output\diff" --timing-a "D:\output\before\gpu_timing.json" --timing-b "D:\output\after\gpu_timing.json"
 
 # 批量处理
 python -m scripts.cli batch "D:\captures\batch" -o "D:\output\batch_out"

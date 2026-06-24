@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""CLI 子命令架构：convert / parse / classify / report / poly / run / html / compare / batch / timing。"""
+"""CLI 子命令架构：convert / parse / classify / report / poly / run / html / compare / batch / timing / update-refs。"""
 
 from __future__ import annotations
 
@@ -40,7 +40,7 @@ def _default_out_dir(input_path: Path) -> Path:
 
 # ── 参考文件自动发现 ────────────────────────────────────────────────
 
-_DEFAULT_REFS_DIR = Path("rdc_parser/references")
+_DEFAULT_REFS_DIR = Path("references")
 
 
 def _add_references_args(p: argparse.ArgumentParser) -> None:
@@ -334,7 +334,17 @@ def cmd_compare(args: argparse.Namespace) -> None:
 
     name_a = Path(args.name_a).stem if hasattr(args, "name_a") and args.name_a else path_a.stem
     name_b = Path(args.name_b).stem if hasattr(args, "name_b") and args.name_b else path_b.stem
-    compare_records(records_a, records_b, out_dir, name_a, name_b)
+
+    timing_a = None
+    timing_b = None
+    if hasattr(args, "timing_a") and args.timing_a:
+        timing_a = load_timing_json(Path(args.timing_a).resolve())
+        print(f"A 耗时: {len(timing_a)} 个事件")
+    if hasattr(args, "timing_b") and args.timing_b:
+        timing_b = load_timing_json(Path(args.timing_b).resolve())
+        print(f"B 耗时: {len(timing_b)} 个事件")
+
+    compare_records(records_a, records_b, out_dir, name_a, name_b, timing_a, timing_b)
     print(f"对比报告: {out_dir / 'compare_report.md'}")
 
 
@@ -448,6 +458,62 @@ def _run_pipeline_core(
 
 # ── 主入口 ──────────────────────────────────────────────────────────
 
+_DEFAULT_REFS_DIR = Path("references")
+
+
+def cmd_update_refs(args: argparse.Namespace) -> None:
+    """更新参考数据：从 Unity 项目导出 mesh/prefab/shader 路径。"""
+    import importlib
+    import os
+
+    project_dir = Path(args.input).resolve()
+    if not project_dir.is_dir():
+        print(f"错误: 目录不存在: {project_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    out_dir = Path(args.out_dir).resolve() if args.out_dir else _DEFAULT_REFS_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # 更新 mesh_export.csv
+    if not args.skip_mesh:
+        print(f"=== 导出 mesh 路径 ===")
+        search_dir = args.mesh_dir or str(project_dir / "Assets" / "_Resources")
+        mesh_csv = out_dir / "mesh_export.csv"
+        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
+        try:
+            mod = importlib.import_module("export_mesh_paths")
+            mod.export_mesh_paths(search_dir, str(mesh_csv), args.workers)
+        finally:
+            sys.path.pop(0)
+
+    # 更新 prefab_export.csv
+    if not args.skip_prefab:
+        print(f"=== 导出 prefab 路径 ===")
+        search_dir = args.prefab_dir or str(project_dir / "Assets" / "_Resources")
+        prefab_csv = out_dir / "prefab_export.csv"
+        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
+        try:
+            mod = importlib.import_module("export_prefab_paths")
+            mod.export_prefab_paths(search_dir, str(prefab_csv))
+        finally:
+            sys.path.pop(0)
+
+    # 更新 ShaderList.csv
+    if not args.skip_shader:
+        print(f"=== 扫描 Shader ===")
+        shader_csv = out_dir / "ShaderList.csv"
+        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
+        try:
+            mod = importlib.import_module("scan_shaders")
+            shaders = mod.scan_shaders(str(project_dir))
+            mod.export_csv(shaders, str(shader_csv))
+            print(f"共 {len(shaders)} 个 Shader，已导出到: {shader_csv}")
+        finally:
+            sys.path.pop(0)
+
+    print(f"\n参考数据已更新: {out_dir}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="parse_rdc",
@@ -508,6 +574,8 @@ def main() -> None:
     _add_common_args(p)
     p.add_argument("--name-a", help="A 份名称（默认取文件名）")
     p.add_argument("--name-b", help="B 份名称（默认取文件名）")
+    p.add_argument("--timing-a", help="A 份 gpu_timing.json 路径（启用耗时对比）")
+    p.add_argument("--timing-b", help="B 份 gpu_timing.json 路径（启用耗时对比）")
 
     # batch
     p = sub.add_parser("batch", help="批量分析目录下所有 .rdc 文件")
@@ -526,6 +594,17 @@ def main() -> None:
     p.add_argument("--renderdoccmd", help="renderdoccmd.exe 路径")
     p.add_argument("--runs", type=int, default=3, help="回放次数 (默认 3)")
 
+    # update-refs
+    p = sub.add_parser("update-refs", help="从 Unity 项目更新参考数据（mesh/prefab/shader）")
+    p.add_argument("input", help="Unity 项目根目录")
+    _add_common_args(p)
+    p.add_argument("--mesh-dir", help="mesh 搜索目录（默认 <项目>/Assets/_Resources）")
+    p.add_argument("--prefab-dir", help="prefab 搜索目录（默认 <项目>/Assets/_Resources）")
+    p.add_argument("--workers", type=int, default=16, help="mesh 解析线程数 (默认 16)")
+    p.add_argument("--skip-mesh", action="store_true", help="跳过 mesh 导出")
+    p.add_argument("--skip-prefab", action="store_true", help="跳过 prefab 导出")
+    p.add_argument("--skip-shader", action="store_true", help="跳过 shader 扫描")
+
     args = parser.parse_args()
     if not args.command:
         parser.print_help()
@@ -542,5 +621,6 @@ def main() -> None:
         "compare": cmd_compare,
         "batch": cmd_batch,
         "timing": cmd_timing,
+        "update-refs": cmd_update_refs,
     }
     cmd_map[args.command](args)
