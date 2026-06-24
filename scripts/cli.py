@@ -18,7 +18,7 @@ from .poly_analyzer import run_poly_analysis
 from .html_report import write_html_report
 from .compare import compare_records
 from .batch import run_batch
-from .gpu_timing import export_gpu_timing, load_timing_json, merge_timing, write_timing_csv
+from .gpu_timing import export_gpu_timing, load_timing_json, load_shader_names_from_timing, merge_timing, write_timing_csv
 
 
 def _add_common_args(p: argparse.ArgumentParser) -> None:
@@ -234,7 +234,7 @@ def cmd_poly(args: argparse.Namespace) -> None:
 # ── run ─────────────────────────────────────────────────────────────
 
 def cmd_run(args: argparse.Namespace) -> None:
-    """一键全流程：convert → parse → classify → report → timing。"""
+    """一键全流程：timing → convert → parse → classify → report。"""
     input_path = Path(args.input).resolve()
     if not input_path.exists():
         print(f"错误: 文件不存在: {input_path}", file=sys.stderr)
@@ -243,7 +243,29 @@ def cmd_run(args: argparse.Namespace) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"输入: {input_path}")
-    records, platform_info, mesh_export, resource_standard = _run_pipeline_core(input_path, out_dir, args)
+
+    # GPU 耗时（提前执行，以便获取 shader names）
+    shader_names = {}
+    timing_data = None
+    if not args.no_timing and input_path.suffix.lower() == ".rdc":
+        timing_runs = getattr(args, "timing_runs", 3)
+        renderdoccmd = getattr(args, "renderdoccmd", None)
+        json_path = out_dir / "gpu_timing.json"
+
+        print(f"导出 GPU 耗时 ({timing_runs} 次回放)...")
+        if export_gpu_timing(input_path, json_path, renderdoccmd, timing_runs):
+            timing_data = load_timing_json(json_path)
+            shader_names = load_shader_names_from_timing(json_path)
+            if shader_names:
+                print(f"获取到 {len(shader_names)} 个 shader 名称")
+            if timing_data:
+                print(f"解析到 {len(timing_data)} 个事件耗时")
+        else:
+            print("GPU 耗时导出失败（可忽略，用 --no-timing 跳过）")
+
+    records, platform_info, mesh_export, resource_standard = _run_pipeline_core(
+        input_path, out_dir, args, shader_names or None
+    )
 
     # 分类 Excel
     if mesh_export:
@@ -263,33 +285,19 @@ def cmd_run(args: argparse.Namespace) -> None:
             if export_rdc_capture_thumbnail(rdc_for_thumb, thumb_path, args.renderdoccmd):
                 print(f"缩略图: {thumb_path}")
 
-    # GPU 耗时（默认开启）
-    timing_data = None
-    if not args.no_timing and input_path.suffix.lower() == ".rdc":
-        timing_runs = getattr(args, "timing_runs", 3)
-        renderdoccmd = getattr(args, "renderdoccmd", None)
-        json_path = out_dir / "gpu_timing.json"
+    # 合并耗时数据
+    if timing_data:
+        classified_path = out_dir / "classified.csv"
+        if classified_path.exists():
+            records = load_classified_csv(classified_path)
+            rows = merge_timing(records, timing_data)
+            csv_path = out_dir / "gpu_timing.csv"
+            write_timing_csv(csv_path, rows)
+            print(f"耗时 CSV: {csv_path}")
 
-        print(f"\n导出 GPU 耗时 ({timing_runs} 次回放)...")
-        if export_gpu_timing(input_path, json_path, renderdoccmd, timing_runs):
-            timing_data = load_timing_json(json_path)
-            if timing_data:
-                print(f"解析到 {len(timing_data)} 个事件耗时")
-                classified_path = out_dir / "classified.csv"
-                if classified_path.exists():
-                    records = load_classified_csv(classified_path)
-                    rows = merge_timing(records, timing_data)
-                    csv_path = out_dir / "gpu_timing.csv"
-                    write_timing_csv(csv_path, rows)
-                    print(f"耗时 CSV: {csv_path}")
-
-                    # 重新生成报告（包含耗时数据和减面分析）
-                    write_report_md(out_dir / "rdc_report.md", records, platform_info, timing_data, resource_standard)
-                    print(f"更新报告（含耗时）: {out_dir / 'rdc_report.md'}")
-            else:
-                print("未获取到耗时数据")
-        else:
-            print("GPU 耗时导出失败（可忽略，用 --no-timing 跳过）")
+            # 重新生成报告（包含耗时数据和减面分析）
+            write_report_md(out_dir / "rdc_report.md", records, platform_info, timing_data, resource_standard)
+            print(f"更新报告（含耗时）: {out_dir / 'rdc_report.md'}")
 
     print_summary(records, platform_info)
 
@@ -359,7 +367,33 @@ def cmd_batch(args: argparse.Namespace) -> None:
     out_dir = _out_dir(args, input_dir)
 
     def _pipeline(rdc_path: Path, sub_out_dir: Path) -> list:
-        records, _platform_info, _me, _rs = _run_pipeline_core(rdc_path, sub_out_dir, args)
+        # 先跑 timing 拿 shader names
+        shader_names = {}
+        timing_data = None
+        if not getattr(args, "no_timing", False):
+            timing_runs = getattr(args, "timing_runs", 3)
+            renderdoccmd = getattr(args, "renderdoccmd", None)
+            json_path = sub_out_dir / "gpu_timing.json"
+
+            print(f"  导出 GPU 耗时 ({timing_runs} 次回放)...")
+            if export_gpu_timing(rdc_path, json_path, renderdoccmd, timing_runs):
+                timing_data = load_timing_json(json_path)
+                shader_names = load_shader_names_from_timing(json_path)
+                if shader_names:
+                    print(f"  获取到 {len(shader_names)} 个 shader 名称")
+
+        records, _platform_info, _me, _rs = _run_pipeline_core(
+            rdc_path, sub_out_dir, args, shader_names or None
+        )
+
+        # 合并耗时数据
+        if timing_data:
+            classified_path = sub_out_dir / "classified.csv"
+            if classified_path.exists():
+                records = load_classified_csv(classified_path)
+                rows = merge_timing(records, timing_data)
+                write_timing_csv(sub_out_dir / "gpu_timing.csv", rows)
+
         return records
 
     run_batch(input_dir, out_dir, _pipeline)
@@ -414,10 +448,12 @@ def _run_pipeline_core(
     rdc_path: Path,
     out_dir: Path,
     args: argparse.Namespace,
+    shader_names: dict[str, str] | None = None,
 ) -> tuple[list, str, Path | None, Path | None]:
     """单个 RDC 的核心流水线：convert → parse → classify → report。
 
     返回 (records, platform_info, mesh_export, resource_standard)。
+    shader_names: 可选的 {shader_module_id: name} 映射，来自 RenderDoc API。
     """
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -426,7 +462,7 @@ def _run_pipeline_core(
     platform_info = extract_platform_info(xml_path) or ""
 
     # 2. parse
-    records = analyze(xml_path)
+    records = analyze(xml_path, shader_names)
     write_drawcalls_csv(out_dir / "drawcalls.csv", records)
 
     # 3. classify
@@ -583,6 +619,8 @@ def main() -> None:
     _add_common_args(p)
     p.add_argument("--renderdoccmd", help="renderdoccmd.exe 路径")
     p.add_argument("--force-convert", action="store_true", help="强制重新转换")
+    p.add_argument("--no-timing", action="store_true", help="禁用 GPU 耗时导出")
+    p.add_argument("--timing-runs", type=int, default=3, help="GPU 耗时回放次数 (默认 3)")
     _add_references_args(p)
 
     # timing

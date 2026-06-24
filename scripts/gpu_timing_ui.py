@@ -91,6 +91,24 @@ def action_chunk_index(action):
     return int(events[-1].chunkIndex)
 
 
+def collect_shader_names(controller):
+    """从 controller 收集 shader module ID → 名称映射。"""
+    import renderdoc as rd
+
+    resources = controller.GetResources()
+    shader_names = {}
+    for r in resources:
+        if r.type == rd.ResourceType.Shader:
+            rid = str(r.resourceId)
+            # 去掉 "ResourceId::" 前缀，只保留数字 ID
+            if "::" in rid:
+                rid = rid.split("::")[-1]
+            name = str(r.name) if r.name else ""
+            if name and not name.startswith("Shader Module"):
+                shader_names[rid] = name
+    return shader_names
+
+
 def export_timing_once(controller):
     """执行一次 FetchCounters，返回 {chunk_index: duration_ms}。"""
     import renderdoc as rd
@@ -156,8 +174,11 @@ def average_timing_samples(samples):
 def main():
     try:
         samples = []
+        shader_names = {}
 
         def timing_callback(controller):
+            # 收集 shader 名称（只需一次）
+            shader_names.update(collect_shader_names(controller))
             for i in range(RUNS):
                 timing = export_timing_once(controller)
                 samples.append(timing)
@@ -167,15 +188,20 @@ def main():
 
         result = average_timing_samples(samples)
 
+        # 合并 shader 名称到输出
+        output = result
+        if shader_names:
+            output = {"timing": result, "shader_names": shader_names}
+
         if OUT_PATH:
             out_dir = os.path.dirname(OUT_PATH)
             if out_dir and not os.path.exists(out_dir):
                 os.makedirs(out_dir)
             with open(OUT_PATH, "w", encoding="utf-8") as f:
-                json.dump(result, f, indent=2)
-            print("ok out={0}".format(OUT_PATH), flush=True)
+                json.dump(output, f, indent=2)
+            print("ok out={0} shaders={1}".format(OUT_PATH, len(shader_names)), flush=True)
         else:
-            print(json.dumps(result, indent=2))
+            print(json.dumps(output, indent=2))
 
     except Exception as e:
         write_error(traceback.format_exc())

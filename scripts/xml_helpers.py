@@ -56,6 +56,15 @@ def resource_named(elem: ET.Element, name: str) -> str:
     return "0" if node is None else (node.text or "0").strip()
 
 
+def _first_nonzero_resource(elem: ET.Element, *names: str) -> str:
+    """返回第一个非 '0' 的 ResourceId 值。"""
+    for name in names:
+        val = resource_named(elem, name)
+        if val and val != "0":
+            return val
+    return ""
+
+
 def command_buffer_id(elem: ET.Element) -> str:
     cb = resource_named(elem, "commandBuffer")
     if cb != "0":
@@ -138,24 +147,34 @@ def clean_name(name: str) -> str:
 def _parse_vk_pipeline_create_info(ci: ET.Element) -> dict[str, object]:
     """从单个 VkGraphicsPipelineCreateInfo 解析出 VS/PS/Blend/Depth/Topology。"""
     result: dict[str, object] = {}
-    vs_node = ci.find(".//ResourceId[@name='module']")
-    if vs_node is not None and (vs_node.text or "").strip() != "0":
-        stage = ci.find(".//struct[@name='stage']")
-        if stage is not None:
+    # 遍历 pStages 数组（array 或 struct 容器均可）
+    stages_container = ci.find(".//array[@name='pStages']") or ci.find(".//struct[@name='Stages']")
+    if stages_container is not None:
+        for stage in stages_container.findall(".//struct"):
             stage_bit = attr_string(stage, "stage")
+            if not stage_bit:
+                # stage 可能是 enum 子元素
+                stage_enum = stage.find(".//enum[@name='stage']")
+                if stage_enum is not None:
+                    stage_bit = stage_enum.get("string", "")
+            module = resource_named(stage, "module")
+            if module == "0":
+                continue
             if "VERTEX" in stage_bit:
-                result["vs"] = (vs_node.text or "").strip()
+                result.setdefault("vs", module)
             elif "FRAGMENT" in stage_bit:
-                result["ps"] = (vs_node.text or "").strip()
-    for stage in ci.findall(".//struct[@name='Stages']//struct"):
-        stage_bit = attr_string(stage, "stage")
-        module = resource_named(stage, "module")
-        if module == "0":
-            continue
-        if "VERTEX" in stage_bit:
-            result.setdefault("vs", module)
-        elif "FRAGMENT" in stage_bit:
-            result.setdefault("ps", module)
+                result.setdefault("ps", module)
+    # fallback：直接找第一个 module（兼容旧格式）
+    if "vs" not in result and "ps" not in result:
+        vs_node = ci.find(".//ResourceId[@name='module']")
+        if vs_node is not None and (vs_node.text or "").strip() != "0":
+            stage = ci.find(".//struct[@name='stage']")
+            if stage is not None:
+                stage_bit = attr_string(stage, "stage")
+                if "VERTEX" in stage_bit:
+                    result["vs"] = (vs_node.text or "").strip()
+                elif "FRAGMENT" in stage_bit:
+                    result["ps"] = (vs_node.text or "").strip()
     topo = attr_string(ci, "topology")
     if topo:
         result["topology"] = topo
@@ -175,14 +194,19 @@ def _parse_vk_pipeline_create_info(ci: ET.Element) -> dict[str, object]:
 def parse_vk_pipeline_states(elem: ET.Element) -> dict[str, dict[str, object]]:
     """从 vkCreateGraphicsPipelines 元素中解析所有 pipeline 状态。"""
     states: dict[str, dict[str, object]] = {}
+    # 批量创建：CreateInfos 数组
     for ci in elem.findall(".//struct[@name='CreateInfos']/struct"):
-        pipe_id = resource_named(ci, "pPipeline") or resource_named(ci, "Pipeline")
-        if not pipe_id or pipe_id == "0":
+        pipe_id = _first_nonzero_resource(ci, "pPipeline", "Pipeline")
+        if not pipe_id:
             continue
         states[pipe_id] = _parse_vk_pipeline_create_info(ci)
-    pipe_id = resource_named(elem, "pPipeline")
-    if pipe_id and pipe_id != "0" and pipe_id not in states:
-        ci = elem.find(".//struct[@name='CreateInfo']")
-        if ci is not None:
+    # 单个创建：CreateInfo 结构
+    ci = elem.find(".//struct[@name='CreateInfo']")
+    if ci is not None:
+        pipe_id = _first_nonzero_resource(ci, "pPipeline", "Pipeline")
+        if not pipe_id:
+            # Pipeline ID 可能在 chunk 顶层而非 CreateInfo 内部
+            pipe_id = _first_nonzero_resource(elem, "pPipeline", "Pipeline")
+        if pipe_id and pipe_id not in states:
             states[pipe_id] = _parse_vk_pipeline_create_info(ci)
     return states

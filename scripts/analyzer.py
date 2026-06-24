@@ -196,11 +196,12 @@ def pre_scan_vk_execute_contexts(xml: Path) -> dict[str, list[str]]:
 
 # ── 主解析 ──────────────────────────────────────────────────────────
 
-def analyze(xml: Path) -> list[DrawRec]:
+def analyze(xml: Path, shader_names: dict[str, str] | None = None) -> list[DrawRec]:
     """流式解析 XML，提取所有 draw call 信息。
 
     遍历 RenderDoc 导出的 XML，维护 D3D11/Vulkan 的渲染状态机（VB/IB/Shader/Blend/Depth/RT），
     在遇到 draw call 时快照当前状态生成 DrawRec。不含资源分类（由 classify_step 完成）。
+    shader_names: 可选的 {shader_module_id: name} 映射，来自 RenderDoc API。
     """
     zip_path = find_zip_for_xml(xml)
     zf = zipfile.ZipFile(zip_path) if zip_path else None
@@ -209,6 +210,8 @@ def analyze(xml: Path) -> list[DrawRec]:
     # 状态机：遍历 XML 元素，跟踪当前渲染状态，遇到 draw call 时生成记录
     # D3D11 状态用全局变量跟踪，Vulkan 用 vk_states dict 按 command buffer 隔离
     names: dict[str, str] = {}                  # ResourceID → 调试名称（SetDebugName）
+    if shader_names:
+        names.update(shader_names)
     buffer_sizes: dict[str, int] = {}           # BufferID → 字节大小
     buffer_bind_flags: dict[str, str] = {}      # BufferID → 绑定标志
     buffer_contents: dict[str, bytearray] = {}  # BufferID → 内容快照（用于解码 indirect args）

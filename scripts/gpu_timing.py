@@ -159,6 +159,10 @@ def load_timing_json(json_path: Path) -> dict[int, float]:
 
     data = json.loads(json_path.read_text(encoding="utf-8"))
 
+    # 新格式：{"timing": {...}, "shader_names": {...}}
+    if isinstance(data, dict) and "timing" in data:
+        data = data["timing"]
+
     timing: dict[int, float] = {}
 
     # 支持多种 JSON 格式
@@ -189,6 +193,24 @@ def load_timing_json(json_path: Path) -> dict[int, float]:
                 timing[eid] = dur
 
     return timing
+
+
+def load_shader_names_from_timing(json_path: Path) -> dict[str, str]:
+    """从耗时 JSON 中提取 shader_names（如果有）。"""
+    if not json_path.exists():
+        return {}
+
+    data = json.loads(json_path.read_text(encoding="utf-8"))
+    if isinstance(data, dict) and "shader_names" in data:
+        result = {}
+        for k, v in data["shader_names"].items():
+            if not v:
+                continue
+            # 去掉 "ResourceId::" 前缀
+            key = str(k).split("::")[-1] if "::" in str(k) else str(k)
+            result[key] = str(v)
+        return result
+    return {}
 
 
 def merge_timing(
