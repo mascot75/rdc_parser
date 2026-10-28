@@ -27,6 +27,8 @@ def _format_number(n: int) -> str:
 
 def write_html_report(path: Path, records: list[DrawRec], platform_info: str = "") -> None:
     """生成交互式 HTML 报告。"""
+    if not records:
+        raise ValueError("没有绘制记录，拒绝生成空 HTML 报告")
     # 统计汇总
     total_dc = len(records)
     total_faces = sum(_safe_int(r.face_estimate) for r in records)
@@ -93,6 +95,8 @@ tr:hover { background: #f9f9f9; }
 
     html_parts.append(f"""
 <h1>RDC DrawCall 分析报告</h1>
+<p>面数仅统计已知绘制参数；未知项不是零。资源名称和分类可能缺少项目参考数据。IB 容量不作为实际绘制面数。</p>
+<p>面数已知 {sum(r.face_known for r in records)} / {total_dc} 条。事件编号类型：{_escape(records[0].event_space)}。</p>
 <div class="summary">
 <div class="card"><div class="label">DrawCall 总数</div><div class="value">{_format_number(total_dc)}</div></div>
 <div class="card"><div class="label">总面数</div><div class="value">{_format_number(total_faces)}</div></div>

@@ -5,31 +5,31 @@ import sys
 from pathlib import Path
 
 # 添加父目录到路径
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
 def test_import():
-    from rdc_parser.scripts.cli import main
+    from scripts.cli import main
     assert callable(main)
 
 
 def test_html_import():
-    from rdc_parser.scripts.html_report import write_html_report
+    from scripts.html_report import write_html_report
     assert callable(write_html_report)
 
 
 def test_compare_import():
-    from rdc_parser.scripts.compare import compare_records
+    from scripts.compare import compare_records
     assert callable(compare_records)
 
 
 def test_batch_import():
-    from rdc_parser.scripts.batch import run_batch
+    from scripts.batch import run_batch
     assert callable(run_batch)
 
 
 def test_gpu_timing_import():
-    from rdc_parser.scripts.gpu_timing import export_gpu_timing
+    from scripts.gpu_timing import export_gpu_timing
     assert callable(export_gpu_timing)
 
 

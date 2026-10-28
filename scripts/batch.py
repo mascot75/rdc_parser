@@ -21,8 +21,7 @@ def run_batch(
     """
     rdcs = sorted(input_dir.glob("*.rdc"))
     if not rdcs:
-        print(f"未找到 .rdc 文件: {input_dir}")
-        return
+        raise ValueError(f"未找到 .rdc 文件: {input_dir}")
 
     print(f"找到 {len(rdcs)} 个 .rdc 文件")
     out_root.mkdir(parents=True, exist_ok=True)
@@ -46,3 +45,5 @@ def run_batch(
 
     print(f"\n批量处理完成: 成功 {succeeded}, 失败 {failed}, 共 {len(rdcs)}")
     print(f"输出目录: {out_root}")
+    if failed:
+        raise ValueError(f"批量分析包含 {failed} 个失败或部分成功的任务")

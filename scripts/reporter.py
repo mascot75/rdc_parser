@@ -31,7 +31,7 @@ def summarise_by(records: list[DrawRec], key_field: str, timing: dict[int, float
     groups: dict[str, list[DrawRec]] = defaultdict(list)
     for r in records:
         groups[getattr(r, key_field)].append(r)
-    total_time = sum(timing.values()) if timing else 0.0
+    total_time = sum(timing.get(r.event, 0.0) for r in records) if timing else 0.0
     rows = []
     for key, recs in sorted(groups.items(), key=lambda x: -len(x[1])):
         # ib_faces: IB 容量面数之和（buffer 资产属性）
@@ -314,7 +314,10 @@ def write_report_md(path: Path, records: list[DrawRec], platform_info: str = "",
 
     total = len(records)
     if total == 0:
-        return
+        raise ValueError("没有绘制记录，拒绝生成空 Markdown 报告")
+
+    from .gpu_timing import validate_timing_alignment
+    validate_timing_alignment(records, timing)
 
     total_ib = sum(int(float(r.ib_capacity_faces_estimate)) for r in records if r.ib_capacity_faces_estimate)
     total_draw = sum(int(r.face_estimate) for r in records if r.face_known and r.face_estimate)
@@ -346,16 +349,21 @@ def write_report_md(path: Path, records: list[DrawRec], platform_info: str = "",
     md.append('| 指标 | 数值 |')
     md.append('|------|------|')
     md.append(f'| DrawCall 总数 | {total:,} |')
-    md.append(f'| IB面数 总计 | {total_ib:,} |')
+    md.append(f'| 面数可确定的 DC | {sum(r.face_known for r in records):,} |')
+    md.append(f'| 面数未知的 DC | {sum(not r.face_known for r in records):,} |')
+    md.append(f'| 已知 IB 容量参考之和 | {total_ib:,} |')
+    md.append(f'| 有 IB 容量参考的 DC | {sum(bool(r.ib_capacity_faces_estimate) for r in records):,} |')
     md.append(f'| Draw参数面数 总计 | {total_draw:,} |')
     md.append(f'| Mesh 数量 | {len(mesh_keys):,} |')
     md.append(f'| Shader 数量 | {len(shader_set)} |')
     md.append(f'| 混合 DC | {blended:,} |')
     md.append(f'| 不写深度 DC | {no_depth:,} |')
     if timing:
-        md.append(f'| GPU 总耗时 | {total_gpu_time:.2f} ms |')
+        md.append(f'| 已匹配绘制事件回放耗时之和 | {total_gpu_time:.2f} ms |')
         timed_count = sum(1 for r in records if timing.get(r.event, 0.0) > 0)
         md.append(f'| 有耗时 DC | {timed_count:,} |')
+    md.append('')
+    md.append('> 面数总计仅覆盖已知记录，未知项不是零；IB 参考仅汇总已知容量，不参与采用面数，无参考记录不代表容量为零。Mesh 按 Buffer 组合近似分组，不能等同于项目资产数。GPU 值为本机回放事件耗时，不是游戏帧时间；占比分母为已匹配绘制事件之和，不含其他计算、拷贝事件。')
     md.append('')
     md.append('---')
     md.append('')
@@ -551,7 +559,7 @@ def write_report_md(path: Path, records: list[DrawRec], platform_info: str = "",
             md.append('未找到面数标准定义。')
             md.append('')
     else:
-        md.append('超出面数标准的 mesh: 需通过 `poly` 子命令生成详细数据')
+        md.append('未提供资源分类/面数标准，无法判定项目资源是否超标。')
         md.append('')
 
     path.write_text("\n".join(md), encoding="utf-8")

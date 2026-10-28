@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import os
 import subprocess
 import sys
@@ -17,8 +18,13 @@ from .models import DrawRec
 
 def find_qrenderdoc(explicit: str | None = None) -> str:
     """查找 qrenderdoc.exe。"""
-    if explicit and Path(explicit).is_file():
-        return str(Path(explicit).resolve())
+    if explicit:
+        path = Path(explicit)
+        if path.name.lower() != "qrenderdoc.exe":
+            path = path.with_name("qrenderdoc.exe")
+        if path.is_file():
+            return str(path.resolve())
+        raise FileNotFoundError(f"找不到与指定工具配套的 qrenderdoc.exe: {path}")
     for cand in (
         r"C:\Program Files\RenderDoc\qrenderdoc.exe",
         r"C:\Program Files (x86)\RenderDoc\qrenderdoc.exe",
@@ -78,6 +84,7 @@ def export_gpu_timing(
     renderdoccmd: str | None = None,
     runs: int = 3,
     timeout_s: int = 600,
+    include_timing: bool = True,
 ) -> bool:
     """从 .rdc 导出 GPU 耗时数据。
 
@@ -91,7 +98,7 @@ def export_gpu_timing(
         return False
 
     # UI 脚本路径
-    ui_script = Path(__file__).parent / "gpu_timing_ui.py"
+    ui_script = Path(__file__).parent / "replay_export_ui.py"
     if not ui_script.is_file():
         print(f"错误: 缺少 UI 脚本: {ui_script}", file=sys.stderr)
         return False
@@ -111,18 +118,23 @@ def export_gpu_timing(
     env["RDC_TIMING_RDC"] = path_for_tool(rdc_path)
     env["RDC_TIMING_RUNS"] = str(max(int(runs), 1))
     env["RDC_TIMING_ERR"] = path_for_tool(err_log)
+    env["RDC_INCLUDE_TIMING"] = "1" if include_timing else "0"
     env.setdefault("RDC_TIMING_AUTO_QUIT", "1")
 
     # 构建命令
     cmd = [
         qrenderdoc,
-        path_for_tool(rdc_path),
         "--ui-python",
         path_for_tool(ui_script),
     ]
 
     print(f"运行(qrenderdoc): {' '.join(f'\"{c}\"' if ' ' in c else c for c in cmd)}", flush=True)
-    proc = subprocess.Popen(cmd, env=env)
+    startup = None
+    if sys.platform == "win32":
+        startup = subprocess.STARTUPINFO()
+        startup.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startup.wShowWindow = 0
+    proc = subprocess.Popen(cmd, env=env, startupinfo=startup)
 
     try:
         returncode = _wait_qrenderdoc(proc, out_json, timeout_s)
@@ -149,7 +161,42 @@ def export_gpu_timing(
         )
         return False
 
-    return True
+    try:
+        data = json.loads(out_json.read_text(encoding="utf-8"))
+        valid = bool(data.get("drawcalls")) and data.get("status") == "ok"
+        if include_timing:
+            valid = valid and bool(load_timing_json(out_json)) and data.get("timing_status") == "ok"
+        if not valid:
+            print("回放未完整成功: " + "\n".join(data.get("diagnostics", ["没有有效数据"])), file=sys.stderr)
+        return valid
+    except (ValueError, OSError) as exc:
+        print(f"回放 JSON 无效: {exc}", file=sys.stderr)
+        return False
+
+
+class TimingData(dict):
+    def __init__(self, *args, key_space="xml_chunk", **kwargs):
+        super().__init__(*args, **kwargs)
+        self.key_space = key_space
+
+
+def load_replay_result(path: Path, capture: Path) -> dict:
+    """Reuse only a complete export belonging to the same unchanged capture."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    source = data.get("source", {})
+    stat = capture.stat()
+    if (data.get("schema_version") != 2 or not data.get("drawcalls")
+            or data.get("status") not in {"ok", "partial"}
+            or Path(source.get("path", "")).resolve() != capture.resolve()
+            or source.get("size") != stat.st_size or source.get("mtime_ns") != stat.st_mtime_ns):
+        raise ValueError("回放数据无效、对应不同抓帧或源文件已改变，拒绝复用")
+    return data
+
+
+def validate_timing_alignment(records, timing):
+    key_space = getattr(timing, "key_space", "xml_chunk")
+    if timing and any(r.event_space != key_space for r in records):
+        raise ValueError("耗时与绘制记录的事件编号类型不同，不能合并 replay event ID 和 XML chunk index")
 
 
 def load_timing_json(json_path: Path) -> dict[int, float]:
@@ -158,6 +205,7 @@ def load_timing_json(json_path: Path) -> dict[int, float]:
         return {}
 
     data = json.loads(json_path.read_text(encoding="utf-8"))
+    key_space = data.get("key_space", "xml_chunk") if isinstance(data, dict) else "xml_chunk"
 
     # 新格式：{"timing": {...}, "shader_names": {...}}
     if isinstance(data, dict) and "timing" in data:
@@ -192,7 +240,7 @@ def load_timing_json(json_path: Path) -> dict[int, float]:
             if eid > 0:
                 timing[eid] = dur
 
-    return timing
+    return TimingData({k: v for k, v in timing.items() if math.isfinite(v) and v >= 0}, key_space=key_space)
 
 
 def load_shader_names_from_timing(json_path: Path) -> dict[str, str]:
@@ -218,16 +266,20 @@ def merge_timing(
     timing: dict[int, float],
 ) -> list[dict[str, Any]]:
     """将耗时数据合并到 records 中。"""
+    validate_timing_alignment(records, timing)
+    if not records or not any(r.event in timing for r in records):
+        raise ValueError("耗时与绘制记录没有匹配的事件")
     rows = []
     for r in records:
-        gpu_time = timing.get(r.event, 0.0)
+        gpu_time = timing.get(r.event)
         rows.append({
             "event": r.event,
             "pass_name": r.pass_name,
             "ps": r.ps,
             "resource_category": r.resource_category,
             "face_estimate": r.face_estimate,
-            "gpu_time_ms": round(gpu_time, 4),
+            "gpu_time_ms": round(gpu_time, 6) if gpu_time is not None else "",
+            "timing_available": gpu_time is not None,
         })
     return rows
 
@@ -235,8 +287,7 @@ def merge_timing(
 def write_timing_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     """写入耗时 CSV。"""
     if not rows:
-        path.write_text("", encoding="utf-8")
-        return
+        raise ValueError("没有耗时记录，拒绝写入空 CSV")
 
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(rows[0].keys())

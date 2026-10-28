@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -18,7 +19,8 @@ from .poly_analyzer import run_poly_analysis
 from .html_report import write_html_report
 from .compare import compare_records
 from .batch import run_batch
-from .gpu_timing import export_gpu_timing, load_timing_json, load_shader_names_from_timing, merge_timing, write_timing_csv
+from .gpu_timing import export_gpu_timing, load_timing_json, load_shader_names_from_timing, merge_timing, write_timing_csv, validate_timing_alignment, load_replay_result
+from .models import DrawRec
 
 
 def _add_common_args(p: argparse.ArgumentParser) -> None:
@@ -115,7 +117,11 @@ def cmd_parse(args: argparse.Namespace) -> None:
         print(f"平台: {platform_info}")
 
     print("解析中...", flush=True)
+    if platform_info.startswith("D3D12"):
+        raise ValueError("D3D12 请用 run 输入 RDC，XML 静态解析无法展开间接绘制")
     records = analyze(xml_path)
+    if not records:
+        raise ValueError("未解析到绘制记录；D3D12 请用 run 输入 RDC 获取回放事件")
     print(f"共 {len(records)} 个 DrawCall")
 
     csv_path = out_dir / "drawcalls.csv"
@@ -136,6 +142,8 @@ def cmd_classify(args: argparse.Namespace) -> None:
 
     print(f"输入: {csv_path}")
     records = load_drawcalls_csv(csv_path)
+    if not records:
+        raise ValueError("输入 CSV 没有绘制记录")
     print(f"加载 {len(records)} 条记录")
 
     # 加载参考数据
@@ -247,24 +255,38 @@ def cmd_run(args: argparse.Namespace) -> None:
     # GPU 耗时（提前执行，以便获取 shader names）
     shader_names = {}
     timing_data = None
-    if not args.no_timing and input_path.suffix.lower() == ".rdc":
+    replay_failed = False
+    replay_path = None
+    if input_path.suffix.lower() == ".rdc":
         timing_runs = getattr(args, "timing_runs", 3)
         renderdoccmd = getattr(args, "renderdoccmd", None)
         json_path = out_dir / "gpu_timing.json"
 
-        print(f"导出 GPU 耗时 ({timing_runs} 次回放)...")
-        if export_gpu_timing(input_path, json_path, renderdoccmd, timing_runs):
-            timing_data = load_timing_json(json_path)
+        print(f"导出回放绘制记录和 GPU 耗时 ({timing_runs} 次采样；禁用耗时={args.no_timing})...")
+        if getattr(args, "replay_json", None):
+            cached_path = Path(args.replay_json).resolve()
+            cached = load_replay_result(cached_path, input_path)
+            json_path.write_text(json.dumps(cached, ensure_ascii=False, indent=2), encoding="utf-8")
+            replay_ok = args.no_timing or (cached.get("timing_status") == "ok" and bool(load_timing_json(json_path)))
+            print(f"复用已验证来源的回放数据: {cached_path}")
+        else:
+            replay_ok = export_gpu_timing(input_path, json_path, renderdoccmd, timing_runs,
+                                         include_timing=not args.no_timing)
+        if json_path.is_file():
+            replay_path = json_path
+        if replay_ok:
+            timing_data = load_timing_json(json_path) if not args.no_timing else None
             shader_names = load_shader_names_from_timing(json_path)
             if shader_names:
                 print(f"获取到 {len(shader_names)} 个 shader 名称")
             if timing_data:
                 print(f"解析到 {len(timing_data)} 个事件耗时")
         else:
-            print("GPU 耗时导出失败（可忽略，用 --no-timing 跳过）")
+            replay_failed = not args.no_timing
+            print("回放未完整成功，将尝试 XML 静态分析；失败原因保留在 gpu_timing.json。")
 
     records, platform_info, mesh_export, resource_standard = _run_pipeline_core(
-        input_path, out_dir, args, shader_names or None
+        input_path, out_dir, args, shader_names or None, replay_path
     )
 
     # 分类 Excel
@@ -300,6 +322,22 @@ def cmd_run(args: argparse.Namespace) -> None:
             print(f"更新报告（含耗时）: {out_dir / 'rdc_report.md'}")
 
     print_summary(records, platform_info)
+    write_html_report(out_dir / "rdc_report.html", records, platform_info)
+    receipt = {
+        "status": "partial" if replay_failed else "ok",
+        "input": str(input_path), "drawcalls": len(records),
+        "event_space": records[0].event_space,
+        "known_faces": sum(r.face_known for r in records),
+        "unknown_faces": sum(not r.face_known for r in records),
+        "timed_drawcalls": sum(r.event in timing_data for r in records) if timing_data else 0,
+        "timing_status": "skipped" if args.no_timing or input_path.suffix.lower() != ".rdc" else ("failed" if replay_failed else "ok"),
+        "references_loaded": bool(mesh_export),
+    }
+    (out_dir / "analysis_status.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding="utf-8")
+    if replay_failed:
+        with (out_dir / "rdc_report.md").open("a", encoding="utf-8") as f:
+            f.write("\n\n> 本次为部分结果：回放或 GPU 耗时失败，详见 gpu_timing.json。\n")
+        raise SystemExit(2)
 
 
 # ── html ─────────────────────────────────────────────────────────
@@ -352,6 +390,8 @@ def cmd_compare(args: argparse.Namespace) -> None:
         timing_b = load_timing_json(Path(args.timing_b).resolve())
         print(f"B 耗时: {len(timing_b)} 个事件")
 
+    validate_timing_alignment(records_a, timing_a)
+    validate_timing_alignment(records_b, timing_b)
     compare_records(records_a, records_b, out_dir, name_a, name_b, timing_a, timing_b)
     print(f"对比报告: {out_dir / 'compare_report.md'}")
 
@@ -367,34 +407,14 @@ def cmd_batch(args: argparse.Namespace) -> None:
     out_dir = _out_dir(args, input_dir)
 
     def _pipeline(rdc_path: Path, sub_out_dir: Path) -> list:
-        # 先跑 timing 拿 shader names
-        shader_names = {}
-        timing_data = None
-        if not getattr(args, "no_timing", False):
-            timing_runs = getattr(args, "timing_runs", 3)
-            renderdoccmd = getattr(args, "renderdoccmd", None)
-            json_path = sub_out_dir / "gpu_timing.json"
-
-            print(f"  导出 GPU 耗时 ({timing_runs} 次回放)...")
-            if export_gpu_timing(rdc_path, json_path, renderdoccmd, timing_runs):
-                timing_data = load_timing_json(json_path)
-                shader_names = load_shader_names_from_timing(json_path)
-                if shader_names:
-                    print(f"  获取到 {len(shader_names)} 个 shader 名称")
-
-        records, _platform_info, _me, _rs = _run_pipeline_core(
-            rdc_path, sub_out_dir, args, shader_names or None
-        )
-
-        # 合并耗时数据
-        if timing_data:
-            classified_path = sub_out_dir / "classified.csv"
-            if classified_path.exists():
-                records = load_classified_csv(classified_path)
-                rows = merge_timing(records, timing_data)
-                write_timing_csv(sub_out_dir / "gpu_timing.csv", rows)
-
-        return records
+        child = argparse.Namespace(**vars(args))
+        child.input, child.out_dir = str(rdc_path), str(sub_out_dir)
+        child.no_thumb = True
+        try:
+            cmd_run(child)
+        except SystemExit as exc:
+            raise ValueError(f"分析未完整成功，退出码 {exc.code}") from exc
+        return load_classified_csv(sub_out_dir / "classified.csv")
 
     run_batch(input_dir, out_dir, _pipeline)
 
@@ -449,6 +469,7 @@ def _run_pipeline_core(
     out_dir: Path,
     args: argparse.Namespace,
     shader_names: dict[str, str] | None = None,
+    replay_path: Path | None = None,
 ) -> tuple[list, str, Path | None, Path | None]:
     """单个 RDC 的核心流水线：convert → parse → classify → report。
 
@@ -462,7 +483,17 @@ def _run_pipeline_core(
     platform_info = extract_platform_info(xml_path) or ""
 
     # 2. parse
-    records = analyze(xml_path, shader_names)
+    replay_data = json.loads(replay_path.read_text(encoding="utf-8")) if replay_path and replay_path.is_file() else {}
+    if replay_data.get("drawcalls"):
+        records = [DrawRec(**row) for row in replay_data["drawcalls"]]
+        if len({r.event for r in records}) != len(records):
+            raise ValueError("回放记录包含重复 event ID")
+    else:
+        if platform_info.startswith("D3D12"):
+            raise ValueError("D3D12 需要可成功回放的 RDC 输入；XML 不能独立展开 GPU 间接绘制")
+        records = analyze(xml_path, shader_names)
+    if not records:
+        raise ValueError("没有解析到 DrawCall，拒绝生成空报告；D3D12 需要可成功回放的 RDC 输入")
     write_drawcalls_csv(out_dir / "drawcalls.csv", records)
 
     # 3. classify
@@ -515,37 +546,29 @@ def cmd_update_refs(args: argparse.Namespace) -> None:
         print(f"=== 导出 mesh 路径 ===")
         search_dir = args.mesh_dir or str(project_dir / "Assets" / "_Resources")
         mesh_csv = out_dir / "mesh_export.csv"
-        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
-        try:
-            mod = importlib.import_module("export_mesh_paths")
-            mod.export_mesh_paths(search_dir, str(mesh_csv), args.workers)
-        finally:
-            sys.path.pop(0)
+        mod = importlib.import_module(".export_mesh_paths", package=__package__)
+        if not Path(search_dir).is_dir():
+            raise ValueError(f"Mesh 目录不存在: {search_dir}")
+        mod.export_mesh_paths(search_dir, str(mesh_csv), args.workers)
 
     # 更新 prefab_export.csv
     if not args.skip_prefab:
         print(f"=== 导出 prefab 路径 ===")
         search_dir = args.prefab_dir or str(project_dir / "Assets" / "_Resources")
         prefab_csv = out_dir / "prefab_export.csv"
-        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
-        try:
-            mod = importlib.import_module("export_prefab_paths")
-            mod.export_prefab_paths(search_dir, str(prefab_csv))
-        finally:
-            sys.path.pop(0)
+        mod = importlib.import_module(".export_prefab_paths", package=__package__)
+        if not Path(search_dir).is_dir():
+            raise ValueError(f"Prefab 目录不存在: {search_dir}")
+        mod.export_prefab_paths(search_dir, str(prefab_csv))
 
     # 更新 ShaderList.csv
     if not args.skip_shader:
         print(f"=== 扫描 Shader ===")
         shader_csv = out_dir / "ShaderList.csv"
-        sys.path.insert(0, str(Path(__file__).parent.parent / "references"))
-        try:
-            mod = importlib.import_module("scan_shaders")
-            shaders = mod.scan_shaders(str(project_dir))
-            mod.export_csv(shaders, str(shader_csv))
-            print(f"共 {len(shaders)} 个 Shader，已导出到: {shader_csv}")
-        finally:
-            sys.path.pop(0)
+        mod = importlib.import_module(".scan_shaders", package=__package__)
+        shaders = mod.scan_shaders(str(project_dir))
+        mod.export_csv(shaders, str(shader_csv))
+        print(f"共 {len(shaders)} 个 Shader，已导出到: {shader_csv}")
 
     print(f"\n参考数据已更新: {out_dir}")
 
@@ -589,6 +612,7 @@ def main() -> None:
     # run
     p = sub.add_parser("run", help="一键全流程")
     p.add_argument("input", help=".rdc 或 .xml 文件路径")
+    p.add_argument("--replay-json", help="复用同一未变更 RDC 的 schema 2 回放导出；避免重复逐事件回放")
     _add_common_args(p)
     p.add_argument("--renderdoccmd", help="renderdoccmd.exe 路径")
     p.add_argument("--force-convert", action="store_true", help="强制重新转换")
@@ -661,4 +685,17 @@ def main() -> None:
         "timing": cmd_timing,
         "update-refs": cmd_update_refs,
     }
-    cmd_map[args.command](args)
+    try:
+        cmd_map[args.command](args)
+    except (ValueError, OSError) as exc:
+        print(f"分析失败: {exc}", file=sys.stderr)
+        if args.command == "run":
+            destination = _out_dir(args, Path(args.input))
+            destination.mkdir(parents=True, exist_ok=True)
+            (destination / "analysis_status.json").write_text(
+                json.dumps({"status": "failed", "error": str(exc)}, ensure_ascii=False, indent=2), encoding="utf-8")
+        raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

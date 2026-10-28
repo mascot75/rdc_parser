@@ -130,9 +130,13 @@ class DrawRec:
     depth_write: bool
     depth_enable: bool
     rt: str
+    event_space: str = "xml_chunk"
+    chunk_index: int = -1
 
 
 HEADER_ZH = {
+    "event_space": "事件编号类型",
+    "chunk_index": "XML chunk序号",
     "event": "事件序号",
     "draw_type": "Draw类型",
     "mesh_type": "Mesh渲染类型",
@@ -258,7 +262,7 @@ def aggregate_mesh_stats(records: list[DrawRec]) -> list[tuple[MeshStat, list[Dr
         if combined_faces and instance_count > 0:
             single_faces = combined_faces // instance_count
         else:
-            single_faces = ib_faces  # 无 Draw 参数时回退到 IB 容量
+            single_faces = 0  # Missing draw parameters must not become buffer capacity.
 
         # face_source: 取所有 DrawCall 中出现最多的面数来源
         # 有多种来源时标记为 "mixed"（如同一 mesh 既有 direct draw 又有 indirect draw）

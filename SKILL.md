@@ -1,189 +1,68 @@
 ---
-name: rdc_parser
-description: RenderDoc .rdc 文件解析流水线。将 .rdc 转 XML、解析 DrawCall、分类资源、生成报告。支持单文件、批量、对比、GPU 耗时。
+name: rdc-parser
+description: 解析 RenderDoc RDC 抓帧，导出绘制记录、资源分类、CSV/Markdown/HTML 报告和事件 GPU 回放耗时。支持 D3D11、Vulkan 静态 XML 分析及可回放 RDC 的 D3D12 间接绘制展开。
 metadata:
-  short-description: RenderDoc 抓帧解析与资源分类
+  short-description: RenderDoc 抓帧解析与证据验证
 ---
 
-# rdc_parser
+# RenderDoc 抓帧解析
 
-RenderDoc `.rdc` 抓帧解析 CLI 工具。从 `.rdc` 导出 XML，解析全部 DrawCall，按 Pass/Shader/资源类型分类，输出 CSV/Markdown/HTML 报告。
+在技能根目录执行 `python -m scripts <子命令>`。运行环境为 Python 3.10+ 和 RenderDoc；完整回放依赖与抓帧兼容的 GPU、驱动和 API。当前回放适配经 RenderDoc 1.46 验证。
 
-## 目录结构
+## 一键分析
 
-```
-rdc_parser/
-├── scripts/          ← Python 脚本（cli.py 为主入口）
-├── references/       ← 参考数据
-│   ├── mesh_export.csv
-│   ├── ShaderList.csv
-│   └── 资源分类标准.md
-└── output/           ← 测试输出
+```powershell
+python -m scripts run "D:\captures\scene.rdc" -o "D:\output\scene"
 ```
 
-## 用法
+默认尝试三轮 GPU 采样并导出回放事件状态，然后转换 XML、分类和生成报告。可回放时以 RenderDoc 事件树的叶子绘制为准，包括 D3D12 ExecuteIndirect 展开的实际绘制。不可回放时尝试 D3D11/Vulkan XML 静态分析，保留部分结果及失败原因。
 
-```bash
-python -m scripts.cli <子命令> [参数]
-```
+可选参数：`--renderdoccmd <renderdoccmd.exe>`、`--force-convert`、`--no-thumb`、`--no-timing`、`--timing-runs N`。
+`--replay-json <gpu_timing.json>` 可复用已完成的 schema 2 回放导出，校验源路径、文件大小和修改时间；必须说明该轮复用了采样，不能声称重新测量。强制重新测量时不传此参数。
+`--no-timing` 仅禁用性能计数器采样；为展开间接绘制，仍尝试提取回放状态。D3D12 完整分析需要成功回放，不能从 XML 静态内容可靠还原 GPU 生成的间接参数。
 
-需在项目根目录 `rdc_parser/` 下执行。
+## 结果验收
+
+- 首先读取 `analysis_status.json`。退出码 0 表示所请求的流程完成；2 表示保留了静态报告但请求的回放/耗时失败；1 表示分析失败。已知面数覆盖率仍需单独检查，流程完成不意味着所有字段都已知。
+- 检查 `drawcalls.csv`、`classified.csv`、`rdc_report.md`、`rdc_report.html` 及汇总 CSV 的真实内容。空 DrawCall、空报告或没有匹配的耗时必须报错，不能只看进程退出。
+- `gpu_timing.json` schema 2 保存逐次样本、叶子事件、绘制状态、源文件身份和失败原因。`gpu_timing.csv` 仅为匹配到绘制记录的耗时，未匹配项为空而非零。
+- CSV 明确记录事件编号类型：`replay_event` 为回放 event ID；`xml_chunk` 为 XML chunk index。二者不能混用。多个间接子事件可以关联一个原始调用，不能当作重复项丢弃或重复累加同一个耗时。
+- Draw 面数来自绘制参数或回放动作；未解码的间接参数、未知拓扑、启用 primitive restart 的 strip 保留未知。IB 容量参考不能作为实际绘制面数。提交的三角形数也不代表裁剪、细分后最终光栅化的三角形数。
+- GPU 耗时为当前 GPU 上的回放测量。按绘制汇总不包含所有计算、拷贝或未匹配事件；不得换算成游戏 FPS 或原设备帧时间。
+- Android 抓帧可能依赖桌面 GPU 不支持的扩展。保留具体 OpenCapture 错误，需要兼容设备远程回放时明确说明；不要把空计数器结果当作零耗时。
 
 ## 参考数据
 
-内置参考文件位于 `rdc_parser/references/`：
+参考数据是可选的项目输入：`mesh_export.csv`、`ShaderList.csv` 和 `资源分类标准.md`。CLI 默认查找工作目录的 `references/`，也可通过 `--references-dir`、`--mesh-export`、`--shader-list`、`--resource-standard` 指定。没有这些数据时，不承诺项目路径匹配、Shader 名称归一化或面数标准判断；报告中的启发式分类和 Buffer 分组不等于经过验证的项目资产。
 
-| 文件 | 用途 |
-|------|------|
-| `mesh_export.csv` | 项目 mesh 路径 → 资源分类映射 |
-| `ShaderList.csv` | Shader 名称归一化表 |
-| `资源分类标准.md` | 资源类型/分类规则定义 |
+更新数据的工具脚本位于 `scripts/`，不依赖打包内的 references 目录：
 
-CLI 默认从 `rdc_parser/references/` 自动加载，也可用 `--references-dir` 或各 `--mesh-export` / `--resource-standard` / `--shader-list` 单独指定。
-
-## 子命令
-
-### run — 一键全流程（最常用）
-
-```bash
-python -m scripts.cli run <input.rdc> -o <output_dir>
+```powershell
+python -m scripts update-refs "D:\UnityProject" -o "D:\project-reference-data"
 ```
 
-自动执行：convert → parse → classify → report → timing，输出全部 CSV + Markdown 报告 + 缩略图。
+该命令扫描 Unity YAML mesh、prefab 和 shader；可用 `--mesh-dir`、`--prefab-dir`、`--workers` 和 `--skip-mesh/--skip-prefab/--skip-shader` 控制范围。资源分类标准需自行提供，不能从缺失的标准推断超标。
 
-可选参数：
-- `--renderdoccmd <path>` — 指定 renderdoccmd.exe
-- `--force-convert` — 强制重新转换 XML
-- `--no-thumb` — 禁用缩略图导出
-- `--no-timing` — 禁用 GPU 耗时导出
-- `--timing-runs <N>` — GPU 耗时回放次数（默认 3）
-- `--references-dir <dir>` — 参考数据目录
-- `--mesh-export <path>` — mesh_export.csv 路径（覆盖 references-dir）
-- `--resource-standard <path>` — 资源分类标准.md 路径（覆盖 references-dir）
-- `--shader-list <path>` — ShaderList.csv 路径（覆盖 references-dir）
+## 分步命令
 
-### convert — .rdc 转 .xml
-
-```bash
-python -m scripts.cli convert <input.rdc> -o <out_dir>
+```powershell
+python -m scripts convert input.rdc -o output
+python -m scripts parse output/input.xml -o output
+python -m scripts classify output/drawcalls.csv -o output --references-dir D:\project-reference-data
+python -m scripts report output/classified.csv -o output
+python -m scripts html output/classified.csv -o output
+python -m scripts poly output/classified.csv -o output --resource-standard D:\project-reference-data\资源分类标准.md
+python -m scripts timing input.rdc -o timing --runs 3
+python -m scripts compare before/classified.csv after/classified.csv -o comparison
+python -m scripts batch D:\captures -o D:\reports
 ```
 
-### parse — XML 解析 DrawCall
+`parse` 的 XML 静态状态机仅支持 D3D11/Vulkan。对 D3D12 使用 `run input.rdc`。`timing --json` 可读取已有耗时，`--classified` 可合并同一次抓帧的分类 CSV；新旧事件编号格式不一致会拒绝合并。`compare` 可用 `--timing-a/--timing-b` 提供各自对应的耗时。按 `--help` 查询各子命令支持的参数。
 
-```bash
-python -m scripts.cli parse <input.xml> -o <out_dir>
+## 回归验证
+
+```powershell
+python -m unittest scripts.test_regressions -v
 ```
 
-输出 `drawcalls.csv`。
-
-### classify — 资源分类
-
-```bash
-python -m scripts.cli classify <drawcalls.csv> -o <out_dir>
-```
-
-加载参考数据，输出 `classified.csv`。
-
-可选参考参数：`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
-
-### report — 生成汇总报告
-
-```bash
-python -m scripts.cli report <classified.csv> -o <out_dir>
-```
-
-输出：
-- `rdc_report.md` — Markdown 分析报告
-- `rdc_summary_by_mesh_type.csv` — 按类型汇总
-- `rdc_summary_by_pass_name.csv` — 按 Pass 汇总
-- `rdc_summary_by_ps.csv` — 按 Shader 汇总
-- `rdc_summary_by_asset_module.csv` — 按资产模块汇总
-- `rdc_summary_by_resource_category.csv` — 按资源分类汇总
-- `rdc_mesh_detail.csv` — Mesh 详细汇总
-- `rdc_shader_detail.csv` — Shader 详细汇总
-- `rdc_shader_keywords.csv` — Shader 关键字明细
-
-### html — 交互式 HTML 报告
-
-```bash
-python -m scripts.cli html <classified.csv> -o <out_dir> [--platform "D3D11 / SM5.0"]
-```
-
-输出 `rdc_report.html`，表格可排序筛选。
-
-### poly — 减面分析
-
-```bash
-python -m scripts.cli poly <classified.csv> -o <out_dir>
-```
-
-聚合 mesh 级别数据，匹配 `资源分类标准.md` 中的面数标准，输出超标项。
-
-可选参考参数：`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
-
-### compare — 两份抓帧对比
-
-```bash
-python -m scripts.cli compare <A_classified.csv> <B_classified.csv> -o <out_dir> [--name-a "优化前"] [--name-b "优化后"] [--timing-a <A_gpu_timing.json>] [--timing-b <B_gpu_timing.json>]
-```
-
-输出 `compare_report.md` + 差异 CSV。传入 `--timing-a` / `--timing-b` 可启用 GPU 耗时对比，报告和 CSV 会增加耗时列，按耗时变化排序。
-
-### batch — 批量分析
-
-```bash
-python -m scripts.cli batch <rdc_directory> -o <out_dir>
-```
-
-遍历目录下所有 `.rdc`，每个子目录独立走一遍全流程。
-
-可选参数：`--renderdoccmd`、`--force-convert`、`--references-dir`、`--mesh-export`、`--resource-standard`、`--shader-list`。
-
-### timing — GPU 耗时
-
-```bash
-python -m scripts.cli timing <input.rdc> -o <out_dir> [--runs 3] [--classified <classified.csv>] [--json <timing.json>]
-```
-
-多次回放导出 per-event GPU 耗时，可合并到 `classified.csv`。`--json` 可跳过导出，直接使用已有的 timing JSON 文件。
-
-### update-refs — 更新参考数据
-
-```bash
-python -m scripts.cli update-refs <unity_project_dir> [-o <out_dir>]
-```
-
-从 Unity 项目目录扫描并导出 mesh/prefab/shader 路径到参考数据目录。默认输出到 `references/`。
-
-可选参数：
-- `--mesh-dir <dir>` — mesh 搜索目录（默认 `<项目>/Assets/_Resources`）
-- `--prefab-dir <dir>` — prefab 搜索目录（默认 `<项目>/Assets/_Resources`）
-- `--workers <N>` — mesh 解析线程数（默认 16）
-- `--skip-mesh` — 跳过 mesh 导出
-- `--skip-prefab` — 跳过 prefab 导出
-- `--skip-shader` — 跳过 shader 扫描
-
-> 注：此命令较慢（需扫描整个 Unity 项目），仅在参考数据需要更新时执行。
-
-## 工作流示例
-
-```bash
-# 更新参考数据（仅在 Unity 项目资源变更时执行）
-python -m scripts.cli update-refs "E:\swordm3d" -o references
-
-# 单文件完整分析
-python -m scripts.cli run "D:\captures\scene.rdc" -o "D:\output\scene"
-
-# 对比优化前后（含耗时对比）
-python -m scripts.cli run "D:\captures\before.rdc" -o "D:\output\before"
-python -m scripts.cli run "D:\captures\after.rdc" -o "D:\output\after"
-python -m scripts.cli compare "D:\output\before\classified.csv" "D:\output\after\classified.csv" -o "D:\output\diff" --timing-a "D:\output\before\gpu_timing.json" --timing-b "D:\output\after\gpu_timing.json"
-
-# 批量处理
-python -m scripts.cli batch "D:\captures\batch" -o "D:\output\batch_out"
-```
-
-## 环境要求
-
-- Python 3.10+
-- RenderDoc（`renderdoccmd.exe` 用于 .rdc 转 XML 和缩略图导出）
+脚本测试不能替代真实 RDC。交付前从最终 ZIP 解压运行，核对真实事件/参数和报告文件，分别报告通过、失败和环境阻塞，不将单个样本推广为所有 API/设备均已覆盖。

@@ -107,6 +107,8 @@ def load_classified_csv(path: Path) -> list[DrawRec]:
         for row in reader:
             records.append(DrawRec(
                 event=get_int(row, "event"),
+                event_space=get(row, "event_space") or "xml_chunk",
+                chunk_index=int(get(row, "chunk_index") or "-1"),
                 draw_type=get(row, "draw_type"),
                 mesh_type=get(row, "mesh_type"),
                 asset_module=get(row, "asset_module"),

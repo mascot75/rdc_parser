@@ -38,7 +38,7 @@ def face_estimate(
     返回 (面数str, 是否有效, 索引/顶点数, 实例数, 来源)。
     来源: "draw_params"（直接参数）| "indirect_args"（从 buffer 解码）| "unknown"。
     """
-    topo = topology or "D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST(assumed)"
+    topo = (topology or "").replace("_", "").upper()
     inst = 1
     count = 0
     dt = draw_type
@@ -68,12 +68,24 @@ def face_estimate(
         inst = indirect_args[1] or 0
     else:
         return "", False, 0, 0, "unknown"
-    if not count:
-        return "", False, count, inst, "unknown"
+    if indirect_args is None:
+        required = {
+            "vkCmdDrawIndexed": "indexCount", "vkCmdDraw": "vertexCount",
+            "ID3D11DeviceContext::DrawIndexed": "IndexCount",
+            "ID3D11DeviceContext::Draw": "VertexCount",
+            "ID3D11DeviceContext::DrawIndexedInstanced": "IndexCountPerInstance",
+            "ID3D11DeviceContext::DrawInstanced": "VertexCountPerInstance",
+        }.get(dt)
+        if required and optional_int_named(elem, required) is None:
+            return "", False, 0, inst, "unknown"
     if "TRIANGLESTRIP" in topo:
+        # Indexed strips may contain primitive restart indices. Parameters alone
+        # cannot establish their exact primitive count.
+        if "Indexed" in dt:
+            return "", False, count, inst, "unknown"
         faces = max(count - 2, 0) * inst
-    elif "TRIANGLELIST" in topo or "(assumed)" in topo:
-        faces = (count * inst) / 3.0
+    elif "TRIANGLELIST" in topo and "ASSUMED" not in topo:
+        faces = (count // 3) * inst
     else:
         return "", False, count, inst, "unknown"
     source = "indirect_args" if "Indirect" in draw_type else "draw_params"
@@ -493,12 +505,13 @@ def analyze(xml: Path, shader_names: dict[str, str] | None = None) -> list[DrawR
             faces, known, count, inst, face_src = face_estimate(cname, elem, active_topology, indirect_args)
             ib_faces = ib_capacity_faces(buffer_sizes.get(active_ib_id, 0), active_ib_format, active_topology)
             # 采用面数：优先用 Draw 参数计算值，不可用时回退到 IB 容量
-            combined_faces = faces if known and faces else ib_faces
+            combined_faces = faces if known else ""
             blend = blend_states.get(active_blend_state, BlendInfo())
             depth = depth_states.get(active_depth_state, DepthInfo())
 
             records.append(DrawRec(
                 event=int_attr(elem, "chunkIndex", len(records) + 1),
+                chunk_index=int_attr(elem, "chunkIndex", -1),
                 draw_type=normalize_draw_type(cname),
                 mesh_type=mesh_type,
                 asset_module="",
@@ -554,6 +567,7 @@ def find_zip_for_xml(xml: Path) -> Path | None:
 # ── CSV 读写 ────────────────────────────────────────────────────────
 
 DRAWCALLS_CSV_FIELDS = [
+    "event_space", "chunk_index",
     "event", "draw_type", "mesh_type", "marker", "pass_name", "topology",
     "face_estimate", "face_known", "face_source", "indirect_args_decoded",
     "ib_capacity_faces_estimate", "combined_faces_estimate",
@@ -596,6 +610,8 @@ def load_drawcalls_csv(path: Path) -> list[DrawRec]:
         for row in reader:
             records.append(DrawRec(
                 event=int(get(row, "event") or "0"),
+                event_space=get(row, "event_space") or "xml_chunk",
+                chunk_index=int(get(row, "chunk_index") or "-1"),
                 draw_type=get(row, "draw_type"),
                 mesh_type=get(row, "mesh_type"),
                 asset_module="",

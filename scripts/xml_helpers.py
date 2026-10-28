@@ -19,6 +19,12 @@ def first_text(elem: ET.Element, tag: str, name: str) -> str:
     return "" if node is None else (node.text or "").strip()
 
 
+def bool_named(elem: ET.Element, name: str) -> bool:
+    # VkBool32 is serialized as uint, unlike D3D bool fields.
+    value = first_text(elem, "bool", name) or first_text(elem, "uint", name)
+    return value.lower() in {"true", "1"}
+
+
 def int_named(elem: ET.Element, name: str, default: int = 0) -> int:
     text = first_text(elem, "uint", name) or first_text(elem, "int", name)
     try:
@@ -180,13 +186,14 @@ def _parse_vk_pipeline_create_info(ci: ET.Element) -> dict[str, object]:
         result["topology"] = topo
     bs = ci.find(".//struct[@name='pColorBlendState']")
     if bs is not None:
-        enabled = first_text(bs, "bool", "blendEnable").lower() == "true"
-        atc = first_text(bs, "bool", "alphaToCoverageEnable").lower() == "true"
+        enabled = any((n.text or "").lower() in {"true", "1"}
+                      for n in bs.findall(".//*[@name='blendEnable']"))
+        atc = bool_named(ci, "alphaToCoverageEnable")
         result["blend"] = BlendInfo(enabled, atc)
     ds = ci.find(".//struct[@name='pDepthStencilState']")
     if ds is not None:
-        de = first_text(ds, "bool", "depthTestEnable").lower() == "true"
-        dw = first_text(ds, "bool", "depthWriteEnable").lower() == "true"
+        de = bool_named(ds, "depthTestEnable")
+        dw = bool_named(ds, "depthWriteEnable")
         result["depth"] = DepthInfo(de, "ALL" if dw else "NONE", "")
     return result
 
